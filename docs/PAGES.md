@@ -81,4 +81,4 @@ Pyodide 0.27.7, `x3d_mcp` b5c9956 (XSD 4.0 plus semantic checks, 18 worlds plus 
 * Cross-runtime parity extended to all 18 (`receipts/runtime-parity-18.json`): 7 lessons bit-identical
   (integral, lorenz, gradient, probability, least_squares, bayes, refraction), 11 differ by at most
   4.44e-16 absolute. The bound did not grow with the 12 new lessons.
-* The first six lessons are preserved at tag `v0.1.1-six-lessons`.
+* The first six lessons are preserved at branch `archive-v0.1.1-six-lessons`.
