@@ -19,9 +19,11 @@ import webbrowser
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BODY = 32_768
 MAX_RESPONSE = 4 * 1024 * 1024
-VERSION = "0.1.0"
+VERSION = "0.3.0"
 _WORKERS = threading.BoundedSemaphore(4)
-_PRODUCERS = ('catalog.py', 'kernel.py', 'x3d.py', 'manim_bridge.py')
+_PRODUCERS = ('catalog.py', 'kernel.py', 'lessons_analysis.py', 'lessons_structures.py',
+              'lessons_inference.py', 'lessons_science.py',
+              'x3d.py', 'manim_bridge.py')
 _PRODUCER_SHA = {name: hashlib.sha256((ROOT / 'mathlab' / name).read_bytes()).hexdigest()
                  for name in _PRODUCERS}
 MIME = {'.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
@@ -153,6 +155,12 @@ class Handler(BaseHTTPRequestHandler):
             base, rel = ROOT / 'docs', path[len('/docs/'):]
         elif path.startswith('/examples/'):
             base, rel = ROOT / 'examples', path[len('/examples/'):]
+        elif path.startswith('/web/'):
+            # The authored guides share ../web/#lesson links with static Pages.
+            # Retain that route alongside the loopback app's shorter root URL.
+            base, rel = ROOT / 'web', path[len('/web/'):] or 'index.html'
+        elif path == '/README.md':
+            base, rel = ROOT, 'README.md'
         else:
             base, rel = ROOT / 'web', path.lstrip('/') or 'index.html'
         candidate = (base / rel).resolve()

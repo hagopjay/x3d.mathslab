@@ -1,0 +1,153 @@
+{
+  "url": "http://127.0.0.2:8902/web/",
+  "status": "pass",
+  "playwright": "1.63.0",
+  "lessons": [
+    {
+      "title": "The Shape of a Matrix",
+      "nodes": 8,
+      "metrics": 16,
+      "model": "MODEL 2d9c41e7ec9b85a9",
+      "ms": 2401
+    },
+    {
+      "title": "A Secant Becomes a Tangent",
+      "nodes": 8,
+      "metrics": 17,
+      "model": "MODEL 1567f03eacc1031f",
+      "ms": 2124
+    },
+    {
+      "title": "Build an Area from Samples",
+      "nodes": 8,
+      "metrics": 17,
+      "model": "MODEL b4f807c48a205482",
+      "ms": 2224
+    },
+    {
+      "title": "A Wave Made of Circles",
+      "nodes": 8,
+      "metrics": 15,
+      "model": "MODEL 291e673018962104",
+      "ms": 2252
+    },
+    {
+      "title": "Two Almost-Identical Beginnings",
+      "nodes": 8,
+      "metrics": 20,
+      "model": "MODEL 65b3329245cbcc7f",
+      "ms": 2223
+    },
+    {
+      "title": "Find the Floor of a Valley",
+      "nodes": 8,
+      "metrics": 20,
+      "model": "MODEL 79cff13dd47aa74a",
+      "ms": 2488
+    },
+    {
+      "title": "Multiplication Becomes Motion",
+      "nodes": 8,
+      "metrics": 19,
+      "model": "MODEL cb94356bf4650138",
+      "ms": 2329
+    },
+    {
+      "title": "How Far Can a Local Idea Reach?",
+      "nodes": 8,
+      "metrics": 19,
+      "model": "MODEL b5e0e979d41a4b49",
+      "ms": 2248
+    },
+    {
+      "title": "Two Moving Waves Make Still Nodes",
+      "nodes": 8,
+      "metrics": 23,
+      "model": "MODEL 2d72954af4ae73de",
+      "ms": 2247
+    },
+    {
+      "title": "A Bell Curve from Coin Counts",
+      "nodes": 8,
+      "metrics": 20,
+      "model": "MODEL a076a8dc6d9a23dc",
+      "ms": 2300
+    },
+    {
+      "title": "The Closest Reachable Point",
+      "nodes": 8,
+      "metrics": 18,
+      "model": "MODEL ae35593f041018c0",
+      "ms": 2317
+    },
+    {
+      "title": "A Source Is Not a Whirlpool",
+      "nodes": 8,
+      "metrics": 19,
+      "model": "MODEL a1c052bc4fad8934",
+      "ms": 2706
+    },
+    {
+      "title": "A Matrix Reveals Its Favorite Directions",
+      "nodes": 8,
+      "metrics": 21,
+      "model": "MODEL 4cc9e634c207b1f2",
+      "ms": 2232
+    },
+    {
+      "title": "A Positive Signal Changes the Denominator",
+      "nodes": 8,
+      "metrics": 22,
+      "model": "MODEL 2fbe16cf995a670d",
+      "ms": 2151
+    },
+    {
+      "title": "The Best Move May Be Forbidden",
+      "nodes": 8,
+      "metrics": 22,
+      "model": "MODEL fc61a2bb1d80c974",
+      "ms": 2295
+    },
+    {
+      "title": "Different Motions, Identical Samples",
+      "nodes": 8,
+      "metrics": 18,
+      "model": "MODEL b7697815678028a1",
+      "ms": 2443
+    },
+    {
+      "title": "Why Fine Detail Melts First",
+      "nodes": 8,
+      "metrics": 19,
+      "model": "MODEL 0ae4fbefb4e80ff7",
+      "ms": 2421
+    },
+    {
+      "title": "The Fastest Route Bends",
+      "nodes": 8,
+      "metrics": 17,
+      "model": "MODEL 3b6a053e289d3fca",
+      "ms": 2217
+    }
+  ],
+  "checks": {
+    "lessons_in_nav": 18,
+    "parameter_change_changes_model_id": {
+      "before": "MODEL 3b6a053e289d3fca",
+      "after": "MODEL 4a1fe1efe9e63e42",
+      "changed": true
+    },
+    "manim_source": {
+      "filename": "mathlab-refraction.py",
+      "bytes": 27321,
+      "has_scene_class": true
+    }
+  },
+  "scope": "Native browser smoke; no learning-outcome or GPU benchmark claim.",
+  "chromium": "153.0.8010.12",
+  "first_native_scene_s": 4.778,
+  "python_runtime": "3.12.7",
+  "transport": "pyodide",
+  "console_errors": [],
+  "elapsed_s": 51.901
+}

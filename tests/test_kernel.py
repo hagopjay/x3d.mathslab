@@ -10,7 +10,9 @@ from mathlab.kernel import evaluate, normalize_params, _lorenz_rhs, _rk4_lorenz
 class CatalogAndBoundaryTests(unittest.TestCase):
     def test_catalog_is_independent_and_every_lesson_is_discoverable(self):
         lessons=catalog()
-        self.assertEqual({s["id"] for s in lessons},{"linear","derivative","integral","fourier","lorenz","gradient"})
+        self.assertEqual({s["id"] for s in lessons},{"linear","derivative","integral","fourier","lorenz","gradient",
+                         "complex","taylor","waves","probability","least_squares","vector_field",
+                         "svd","bayes","lagrange","aliasing","heat","refraction"})
         lessons[0]["parameters"][0]["max"]=999
         self.assertEqual(lesson_spec("linear")["parameters"][0]["max"],2.5)
 

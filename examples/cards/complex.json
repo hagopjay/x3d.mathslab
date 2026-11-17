@@ -1,0 +1,10 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "complex",
+  "params": {
+    "radius": 1,
+    "angle": 1.2566370614359172,
+    "progress": 1,
+    "roots": 5
+  }
+}

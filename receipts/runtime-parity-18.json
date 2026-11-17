@@ -1,0 +1,152 @@
+{
+ "schema": "mathlab.runtime-parity/2",
+ "native": "CPython 3.13.18, glibc, Linux x86_64",
+ "wasm": "Pyodide 0.27.7 (CPython 3.12.7) in Chromium 153.0.8010.12 via Playwright 1.63.0",
+ "params": "catalog defaults",
+ "lessons": {
+  "linear": {
+   "floats": 990,
+   "differing_floats": 18,
+   "max_abs_diff": 2.220446049250313e-16,
+   "sample_sha256_pyodide": "2d9c41e7ec9b85a9",
+   "sample_sha256_native": "5902c7103e181c02",
+   "bit_identical": false
+  },
+  "derivative": {
+   "floats": 759,
+   "differing_floats": 5,
+   "max_abs_diff": 4.440892098500626e-16,
+   "sample_sha256_pyodide": "1567f03eacc1031f",
+   "sample_sha256_native": "d89a4419421d67b5",
+   "bit_identical": false
+  },
+  "integral": {
+   "floats": 1206,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "b4f807c48a205482",
+   "sample_sha256_native": "b4f807c48a205482",
+   "bit_identical": true
+  },
+  "fourier": {
+   "floats": 2314,
+   "differing_floats": 20,
+   "max_abs_diff": 3.3306690738754696e-16,
+   "sample_sha256_pyodide": "291e673018962104",
+   "sample_sha256_native": "f284a6c4270162d8",
+   "bit_identical": false
+  },
+  "lorenz": {
+   "floats": 6073,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "65b3329245cbcc7f",
+   "sample_sha256_native": "65b3329245cbcc7f",
+   "bit_identical": true
+  },
+  "gradient": {
+   "floats": 5041,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "79cff13dd47aa74a",
+   "sample_sha256_native": "79cff13dd47aa74a",
+   "bit_identical": true
+  },
+  "complex": {
+   "floats": 1460,
+   "differing_floats": 29,
+   "max_abs_diff": 1.1102230246251565e-16,
+   "sample_sha256_pyodide": "cb94356bf4650138",
+   "sample_sha256_native": "2c12f0c73b869821",
+   "bit_identical": false
+  },
+  "taylor": {
+   "floats": 2525,
+   "differing_floats": 18,
+   "max_abs_diff": 1.1102230246251565e-16,
+   "sample_sha256_pyodide": "b5e0e979d41a4b49",
+   "sample_sha256_native": "13137dd9e1fb3e32",
+   "bit_identical": false
+  },
+  "waves": {
+   "floats": 4752,
+   "differing_floats": 67,
+   "max_abs_diff": 4.440892098500626e-16,
+   "sample_sha256_pyodide": "2d72954af4ae73de",
+   "sample_sha256_native": "6f37856adf22c31b",
+   "bit_identical": false
+  },
+  "probability": {
+   "floats": 1423,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "a076a8dc6d9a23dc",
+   "sample_sha256_native": "a076a8dc6d9a23dc",
+   "bit_identical": true
+  },
+  "least_squares": {
+   "floats": 261,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "ae35593f041018c0",
+   "sample_sha256_native": "ae35593f041018c0",
+   "bit_identical": true
+  },
+  "vector_field": {
+   "floats": 1684,
+   "differing_floats": 19,
+   "max_abs_diff": 4.440892098500626e-16,
+   "sample_sha256_pyodide": "a1c052bc4fad8934",
+   "sample_sha256_native": "7d819790ada24ca0",
+   "bit_identical": false
+  },
+  "svd": {
+   "floats": 1718,
+   "differing_floats": 218,
+   "max_abs_diff": 4.440892098500626e-16,
+   "sample_sha256_pyodide": "4cc9e634c207b1f2",
+   "sample_sha256_native": "29a8017c26c30494",
+   "bit_identical": false
+  },
+  "bayes": {
+   "floats": 139,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "2fbe16cf995a670d",
+   "sample_sha256_native": "2fbe16cf995a670d",
+   "bit_identical": true
+  },
+  "lagrange": {
+   "floats": 942,
+   "differing_floats": 14,
+   "max_abs_diff": 2.220446049250313e-16,
+   "sample_sha256_pyodide": "fc61a2bb1d80c974",
+   "sample_sha256_native": "e1834618f60f4dab",
+   "bit_identical": false
+  },
+  "aliasing": {
+   "floats": 10017,
+   "differing_floats": 166,
+   "max_abs_diff": 1.1102230246251565e-16,
+   "sample_sha256_pyodide": "b7697815678028a1",
+   "sample_sha256_native": "64329305647eb230",
+   "bit_identical": false
+  },
+  "heat": {
+   "floats": 9964,
+   "differing_floats": 21,
+   "max_abs_diff": 4.440892098500626e-16,
+   "sample_sha256_pyodide": "0ae4fbefb4e80ff7",
+   "sample_sha256_native": "0858b108e18cfd3c",
+   "bit_identical": false
+  },
+  "refraction": {
+   "floats": 1371,
+   "differing_floats": 0,
+   "max_abs_diff": 0.0,
+   "sample_sha256_pyodide": "3b6a053e289d3fca",
+   "sample_sha256_native": "3b6a053e289d3fca",
+   "bit_identical": true
+  }
+ }
+}

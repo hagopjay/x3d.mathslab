@@ -2,6 +2,11 @@
 from copy import deepcopy
 from math import pi
 
+from .lessons_analysis import LESSONS as ANALYSIS_LESSONS
+from .lessons_structures import LESSONS as STRUCTURE_LESSONS
+from .lessons_inference import LESSONS as INFERENCE_LESSONS
+from .lessons_science import LESSONS as SCIENCE_LESSONS
+
 
 def _p(key, label, lo, hi, step, default, unit="", integer=False):
     return {"id": key, "label": label, "min": lo, "max": hi, "step": step,
@@ -69,6 +74,105 @@ _LESSONS = [
                {"title": "Verify", "text": "Every start converges precisely when 0<α<2/κ. The exact eigen-coordinate recurrence checks the numerical iteration. Iterates outside the displayed domain remain in numeric data but are omitted from the scene."}],
      "challenge": {"question": "Can a larger learning rate make convergence slower or unstable?", "answer": "Yes. Compare max(|1−α|,|1−ακ|). As it approaches one convergence slows; above one some modes grow. Reducing α is not always faster either."}},
 ]
+
+
+_ENRICHMENTS = {
+    "linear": {
+        "level": "Grade 10–12", "prerequisites": ["Coordinates", "Vectors"],
+        "resources": [{"title": "3Blue1Brown · Linear transformations and matrices",
+                       "url": "https://www.3blue1brown.com/lessons/linear-transformations/",
+                       "note": "See matrix columns as destinations of basis vectors; then test a reflection here."}],
+        "presets": [
+            {"title": "Mirror without shrinking", "params": {"a": -1, "b": 0, "c": 0, "d": 1}, "why": "Signed area reverses while its magnitude stays one."},
+            {"title": "Collapse a dimension", "params": {"a": 1, "b": 2, "c": .5, "d": 1}, "why": "Dependent columns turn a square into a line."},
+            {"title": "Rotate with no real eigenline", "params": {"a": 0, "b": -1, "c": 1, "d": 0}, "why": "A quarter turn preserves area and has no real eigendirection."}],
+        "legend": [{"label": "Transformed grid", "color": "#47d6ff"}, {"label": "Circle image", "color": "#ffba52"}, {"label": "Real eigenlines", "color": "#a68cff"}]},
+    "derivative": {
+        "level": "Grade 10–12", "prerequisites": ["Functions", "Slope", "Radians"],
+        "resources": [{"title": "OpenStax Calculus 1 · Defining the derivative", "url": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative", "note": "Connect the secant-slope limit with tangent and instantaneous rate."}],
+        "presets": [
+            {"title": "A wide secant", "params": {"x": .7, "h": 1.2}, "why": "Start with a visible interval before taking a limit."},
+            {"title": "A close look", "params": {"x": .7, "h": .02}, "why": "Compare forward and symmetric differences at the same point."}],
+        "legend": [{"label": "Function", "color": "#47d6ff"}, {"label": "Secant", "color": "#ffba52"}, {"label": "Analytic tangent", "color": "#ff59a8"}]},
+    "integral": {
+        "level": "Grade 10–12", "prerequisites": ["Functions", "Area", "Finite sums"],
+        "resources": [{"title": "OpenStax Calculus 1 · The definite integral", "url": "https://openstax.org/books/calculus-volume-1/pages/5-2-the-definite-integral", "note": "Riemann sums approach signed accumulation; this particular curve is positive."}],
+        "presets": [
+            {"title": "Coarse midpoint", "params": {"n": 4, "sample": 0}, "why": "Compare the finite sum with the exact antiderivative."},
+            {"title": "Refined midpoint", "params": {"n": 32, "sample": 0}, "why": "Test the n⁻² error bound with all other inputs fixed."}],
+        "legend": [{"label": "Function", "color": "#ffba52"}, {"label": "Sampled rectangles", "color": "#5cffba"}, {"label": "Sample locations", "color": "#ff59a8"}]},
+    "fourier": {
+        "level": "Undergraduate 1", "prerequisites": ["Trigonometry", "Radians", "Finite sums"],
+        "resources": [{"title": "3Blue1Brown · But what is a Fourier series?", "url": "https://www.3blue1brown.com/lessons/fourier-series/", "note": "Study rotating vectors, then distinguish whole-period error from ringing near jumps."}],
+        "presets": [
+            {"title": "One harmonic", "params": {"terms": 1}, "why": "Find the single sine inside a rotating vector."},
+            {"title": "Many harmonics, persistent ringing", "params": {"terms": 12, "phase": .12}, "why": "More terms improve RMS error without removing the Gibbs phenomenon."}],
+        "legend": [{"label": "Circles", "color": "#a68cff"}, {"label": "Rotating vectors", "color": "#5cffba"}, {"label": "Partial sum", "color": "#47d6ff"}, {"label": "Square-wave plateaus", "color": "#1f4063"}]},
+    "lorenz": {
+        "level": "Undergraduate 2–3", "view": "spatial", "prerequisites": ["Differential equations", "Numerical integration"],
+        "resources": [{"title": "MIT · Lorenz attractor and chaos", "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/resources/lorenz-attractor-and-chaos/", "note": "Strang and Moler introduce deterministic sensitivity; compare initial-data changes with step refinement here."}],
+        "presets": [
+            {"title": "Short horizon", "params": {"duration": 4}, "why": "Nearby starts initially remain nearby."},
+            {"title": "A longer horizon", "params": {"duration": 20}, "why": "Separate initial-data sensitivity from numerical step-size sensitivity."}],
+        "legend": [{"label": "Base trajectory", "color": "#47d6ff"}, {"label": "Nearby start", "color": "#ff59a8"}]},
+    "gradient": {
+        "level": "Undergraduate 2–3", "view": "spatial", "prerequisites": ["Gradients", "Eigenvalues", "Quadratics"],
+        "resources": [{"title": "Boyd and Vandenberghe · Convex Optimization", "url": "https://web.stanford.edu/~boyd/cvxbook/", "note": "Chapter 9 connects gradient descent with curvature and convergence."}],
+        "presets": [
+            {"title": "Round bowl", "params": {"condition": 1, "rate": .2}, "why": "Equal curvatures contract both modes equally."},
+            {"title": "Zigzag, yet converge", "params": {"condition": 8, "rate": .2}, "why": "A negative mode factor alternates sign while its magnitude stays below one."},
+            {"title": "Cross the stability boundary", "params": {"condition": 8, "rate": .26}, "why": "The steep mode amplifies when α exceeds 2/κ."}],
+        "legend": [{"label": "Quadratic surface", "color": "#a68cff"}, {"label": "Descent iterates", "color": "#ffba52"}, {"label": "Minimum", "color": "#ff59a8"}]},
+}
+for _lesson in _LESSONS:
+    _lesson.update(_ENRICHMENTS[_lesson["id"]])
+_LESSONS.extend(ANALYSIS_LESSONS + STRUCTURE_LESSONS + INFERENCE_LESSONS + SCIENCE_LESSONS)
+
+# Coordinate meanings and conceptual bridges remain catalog data, so every
+# lesson uses the same UI and exporters without a browser-side subject switch.
+_BRIDGES = {
+    "linear": ("XY plane: original and transformed Cartesian coordinates.", [
+        ("svd", "Decompose a transformation into two rotations and independent stretches."),
+        ("least_squares", "A column space is the set a matrix can reach.")]),
+    "derivative": ("Horizontal: x. Vertical: f(x). Slopes use the unscaled mathematical coordinates.", [
+        ("taylor", "A tangent is the first-order Taylor approximation."),
+        ("refraction", "A zero travel-time derivative selects the crossing point.")]),
+    "integral": ("Horizontal: x. Vertical: f(x). Rectangle area represents f(x*) Δx.", [
+        ("probability", "Probability density becomes probability through area."),
+        ("heat", "Integrate temperature to distinguish total heat from roughness.")]),
+    "fourier": ("Left: rotating vectors in a plane. Right: phase θ horizontally, partial-wave value vertically.", [
+        ("aliasing", "A continuous frequency and its sampled identity are different information."),
+        ("heat", "Diffusion damps each Fourier mode at a rate proportional to frequency squared.")]),
+    "lorenz": ("Display: (0.36x, 0.36(z−23), 0.36y); vertical height represents the Lorenz z coordinate.", [
+        ("vector_field", "Start with an exactly solvable flow before a nonlinear numerical flow."),
+        ("gradient", "Compare an attracting optimization recurrence with a continuous dynamical system.")]),
+    "gradient": ("Display: (x, 0.6f(x,y)/√κ, y). Metric losses retain mathematical units.", [
+        ("lagrange", "A constraint changes which downhill directions are available."),
+        ("svd", "Unequal stretch factors explain conditioning and narrow optimization valleys.")]),
+    "complex": ("Horizontal: real part. Vertical: imaginary part. Amber interpolates successive powers along one chosen angle path.", [
+        ("fourier", "Rotating complex vectors can be added to build a signal."),
+        ("svd", "Complex multiplication scales every direction equally; general matrix stretches need not.")]),
+    "taylor": ("Horizontal: x within [a−R,a+R]. Vertical: sine/polynomial value; the bracket shows a pointwise bound.", [
+        ("derivative", "Local slope agreement is the first derivative-matching condition."),
+        ("refraction", "Local derivatives can locate a global minimum when strict convexity is known.")]),
+    "waves": ("Horizontal: x−3 for string position x∈[0,6]. Wave lanes offset vertically ±2.7; middle is the sum. Time is t/T.", [
+        ("heat", "The same spatial modes oscillate in a wave equation but decay in a heat equation."),
+        ("aliasing", "A finite sequence of snapshots can disguise oscillation frequency.")]),
+    "probability": ("Horizontal: standardized count Z. Vertical: density ×6; displayed bar area divided by six equals probability mass.", [
+        ("bayes", "A distribution and a probability conditional on evidence answer different questions."),
+        ("integral", "A normal density gives probability through area, not curve height.")]),
+    "least_squares": ("Spatial coordinates: mathematical (x,y,z). Orbit to separate the target, plane and perpendicular residual.", [
+        ("svd", "Singular values explain why nearly dependent columns produce fragile coefficients."),
+        ("gradient", "The closest-point problem can also be viewed as minimizing a quadratic.")]),
+    "vector_field": ("XY plane: field positions. Cyan velocities use common scale 0.28; the integration circle stays fixed while tracers move.", [
+        ("lorenz", "Replace this exact linear flow with a nonlinear numerically integrated field."),
+        ("heat", "Flux connects local differential laws with changes across a whole domain.")]),
+}
+for _lesson in _LESSONS:
+    if _lesson["id"] in _BRIDGES:
+        _axes, _links = _BRIDGES[_lesson["id"]]
+        _lesson["axes"] = _axes
+        _lesson["connections"] = [{"lesson": key, "why": why} for key, why in _links]
 
 
 def catalog():

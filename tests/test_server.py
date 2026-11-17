@@ -12,6 +12,7 @@ from unittest import mock
 
 from mathlab.server import Handler, ThreadingHTTPServer, canonical, decode_request, MAX_BODY
 from mathlab import server as service
+from mathlab.catalog import catalog
 
 
 class DecodeControls(unittest.TestCase):
@@ -81,10 +82,10 @@ class HTTPControls(unittest.TestCase):
         self.assertEqual(headers['X-Content-Type-Options'], 'nosniff')
         status, _, data = self.request('GET', '/api/catalog')
         self.assertEqual(status, 200)
-        self.assertEqual(len(json.loads(data)['lessons']), 6)
+        self.assertEqual(len(json.loads(data)['lessons']), 18)
 
     def test_every_default_model_has_matching_export_identity(self):
-        for lesson in ('linear', 'derivative', 'integral', 'fourier', 'lorenz', 'gradient'):
+        for lesson in (spec['id'] for spec in catalog()):
             with self.subTest(lesson=lesson):
                 status, _, raw = self.request('POST', '/api/evaluate', {'lesson': lesson})
                 self.assertEqual(status, 200, raw[:300])
@@ -94,6 +95,20 @@ class HTTPControls(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(payload['x3d'].encode()).hexdigest(), payload['identity']['x3d_sha256'])
                 again = self.request('POST', '/api/evaluate', {'lesson': lesson})
                 self.assertEqual(raw, again[2])
+
+    def test_study_guide_relative_routes_work_on_loopback_and_static_layout(self):
+        status, _, root = self.request('GET', '/')
+        self.assertEqual(status, 200)
+        status, _, alias = self.request('GET', '/web/')
+        self.assertEqual(status, 200)
+        self.assertEqual(root, alias)
+        status, _, script = self.request('GET', '/web/app.js')
+        self.assertEqual(status, 200)
+        self.assertIn(b'function choose(', script)
+        status, _, guide = self.request('GET', '/docs/Insight-Expeditions.html')
+        self.assertEqual(status, 200)
+        self.assertIn(b'../web/#svd', guide)
+        self.assertEqual(self.request('GET', '/README.md')[0], 200)
 
     def test_refused_models_and_inputs_do_not_replace_a_healthy_result(self):
         for body in ({'lesson': '__import__'}, {'lesson': 'linear', 'params': {'a': 100000}},

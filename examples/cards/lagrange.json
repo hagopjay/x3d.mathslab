@@ -1,0 +1,10 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "lagrange",
+  "params": {
+    "axis_a": 2,
+    "axis_b": 1,
+    "direction": 0.7,
+    "probe": 0
+  }
+}

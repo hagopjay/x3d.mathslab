@@ -116,23 +116,145 @@ function changePanel(id) {
     panel.classList.toggle("active", active);
   }
 }
+function collectionMatches(lesson, query, level) {
+  const words = [lesson.title, lesson.shortName, lesson.tagline,
+    lesson.domain || domains[lesson.id], lesson.level,
+    ...(lesson.prerequisites || [])].filter(Boolean).join(" ").toLocaleLowerCase();
+  return (!level || lesson.level === level) &&
+    query.trim().toLocaleLowerCase().split(/\s+/).every((word) => words.includes(word));
+}
+function buildCollection() {
+  $("collectionCount").textContent = "01—" + String(state.lessons.length).padStart(2, "0");
+  $("collectionNote").textContent = state.lessons.length + " connected ways of seeing.";
+  const filter = $("levelFilter");
+  const levels = [...new Set(state.lessons.map((lesson) => lesson.level).filter(Boolean))];
+  for (const level of levels) {
+    const option = node("option", "", level);
+    option.value = level;
+    filter.append(option);
+  }
+  buildNav();
+}
 function buildNav() {
   const nav = $("lessonNav");
+  const query = $("lessonSearch")?.value || "";
+  const level = $("levelFilter")?.value || "";
   nav.replaceChildren();
+  let shown = 0;
   state.lessons.forEach((lesson, i) => {
+    if (!collectionMatches(lesson, query, level)) return;
+    shown++;
     const b = node("button", "lesson-button");
     b.dataset.lesson = lesson.id;
-    b.setAttribute("aria-current", "false");
+    b.setAttribute("aria-current", String(state.lesson?.id === lesson.id));
     b.append(node("span", "n", String(i + 1).padStart(2, "0")));
     const text = node("span");
     text.append(
-      node("strong", "", shortNames[lesson.id] || lesson.title),
-      node("small", "", domains[lesson.id] || lesson.tagline),
+      node("strong", "", lesson.shortName || shortNames[lesson.id] || lesson.title),
+      node("small", "", lesson.domain || domains[lesson.id] || lesson.tagline),
     );
     b.append(text);
+    if (lesson.level) b.title = lesson.level;
     b.onclick = () => choose(lesson.id);
     nav.append(b);
   });
+  if (!shown) nav.append(node("p", "collection-empty", "No matching idea. Try a broader search or another level."));
+  if ($("collectionStatus")) $("collectionStatus").textContent = shown + " of " + state.lessons.length + " experiments";
+}
+function clearPreset() {
+  for (const button of document.querySelectorAll("[data-preset]"))
+    button.setAttribute("aria-pressed", "false");
+}
+function applyPreset(index) {
+  const lesson = state.lesson, preset = lesson.presets?.[index];
+  if (!preset) return;
+  choose(lesson.id, { ...defaults(lesson), ...preset.params });
+  const button = $("lessonPresets").querySelector('[data-preset="' + index + '"]');
+  button?.setAttribute("aria-pressed", "true");
+  $("presetNote").textContent = preset.why || "Predict what will happen, then move one control.";
+}
+function followConnection(id) {
+  const target = state.lessons.find((lesson) => lesson.id === id);
+  if (!target) return;
+  const mode = state.mode || "story";
+  const search = $("lessonSearch"), filter = $("levelFilter");
+  // A learning link should not leave its destination hidden by an old search.
+  if (!collectionMatches(target, search?.value || "", filter?.value || "")) {
+    if (search) search.value = "";
+    if (filter) filter.value = "";
+  }
+  choose(target.id);
+  buildNav();
+  changePanel(mode);
+  $("lessonTitle")?.focus?.();
+}
+function buildConnections() {
+  const list = $("lessonConnections");
+  list.replaceChildren();
+  const seen = new Set();
+  for (const connection of state.lesson.connections || []) {
+    const target = state.lessons.find((lesson) => lesson.id === connection.lesson);
+    if (!target || target.id === state.lesson.id || seen.has(target.id)) continue;
+    seen.add(target.id);
+    const row = node("li"), button = node("button", "connection-button");
+    button.type = "button";
+    button.append(node("strong", "", "Continue with " + (target.shortName || target.title) + " →"));
+    if (connection.why) button.append(node("span", "", connection.why));
+    button.onclick = () => followConnection(target.id);
+    row.append(button);
+    list.append(row);
+  }
+  $("connectionsSection").hidden = !list.childElementCount;
+}
+function buildLearningTools() {
+  const lesson = state.lesson;
+  const profile = $("learningProfile");
+  profile.replaceChildren();
+  if (lesson.level) profile.append(node("span", "level-chip", lesson.level));
+  if (lesson.prerequisites?.length)
+    profile.append(node("span", "prerequisites", "Bring: " + lesson.prerequisites.join(" · ")));
+  const legend = $("sceneLegend");
+  legend.replaceChildren();
+  for (const item of lesson.legend || []) {
+    const row = node("li"), swatch = node("i");
+    // Catalog-authored colors; ignore malformed values rather than injecting CSS.
+    if (/^#[0-9a-f]{6}$/i.test(item.color)) swatch.style.backgroundColor = item.color;
+    swatch.setAttribute("aria-hidden", "true");
+    row.append(swatch, node("span", "", item.label));
+    legend.append(row);
+  }
+  legend.hidden = !legend.childElementCount;
+  const axes = $("sceneAxes");
+  axes.textContent = lesson.axes || "";
+  axes.hidden = !lesson.axes;
+  const presets = $("lessonPresets");
+  presets.replaceChildren();
+  (lesson.presets || []).forEach((preset, index) => {
+    const button = node("button", "preset-button", preset.title);
+    button.dataset.preset = String(index);
+    button.setAttribute("aria-pressed", "false");
+    if (preset.why) button.title = preset.why;
+    button.onclick = () => applyPreset(index);
+    presets.append(button);
+  });
+  $("presetSection").hidden = !presets.childElementCount;
+  $("presetNote").textContent = "Choose a starting point, predict, then change one control.";
+  const resources = $("lessonResources");
+  resources.replaceChildren();
+  for (const resource of lesson.resources || []) {
+    let url;
+    try { url = new URL(resource.url); } catch (_) { continue; }
+    if (url.protocol !== "https:") continue;
+    const row = node("li"), link = node("a", "", resource.title + " ↗");
+    link.href = url.href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    row.append(link);
+    if (resource.note) row.append(node("p", "", resource.note));
+    resources.append(row);
+  }
+  $("resourcesSection").hidden = !resources.childElementCount;
+  buildConnections();
 }
 function resetPrediction() {
   $("predictionText").value = "";
@@ -159,7 +281,7 @@ function choose(id, incoming) {
   $("lessonTitle").textContent = lesson.title;
   $("lessonTagline").textContent = lesson.tagline || "";
   $("lessonDescription").textContent = lesson.description || "";
-  $("lessonCategory").textContent = domains[id] || "A CONNECTED IDEA";
+  $("lessonCategory").textContent = lesson.domain || domains[id] || "A CONNECTED IDEA";
   $("lessonIndex").textContent = String(
     state.lessons.indexOf(lesson) + 1,
   ).padStart(2, "0");
@@ -173,6 +295,7 @@ function choose(id, incoming) {
     b.setAttribute("aria-current", String(b.dataset.lesson === id));
   buildControls();
   buildStory();
+  buildLearningTools();
   $("sourceText").value = "";
   $("metrics").replaceChildren();
   $("insights").replaceChildren();
@@ -269,6 +392,7 @@ function syncControls() {
   }
 }
 function schedule() {
+  clearPreset();
   stopMotion();
   clearTimeout(state.debounce);
   state.revision++;
@@ -498,7 +622,7 @@ function drawProjection(sample) {
   group.replaceChildren();
   const prims = sample.primitives || [],
     center = sample.bounds?.center || [0, 0, 0],
-    threeD = ["lorenz", "gradient"].includes(sample.lesson);
+    threeD = sample.view === "spatial" || ["lorenz", "gradient"].includes(sample.lesson);
   const project = (p) =>
     threeD
       ? [
@@ -728,6 +852,7 @@ for (const b of document.querySelectorAll("[data-panel]")) {
   };
 }
 $("resetParameters").onclick = () => {
+  clearPreset();
   stopMotion();
   state.params = defaults(state.lesson);
   syncControls();
@@ -886,7 +1011,7 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) stopMotion();
 });
 $("guideButton").onclick = () =>
-  window.open((location.pathname.includes("/web/") ? "../docs/" : "/docs/") + "Mathlab-Field-Guide.html", "_blank", "noopener");
+  window.open((location.pathname.includes("/web/") ? "../docs/" : "/docs/") + "Insight-Expeditions.html", "_blank", "noopener");
 async function initialize() {
   try {
     const response = await apiFetch("/api/catalog");
@@ -896,7 +1021,7 @@ async function initialize() {
     if (!Array.isArray(data.lessons) || !data.lessons.length)
       throw new Error("The lesson collection is empty.");
     state.lessons = data.lessons;
-    buildNav();
+    buildCollection();
     const requested = location.hash.slice(1);
     choose(
       state.lessons.some((l) => l.id === requested)
@@ -910,6 +1035,16 @@ async function initialize() {
     $("rendererLabel").textContent = "LOCAL SERVICE UNAVAILABLE";
   }
 }
+$("lessonSearch").oninput = buildNav;
+$("levelFilter").onchange = buildNav;
+// Let keyboard users jump directly from a search to its first result.
+$("lessonSearch").onkeydown = (event) => {
+  if (event.key === "ArrowDown") {
+    const first = $("lessonNav").querySelector("button");
+    if (first) { event.preventDefault(); first.focus(); }
+  }
+  if (event.key === "Escape") { $("lessonSearch").value = ""; buildNav(); }
+};
 initialize();
 
 // Keep the 3D view clear of the equation card: size the canvas to the space above it.

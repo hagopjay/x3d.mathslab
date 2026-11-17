@@ -1,0 +1,139 @@
+{
+  "schema": "mathlab.aha-independent/1",
+  "created_utc": "2026-11-17T19:24:48.985344+00:00",
+  "source_sha256": {
+    "mathlab/catalog.py": "669442e4652ce772e2c27f6770fb7efcb6c6f8cc273a73f82b0a7bccd7e1a68d",
+    "mathlab/kernel.py": "6734f505fb9e8e2db7f0c68fb09fbf3585e8561c8091a97d168126e2680c97b6",
+    "mathlab/lessons_analysis.py": "119f37a86b41356f1f66405e32ffd20697e775842af465e0900fc07e5238c928",
+    "mathlab/lessons_structures.py": "0b15b886ca89e25538ecd453993758c7822bef16eb5ebaabe884a4d3b10d9495",
+    "mathlab/x3d.py": "b1f82c9940b75aec4a6da5e5b165dad1ef26d5d385143eada98a635cedab2e98",
+    "mathlab/manim_bridge.py": "1f94c86ce34cc1f028957a73aeff47dd231023bbe3bf7452be09ef8595ffc8a3",
+    "tools/probe_aha.py": "ca009931bf6b9b646a0be2b66e44eb35404fd827c117fbb693d035a578c1f95d"
+  },
+  "seed": 24021,
+  "cases_per_new_model": 60,
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "checks": [
+    {
+      "id": "complex_cmath",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "seed": 24021,
+        "max_endpoint_absolute_difference": 1.1957467920563633e-15,
+        "endpoint_absolute_tolerance": 1e-12,
+        "root_absolute_tolerance": 2e-14,
+        "reference": "Python cmath polar construction and built-in complex integer power"
+      },
+      "elapsed_seconds": 0.02993092199999836
+    },
+    {
+      "id": "taylor_complex_derivative_sum",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "seed": 24022,
+        "max_direct_sum_difference": 2.220446049250313e-16,
+        "direct_sum_absolute_tolerance": 5e-13,
+        "max_error_above_analytic_bound": 5.546820430093321e-17,
+        "roundoff_allowance": 1e-12,
+        "reference": "Complex-exponential derivatives summed directly; analytic sine remainder inequality"
+      },
+      "elapsed_seconds": 0.042920492999996895
+    },
+    {
+      "id": "wave_addition_identity",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "seed": 24023,
+        "max_sample_absolute_difference": 1.3877787807814457e-15,
+        "absolute_tolerance": 1e-12,
+        "reference": "Sine addition identity evaluated at all emitted abscissae"
+      },
+      "elapsed_seconds": 0.059430788000000234
+    },
+    {
+      "id": "binomial_scipy",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "seed": 24024,
+        "max_pmf_absolute_difference": 6.38378239159465e-16,
+        "max_cc_cdf_gap_difference": 2.7755575615628914e-15,
+        "absolute_tolerance": 3e-13,
+        "reference": "scipy.stats.binom.pmf/cdf and scipy.stats.norm.cdf"
+      },
+      "elapsed_seconds": 0.04672011299999923
+    },
+    {
+      "id": "least_squares_numpy_svd",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "seed": 24025,
+        "max_projection_norm_difference": 3.556181433338904e-15,
+        "max_coefficient_norm_difference": 1.2560739669470201e-14,
+        "max_condition_absolute_difference": 3.552713678800501e-15,
+        "absolute_tolerance": 1e-11,
+        "reference": "numpy.linalg.lstsq and numpy.linalg.cond (SVD-based, not the model's geometric QR)"
+      },
+      "elapsed_seconds": 0.02245876500000321
+    },
+    {
+      "id": "field_scipy_flow_and_boundary",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "seed": 24026,
+        "max_flow_endpoint_norm_difference": 5.54416326085691e-12,
+        "flow_absolute_tolerance": 5e-10,
+        "solver_rtol": 1e-11,
+        "solver_atol": 1e-13,
+        "max_flux_absolute_difference": 1.7763568394002505e-15,
+        "max_circulation_absolute_difference": 3.552713678800501e-15,
+        "boundary_absolute_tolerance": 1e-11,
+        "reference": "scipy.integrate.solve_ivp RK45 and adaptive QUADPACK boundary integration"
+      },
+      "elapsed_seconds": 0.12649721500000055
+    },
+    {
+      "id": "wave_scipy_integrated_energy",
+      "status": "pass",
+      "observation": {
+        "cases": 20,
+        "seed": 24027,
+        "max_fraction_absolute_difference": 8.326672684688674e-16,
+        "absolute_tolerance": 1e-11,
+        "reference": "Adaptive integrals of y_t² and c² y_x² over the full ideal string"
+      },
+      "elapsed_seconds": 0.021815099999997756
+    },
+    {
+      "id": "mixed_parameter_exports",
+      "status": "pass",
+      "observation": {
+        "cases": 72,
+        "per_lesson": 4,
+        "seed_by_catalog_index": "24121 + index",
+        "largest_x3d_bytes": 210998,
+        "largest_manim_source_bytes": 212104,
+        "scope": "Adapter validation and generated Python compilation only; no schema validator, X3D rendering, or Manim execution"
+      },
+      "elapsed_seconds": 1.183913564000001
+    }
+  ],
+  "scope": "Reproducible development corroboration with explicit numeric tolerances, not formal proof or a learning-outcome study.",
+  "limitations": [
+    "One numerical host; finite random coverage is not exhaustive.",
+    "No native X3D rendering, browser interaction, GPU benchmark, or Manim video is performed."
+  ],
+  "source_drift": "none",
+  "status": "pass",
+  "report_sha256": "e50f162ad567c3446a67df733541fcf835cbe2633172449ff880a6610729c1f5"
+}

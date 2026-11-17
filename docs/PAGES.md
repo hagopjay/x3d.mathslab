@@ -1,5 +1,17 @@
 # Static hosting (GitHub Pages) mode
 
+Insight Expeditions adds `lessons_inference.py` and `lessons_science.py` to
+the shared stdlib-only browser module inventory. The current catalog has eighteen
+lessons. Static import-contract checks cover all dependencies; fresh browser
+render evidence is recorded separately in [EXPEDITIONS-VALIDATION.md](EXPEDITIONS-VALIDATION.md).
+
+The Aha Atlas extension adds `lessons_analysis.py` and `lessons_structures.py` to
+the same stdlib-only Pyodide installation list. All twelve domains are now in
+the catalog and parameter-card schema. Current automated contract checks pass;
+a fresh native browser/Pyodide render could not run on this host. The measured
+six-lesson browser results below describe the earlier release, not this one.
+See [AHA-VALIDATION.md](AHA-VALIDATION.md).
+
 Every number below names its instrument. Receipts: `receipts/browser-smoke-pages.json`,
 `receipts/browser-smoke-server.json`, `receipts/runtime-parity.json`.
 
@@ -57,3 +69,16 @@ The root `index.html` redirects to `web/`. `.nojekyll` is present so vendored fi
 * First load needs the network for Pyodide (about 10 MB); offline use needs the local server.
 * The 3D view zooms the authored viewpoint 25% closer at runtime (view-only; the X3D bytes are unchanged).
 * The shipped `receipts/*` were produced on Linux; they are not claims about your machine.
+
+## 18-lesson verification (17 Nov 2026, second launch)
+
+Instruments: CPython 3.13.18, mcp 2.3.0, SciPy 1.17.0, Node 22.23.4, Chromium 153.0.8010.12 via Playwright 1.63.0 (software GL),
+Pyodide 0.27.7, `x3d_mcp` b5c9956 (XSD 4.0 plus semantic checks, 18 worlds plus 2 negative controls).
+
+* `tools/check_release.py`: pass, 9 instruments, 148 Python tests, 3 Node UI tests, source drift none.
+* Both transports render all 18 lessons natively with 0 console errors; a parameter nudge changes the model identity;
+  the Manim source download works (`receipts/browser-smoke-pages-18.json`, `receipts/browser-smoke-server-18.json`).
+* Cross-runtime parity extended to all 18 (`receipts/runtime-parity-18.json`): 7 lessons bit-identical
+  (integral, lorenz, gradient, probability, least_squares, bayes, refraction), 11 differ by at most
+  4.44e-16 absolute. The bound did not grow with the 12 new lessons.
+* The first six lessons are preserved at tag `v0.1.1-six-lessons`.

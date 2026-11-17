@@ -1,16 +1,20 @@
 {
   "schema": "mathlab.example-build/1",
-  "python": "3.13.18",
+  "python": "3.12.14",
   "source_sha256": {
     "__init__.py": "7ced7664bbd1076034fe2c86e39027a9a794944cc4d82138d6ace895734829e4",
     "cards.py": "c1d3fd9ee31b6332c3c0ba279afd3263acb2c10eb54d8ad6e98332fb695c3a4e",
-    "catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
-    "kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
-    "manim_bridge.py": "27f836c06180ed799b7b0f4c462770cb9d5709e02d2d7f153593d34a4c2946f0",
+    "catalog.py": "669442e4652ce772e2c27f6770fb7efcb6c6f8cc273a73f82b0a7bccd7e1a68d",
+    "kernel.py": "6734f505fb9e8e2db7f0c68fb09fbf3585e8561c8091a97d168126e2680c97b6",
+    "lessons_analysis.py": "119f37a86b41356f1f66405e32ffd20697e775842af465e0900fc07e5238c928",
+    "lessons_inference.py": "a33e3ec1106beed568e532f84f5f4dd97a102c0b02203906c52354d0dd014aa7",
+    "lessons_science.py": "1a70c6c834558097ddf3f0f4a8651e702753268897dcb60fabd2c14f067d63fa",
+    "lessons_structures.py": "0b15b886ca89e25538ecd453993758c7822bef16eb5ebaabe884a4d3b10d9495",
+    "manim_bridge.py": "1f94c86ce34cc1f028957a73aeff47dd231023bbe3bf7452be09ef8595ffc8a3",
     "mcp_server.py": "54dda98b3bd29872d6d65fb1f03c61306d3634271aeb53b4f1833f78f535f9e9",
     "schema.py": "f2512f474001845559c69908194865b26cb1f22761b102179810227a4b161886",
-    "server.py": "0c47e85e1b40415ab4354af9491e3619e43af9ba232fc8c5c1c6d2a7f17552b3",
-    "x3d.py": "39fb7f5cedd965e6dd7163b2df381bee73bf27539804cfc8eec2eb93722d5850"
+    "server.py": "abbe0397a17b30f609c1eaf8fadd1fde59099dd44eeffba3c97da1cefed97576",
+    "x3d.py": "b1f82c9940b75aec4a6da5e5b165dad1ef26d5d385143eada98a635cedab2e98"
   },
   "examples": [
     {
@@ -51,12 +55,12 @@
           "sha256": "0e494de833da1653a3899b83b695003f9499555576e1460635bbd468880e083b"
         },
         "examples/x3d/linear.x3d": {
-          "bytes": 50200,
-          "sha256": "f09aa0b55e69ec38046986052dd226c806df2ba6a55d41ebec6df809dbf5ca68"
+          "bytes": 50331,
+          "sha256": "801548f15597b06fd8d40d8ee43ef1b95406236a477bf06d78a1d5746d877b54"
         },
         "examples/manim/linear.py": {
-          "bytes": 23854,
-          "sha256": "6b3278059af017c5411eb89b5dbd73264fcfcc5f145afe957304dd94f01b6233"
+          "bytes": 23972,
+          "sha256": "c614ef13fc2e4f31df84e65b9e2fbb63666e932a0f605a15983a19c238dd0c63"
         }
       }
     },
@@ -105,12 +109,12 @@
           "sha256": "f3f873c59f0cdca3c3abeb9fed2233f34cfcdcc7dd416a33a4c6841d3a0e834c"
         },
         "examples/x3d/derivative.x3d": {
-          "bytes": 26012,
-          "sha256": "f934681ca69d8605f5cd510cffe36befacb0f8bfc95825b18866a227580e44bf"
+          "bytes": 26166,
+          "sha256": "2fb5ef4dfef8823e41e65722cb6c63aecd6ec75c052de179de6ebc88a4140c08"
         },
         "examples/manim/derivative.py": {
-          "bytes": 18452,
-          "sha256": "da4913883c067141d1fe931ca53241579ca57d60d789b711e74c7450fc566ac6"
+          "bytes": 18593,
+          "sha256": "3c7ae80004e719e7bd57e67c995f689b6193394dd7392cc8d99d829a0a5c91fa"
         }
       }
     },
@@ -159,12 +163,12 @@
           "sha256": "a0050e8410b4025daf63c1fb1e2469bd8a08c11dcbe7a0f2acd6e4971eeff4df"
         },
         "examples/x3d/integral.x3d": {
-          "bytes": 37352,
-          "sha256": "a5418a094cdcdf0cc03c79ea62ff39fac3a3f35938b00b6fff6f9104a12095db"
+          "bytes": 37493,
+          "sha256": "a4c3194f61e8a64bac4a05bcfbf9de5130108f22c5aa0b3d1fb7f30f5c1092fe"
         },
         "examples/manim/integral.py": {
-          "bytes": 21912,
-          "sha256": "f99c6a3cd91ceaea443020ce59d585848ea8b0f229c7df8d742f4d98f9b04643"
+          "bytes": 22040,
+          "sha256": "e9de5cace59ce4ea15075575d700debdb3d24d4ea2e652e4cf5c1543160667e3"
         }
       }
     },
@@ -206,12 +210,12 @@
           "sha256": "d9fcedb2d2957abfdf6fc7447cc7521d2a7b9d013885074ddd0d80b9de03621b"
         },
         "examples/x3d/fourier.x3d": {
-          "bytes": 65369,
-          "sha256": "531dc9bab35f96f56d3859f4ebc98d2f8122107cbaea0cf356c15f6662be25a4"
+          "bytes": 65538,
+          "sha256": "d83146564b0199c2ce0fb8b5433d2f02739a90ff5a959ccffb7095264fe96528"
         },
         "examples/manim/fourier.py": {
-          "bytes": 46242,
-          "sha256": "f86e57dffc13518f765cc7ce6bc50e581886c5318ed883f37b4830825275e32d"
+          "bytes": 46398,
+          "sha256": "8969e297f8c1711fc9267d89cde91a41d95ef60deb2456cf4a0f9bb2ae9dc115"
         }
       }
     },
@@ -260,12 +264,12 @@
           "sha256": "fc46f5171e28516f44bad7eadfb53168f9eebdc49f7157ee102e9a0efcac7ffe"
         },
         "examples/x3d/lorenz.x3d": {
-          "bytes": 137979,
-          "sha256": "3c1b7f890a17155ea7d401bf5440a991b9673d774cd0e864e5966d1a068ffe48"
+          "bytes": 138144,
+          "sha256": "8db46cd4bd938a9cdf6eb8517404b6149f5c8a87164bd0d33a1479c2740884c1"
         },
         "examples/manim/lorenz.py": {
-          "bytes": 128713,
-          "sha256": "aea8e9c0c238a550fdc08161bbf4e3c1e5f90fe98b59ff2a4f787efcf2bfd8ae"
+          "bytes": 128865,
+          "sha256": "34a2a68adb02016de2a4f16f228af85146acde146299ae4250ec1152ce1a63a6"
         }
       }
     },
@@ -314,15 +318,691 @@
           "sha256": "5e02a278d75798dc5f74ee8c86e7f5b5c7be86ff5dbbe190ae87d09594940f51"
         },
         "examples/x3d/gradient.x3d": {
-          "bytes": 133560,
-          "sha256": "640197dd2dca1eaff30acc219d9dbb9b498683af52d97eccac438ad9b5c5b680"
+          "bytes": 133709,
+          "sha256": "676336c62f7d629ff623d77e1fa52010bab389cad76b75127af6deecd148948a"
         },
         "examples/manim/gradient.py": {
-          "bytes": 104709,
-          "sha256": "715d244ac6faef1994eb9f3d0aa99209d32c7ab306057a5b5cbd13727986542e"
+          "bytes": 104845,
+          "sha256": "dd5afed645ef1192e25ba5d4291a73d22b4f360f8784cff9b6ec560ace1021e6"
+        }
+      }
+    },
+    {
+      "lesson": "complex",
+      "metrics": [
+        {
+          "id": "modulus",
+          "label": "Displayed multiplier modulus",
+          "value": 1,
+          "unit": "× per step",
+          "note": ""
+        },
+        {
+          "id": "angle",
+          "label": "Displayed angle added",
+          "value": 1.2566370614359172,
+          "unit": "rad per step",
+          "note": ""
+        },
+        {
+          "id": "endpoint_modulus",
+          "label": "Modulus after n steps",
+          "value": 1.0,
+          "unit": "",
+          "note": "Compare with r^(tn)."
+        },
+        {
+          "id": "closure",
+          "label": "Distance of zₜⁿ from 1",
+          "value": 2.220446049250313e-16,
+          "unit": "",
+          "note": "Zero indicates closure after n steps, not necessarily n distinct vertices."
+        },
+        {
+          "id": "polar_residual",
+          "label": "Cartesian / polar endpoint difference",
+          "value": 2.2884754904439333e-17,
+          "unit": "",
+          "note": "Repeated Cartesian products compared with the closed polar formula."
+        }
+      ],
+      "files": {
+        "examples/cards/complex.json": {
+          "bytes": 170,
+          "sha256": "d96e4a34d06e538f1da05e830ef02f4616a63d35fd8cefd0cf6ebcd7c07bcee7"
+        },
+        "examples/x3d/complex.x3d": {
+          "bytes": 42334,
+          "sha256": "d72f3ea4c2350a31ba42346c5621ddb819d4f79269ad0a27637c463abead42e6"
+        },
+        "examples/manim/complex.py": {
+          "bytes": 30842,
+          "sha256": "edfa247d1535ca88c2db587eafeac66e5a714a089d962ab2b5caa6c4071d1a4f"
+        }
+      }
+    },
+    {
+      "lesson": "taylor",
+      "metrics": [
+        {
+          "id": "probe_x",
+          "label": "Probe x",
+          "value": 2.0,
+          "unit": "",
+          "note": "x=a+R·probe fraction."
+        },
+        {
+          "id": "polynomial",
+          "label": "Taylor value Tₙ(x)",
+          "value": 0.6666666666666667,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "error",
+          "label": "Signed error Tₙ(x) − sin x",
+          "value": -0.24263076015901497,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "bound",
+          "label": "Guaranteed pointwise |error| ≤",
+          "value": 0.6666666666666666,
+          "unit": "",
+          "note": "Lagrange remainder with |sin^(n+1)(ξ)|≤1; roundoff is separate."
+        },
+        {
+          "id": "window_bound",
+          "label": "Uniform window |error| ≤",
+          "value": 1.6276041666666667,
+          "unit": "",
+          "note": "Valid throughout [a−R,a+R], not merely at the sampled vertices."
+        }
+      ],
+      "files": {
+        "examples/cards/taylor.json": {
+          "bytes": 155,
+          "sha256": "f6b49dd80b098a3e28e0eed10c22179234f613ecfc1ef50bb1d3dccf392754bd"
+        },
+        "examples/x3d/taylor.x3d": {
+          "bytes": 48633,
+          "sha256": "c88cc62673237911fdcdff246c49333429b5070e832d4230ee439dd964493d66"
+        },
+        "examples/manim/taylor.py": {
+          "bytes": 42590,
+          "sha256": "6efbce66bd8575bbfba57a8106ad5d7a362bbe79f51a5d16fe77af758739afd9"
+        }
+      }
+    },
+    {
+      "lesson": "waves",
+      "metrics": [
+        {
+          "id": "nodes",
+          "label": "Permanent nodes including endpoints",
+          "value": 4,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "period",
+          "label": "Physical period T",
+          "value": 4.0,
+          "unit": "s",
+          "note": "String length L=6. T=2L/(nc)."
+        },
+        {
+          "id": "time_seconds",
+          "label": "Physical time represented",
+          "value": 0.48,
+          "unit": "s",
+          "note": "The time control is a fraction of one current period; changing c changes physical time at the same frozen phase."
+        },
+        {
+          "id": "kinetic",
+          "label": "Whole-string kinetic energy share",
+          "value": 0.4686047402353432,
+          "unit": "of total",
+          "note": "Ideal undamped linear string; normalized integral over the whole string."
+        },
+        {
+          "id": "potential",
+          "label": "Whole-string elastic energy share",
+          "value": 0.5313952597646567,
+          "unit": "of total",
+          "note": ""
+        },
+        {
+          "id": "sum_residual",
+          "label": "Sum / standing-form max difference",
+          "value": 5.551115123125783e-16,
+          "unit": "",
+          "note": "Sampled floating-point check of the sine addition identity."
+        }
+      ],
+      "files": {
+        "examples/cards/waves.json": {
+          "bytes": 174,
+          "sha256": "a33e5fab44e4ac16427df5415146f8adf1e16a26002ba56bd01b8aa51766c25f"
+        },
+        "examples/x3d/waves.x3d": {
+          "bytes": 82947,
+          "sha256": "6bfcc1f185e973e725a755b2565bbac4a55e8b08fe495eb934a36139b3a04ea4"
+        },
+        "examples/manim/waves.py": {
+          "bytes": 77920,
+          "sha256": "0fec210b575114353384fc11082c5736cef5d035ca66b77c2d70db177a0d6b56"
+        }
+      }
+    },
+    {
+      "lesson": "probability",
+      "metrics": [
+        {
+          "id": "mean",
+          "label": "Standardized mean",
+          "value": 2.8760834317430317e-16,
+          "unit": "",
+          "note": "The exact finite-n reference is zero; this is its floating-point sum."
+        },
+        {
+          "id": "variance",
+          "label": "Standardized variance",
+          "value": 1.0,
+          "unit": "",
+          "note": "The exact finite-n reference is one, before taking any limit."
+        },
+        {
+          "id": "mass",
+          "label": "Total discrete probability",
+          "value": 1.0,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "normal_error",
+          "label": "Max continuity-corrected CDF gap",
+          "value": 0.011305830373333992,
+          "unit": "",
+          "note": "Measured at k+½ for k=0…n. A finite comparison, not a theorem bound or a density error."
+        },
+        {
+          "id": "tail",
+          "label": "Undrawn probability mass",
+          "value": 3.379220508056638e-06,
+          "unit": "",
+          "note": "All outcomes remain in numerical data. Only bars with standardized centers |z|≤4.5 are drawn."
+        }
+      ],
+      "files": {
+        "examples/cards/probability.json": {
+          "bytes": 117,
+          "sha256": "945b229d8046de885f8c7a102f73c54ccccf0a4da2cde7071e56e50c10b4a6ca"
+        },
+        "examples/x3d/probability.x3d": {
+          "bytes": 41237,
+          "sha256": "01e05c79ab939e1aac0c99c60310614d21b459ee1090044668ceefb855f18eb8"
+        },
+        "examples/manim/probability.py": {
+          "bytes": 28658,
+          "sha256": "952599f24db0112e202f2f0746fe74066e5d9ab4cfa5800ac1300f0e76ea86d5"
+        }
+      }
+    },
+    {
+      "lesson": "least_squares",
+      "metrics": [
+        {
+          "id": "residual",
+          "label": "Closest distance ||b−p||",
+          "value": 1.163076821608171,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "orthogonality",
+          "label": "Max |aⱼ·(b−p)|",
+          "value": 5.551115123125783e-17,
+          "unit": "",
+          "note": "Zero is the analytic optimality condition; this is a floating-point diagnostic."
+        },
+        {
+          "id": "coefficient_1",
+          "label": "Coefficient x̂₁",
+          "value": -2.4557683767741656,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "coefficient_2",
+          "label": "Coefficient x̂₂",
+          "value": 3.8557683767741655,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "condition",
+          "label": "2-norm condition number κ₂(A)",
+          "value": 3.932042912437429,
+          "unit": "",
+          "note": "κ₂(AᵀA)=κ₂(A)². The display solves by the known orthonormal basis rather than forming the normal equations."
+        }
+      ],
+      "files": {
+        "examples/cards/least_squares.json": {
+          "bytes": 175,
+          "sha256": "658e501921aa327a53c4021b68f93503c1183c6e80092d0393872a60f535bd6a"
+        },
+        "examples/x3d/least_squares.x3d": {
+          "bytes": 26457,
+          "sha256": "e3b67d42c37c7fb1bc38e19fd3a59a440d25fb93eb3b901fd69e7622d32f5114"
+        },
+        "examples/manim/least_squares.py": {
+          "bytes": 13206,
+          "sha256": "3abb3b58cea36e5c216da8cbe227dc3f26ca01ac433920557a76483eba109ea7"
+        }
+      }
+    },
+    {
+      "lesson": "vector_field",
+      "metrics": [
+        {
+          "id": "divergence",
+          "label": "Divergence",
+          "value": 0.4,
+          "unit": "",
+          "note": "Instantaneous fractional area-growth rate for this velocity field."
+        },
+        {
+          "id": "curl",
+          "label": "Out-of-plane curl",
+          "value": 1.6,
+          "unit": "",
+          "note": "Counterclockwise is positive. Rigid-body angular speed is b, half this curl."
+        },
+        {
+          "id": "flux",
+          "label": "Outward flux: fixed circle",
+          "value": 2.1237166338267004,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "circulation",
+          "label": "CCW circulation: fixed circle",
+          "value": 8.494866535306802,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "area",
+          "label": "Tracer area ÷ initial area",
+          "value": 1.3771277643359572,
+          "unit": "×",
+          "note": "Exact flow determinant exp(2at); the integration circle remains fixed."
+        }
+      ],
+      "files": {
+        "examples/cards/vector_field.json": {
+          "bytes": 154,
+          "sha256": "1b0df6f24cfd97d8399309bbd32d5164105dd56bcd0547410ada4848b529be30"
+        },
+        "examples/x3d/vector_field.x3d": {
+          "bytes": 80638,
+          "sha256": "c2a8a17af1b224234f0381e8d75d114a49dc7a16c3a63d1cd5a2e9b50554aaab"
+        },
+        "examples/manim/vector_field.py": {
+          "bytes": 34161,
+          "sha256": "d416bc696f04fb90862a6cdf0b968ed94042ecee9e83ebe996547be2ca526b10"
+        }
+      }
+    },
+    {
+      "lesson": "svd",
+      "metrics": [
+        {
+          "id": "stage",
+          "label": "Currently displayed stage",
+          "value": "complete target A",
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "display_area",
+          "label": "Displayed signed-area factor",
+          "value": 1.4,
+          "unit": "×",
+          "note": "Determinant of the current staged matrix, not automatically that of target A."
+        },
+        {
+          "id": "sigma1",
+          "label": "Target σ₁",
+          "value": 2,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "sigma2",
+          "label": "Target σ₂",
+          "value": 0.7,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "condition",
+          "label": "Target condition number κ₂(A)",
+          "value": 2.857142857142857,
+          "unit": "",
+          "note": "Singular values describe the target; only progress=3 shows that complete target."
+        },
+        {
+          "id": "direction_residual",
+          "label": "Target max ||Avⱼ−σⱼuⱼ||",
+          "value": 5.551115123125783e-17,
+          "unit": "",
+          "note": ""
+        }
+      ],
+      "files": {
+        "examples/cards/svd.json": {
+          "bytes": 179,
+          "sha256": "617d9f65082849a94aed1f1a92700da08387a32477632042a5360176def5ef90"
+        },
+        "examples/x3d/svd.x3d": {
+          "bytes": 51939,
+          "sha256": "dd1245707efc52de62a843cbaa09c71552098b6b9390e99fc727854a9547442d"
+        },
+        "examples/manim/svd.py": {
+          "bytes": 37591,
+          "sha256": "40d739858989e0bdbcdd420e20b3630aa27ebe77549bb8b0cb54fee467a60d5c"
+        }
+      }
+    },
+    {
+      "lesson": "bayes",
+      "metrics": [
+        {
+          "id": "posterior",
+          "label": "Tagged among positive results",
+          "value": 50.0,
+          "unit": "%",
+          "note": "This conditional probability is the mint share of the right panel."
+        },
+        {
+          "id": "expected_tp",
+          "label": "Expected true positives",
+          "value": 99.00000000000001,
+          "unit": "per 10,000",
+          "note": "Expected counts may be fractional; no random population was simulated."
+        },
+        {
+          "id": "expected_fp",
+          "label": "Expected false positives",
+          "value": 99.00000000000001,
+          "unit": "per 10,000",
+          "note": ""
+        },
+        {
+          "id": "positive",
+          "label": "All positive results",
+          "value": 1.9800000000000002,
+          "unit": "% of all objects",
+          "note": ""
+        },
+        {
+          "id": "likelihood_ratio",
+          "label": "Positive likelihood ratio",
+          "value": 99.0,
+          "unit": "× prior odds",
+          "note": ""
+        },
+        {
+          "id": "threshold",
+          "label": "Prior threshold for posterior >50%",
+          "value": 1.0,
+          "unit": "%",
+          "note": "The posterior exceeds one half precisely when the prior exceeds this threshold."
+        }
+      ],
+      "files": {
+        "examples/cards/bayes.json": {
+          "bytes": 155,
+          "sha256": "7f38d78bd90713c2685a8ae89007355d323770e4209f8475fcaf73661d24148f"
+        },
+        "examples/x3d/bayes.x3d": {
+          "bytes": 13873,
+          "sha256": "b12e70d178f3395b7c944ea22a4fb5ae580e618f6c3d9bde9a2003541cda9f17"
+        },
+        "examples/manim/bayes.py": {
+          "bytes": 10557,
+          "sha256": "9851e3412f27e95d7f7d4dc9928ef86a5b5c35bd3f09eb816252b3513ed478d1"
+        }
+      }
+    },
+    {
+      "lesson": "lagrange",
+      "metrics": [
+        {
+          "id": "value",
+          "label": "Objective at probe c·p",
+          "value": 1.529684374568977,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "maximum",
+          "label": "Analytic constrained maximum",
+          "value": 1.6598044205117546,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "gap",
+          "label": "Maximum − current value",
+          "value": 0.1301200459427776,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "tangent_derivative",
+          "label": "Feasible derivative df/dθ",
+          "value": 0.644217687237691,
+          "unit": "",
+          "note": "Zero at both extrema. θ parametrizes the ellipse, so this is not the derivative per unit arc length."
+        },
+        {
+          "id": "gradient",
+          "label": "Unconstrained ||∇f||",
+          "value": 1.0,
+          "unit": "",
+          "note": "The objective gradient is a nonzero constant even at constrained extrema."
+        },
+        {
+          "id": "residual",
+          "label": "Maximum multiplier residual",
+          "value": 0.0,
+          "unit": "",
+          "note": "||∇f−λ∇g|| with λ=maximum/2."
+        }
+      ],
+      "files": {
+        "examples/cards/lagrange.json": {
+          "bytes": 158,
+          "sha256": "4f36a29a2062d3bfe0086130374dc12ed1be3a6a35e5568c00cdc93268eb2f83"
+        },
+        "examples/x3d/lagrange.x3d": {
+          "bytes": 31202,
+          "sha256": "d450f665140aeb48623240ed754e6d4e1825ae2fc4665ccf7dbc57d2dd16dcdb"
+        },
+        "examples/manim/lagrange.py": {
+          "bytes": 23157,
+          "sha256": "c9df201058f99eb5e588c8d3b1562400cf98e77ae03ae83a623f12307cd23ecd"
+        }
+      }
+    },
+    {
+      "lesson": "aliasing",
+      "metrics": [
+        {
+          "id": "alias",
+          "label": "Signed alias frequency",
+          "value": -1,
+          "unit": "Hz",
+          "note": "Representative in [−fₛ/2,fₛ/2); negative means reversed phase advance, not a negative magnitude."
+        },
+        {
+          "id": "nyquist",
+          "label": "Nyquist frequency fₛ/2",
+          "value": 4.0,
+          "unit": "Hz",
+          "note": ""
+        },
+        {
+          "id": "samples",
+          "label": "Shared samples in two seconds",
+          "value": 17,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "sample_error",
+          "label": "Maximum sample disagreement",
+          "value": 6.106226635438361e-15,
+          "unit": "",
+          "note": "Floating-point diagnostic; the sampled values agree algebraically."
+        },
+        {
+          "id": "removed",
+          "label": "Whole turns removed per sample",
+          "value": 1,
+          "unit": "",
+          "note": ""
+        }
+      ],
+      "files": {
+        "examples/cards/aliasing.json": {
+          "bytes": 147,
+          "sha256": "1c0e4c9feb62f1fe1090935608472adc4ed5ff115c4de593dedfd89a557f6656"
+        },
+        "examples/x3d/aliasing.x3d": {
+          "bytes": 164586,
+          "sha256": "18a733176f96bb8997d622ff8b755a7a73ec1ac38fabcfd602eb24508a3db46d"
+        },
+        "examples/manim/aliasing.py": {
+          "bytes": 173655,
+          "sha256": "5ec5887f1244aaabefadeadf5b8a3093ba86b51f8f8709970c2391f70ccea6fc"
+        }
+      }
+    },
+    {
+      "lesson": "heat",
+      "metrics": [
+        {
+          "id": "mean",
+          "label": "Spatial mean",
+          "value": 1.0,
+          "unit": "",
+          "note": "Periodic trapezoid; analytic reference is exactly 1."
+        },
+        {
+          "id": "energy",
+          "label": "Mean squared fluctuation",
+          "value": 0.08113829220026819,
+          "unit": "",
+          "note": "Spatial average of (u−1)², not total heat or thermodynamic energy."
+        },
+        {
+          "id": "fine_amplitude",
+          "label": "Remaining fine-scale amplitude",
+          "value": 0.02402186715812318,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "rate_ratio",
+          "label": "Fine / broad decay rate",
+          "value": 25,
+          "unit": "×",
+          "note": ""
+        },
+        {
+          "id": "pde_residual",
+          "label": "Finite-difference PDE residual",
+          "value": 2.670600490195518e-07,
+          "unit": "",
+          "note": "|analytic uₜ−α·central-difference uₓₓ| at x=.73, h=.001. A stencil diagnostic, not a global error bound."
+        }
+      ],
+      "files": {
+        "examples/cards/heat.json": {
+          "bytes": 162,
+          "sha256": "60650d8ec08f4f1c87882447fca1377c2ad7c4420677af591c5fc78d8d191c6c"
+        },
+        "examples/x3d/heat.x3d": {
+          "bytes": 206000,
+          "sha256": "c5e60a6122fc58e871f7bb4d52ea007d3ec6243137ae2236540e78cb34d4b7b4"
+        },
+        "examples/manim/heat.py": {
+          "bytes": 207467,
+          "sha256": "eb54bc40b88aa19f5d2db40be1b2f4b911ca2459827aacbc7c76cf1806961d95"
+        }
+      }
+    },
+    {
+      "lesson": "refraction",
+      "metrics": [
+        {
+          "id": "trial_cost",
+          "label": "Trial optical travel cost",
+          "value": 4.741513430618609,
+          "unit": "c=1 units",
+          "note": ""
+        },
+        {
+          "id": "minimum_cost",
+          "label": "Minimum optical travel cost",
+          "value": 4.620517378825526,
+          "unit": "c=1 units",
+          "note": ""
+        },
+        {
+          "id": "excess",
+          "label": "Trial cost above minimum",
+          "value": 0.12099605179308259,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "snell",
+          "label": "Snell / stationary residual",
+          "value": 1.1102230246251565e-16,
+          "unit": "",
+          "note": "|n₁sin θ₁−n₂sin θ₂|; angles measured from the interface normal."
+        },
+        {
+          "id": "crossing",
+          "label": "Optimal crossing q/d",
+          "value": 0.7064058102105154,
+          "unit": "",
+          "note": ""
+        }
+      ],
+      "files": {
+        "examples/cards/refraction.json": {
+          "bytes": 189,
+          "sha256": "e459a001eef6e43344fd4da70a7aae932d4cd95d6221381c0ddf0ea969ab3777"
+        },
+        "examples/x3d/refraction.x3d": {
+          "bytes": 32603,
+          "sha256": "a6b1f0e93c010ca33075fc9049f984a704549ade5e27c311f923ebcd6e1a616f"
+        },
+        "examples/manim/refraction.py": {
+          "bytes": 27437,
+          "sha256": "bb77b7b8920ef0276cb414ac7c5a4c57b775ee20f37d07543d5924455182256d"
         }
       }
     }
   ],
-  "card_schema_sha256": "4fd90b74d98efb932c9a10bd902410ffddb18fe682ac296f692ec6ecdbee759e"
+  "card_schema_sha256": "1f2353a2460724e7c014d2e032771eeace3f90da1e2d33b3a1ac04a179ebfb1d"
 }

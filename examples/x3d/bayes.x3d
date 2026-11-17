@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+  <head>
+    <meta name="title" content="A Positive Signal Changes the Denominator.x3d" />
+    <meta name="generator" content="mathlab.x3d/1" />
+    <meta name="description" content="Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint." />
+    <meta name="mathlab.lesson" content="bayes" />
+    <meta name="mathlab.configuration_sha256" content="75399bff8bbbfcebc36a90a5d03351a038c2903b0ae068c4a061b4ab4f8d4bd7" />
+  </head>
+  <Scene>
+    <WorldInfo title="A Positive Signal Changes the Denominator" info="&quot;X3D Math Lab • Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint.&quot;">
+      <MetadataString containerField="metadata" name="mathlab.sample" reference="mathlab.x3d/1" value="&quot;{\&quot;adapter\&quot;:\&quot;mathlab.x3d/1\&quot;,\&quot;axes\&quot;:\&quot;Left rectangle: all objects, area 24. Right rectangle: positive results only, area 4.8 after conditional rescaling.\&quot;,\&quot;bounds\&quot;:{\&quot;center\&quot;:[-0.75,0.0,0.03125],\&quot;size\&quot;:[9.35,4.5,0.5975]},\&quot;configuration_sha256\&quot;:\&quot;75399bff8bbbfcebc36a90a5d03351a038c2903b0ae068c4a061b4ab4f8d4bd7\&quot;,\&quot;insights\&quot;:[\&quot;Every left-panel cell area divided by 24 is its exact joint probability, including very thin rare-tag cells. The right panel has fixed area 4.8 and is separately normalized to positive results only.\&quot;,\&quot;Mint and amber together form the positive-result denominator. Detection probability P(+|H) and posterior P(H|+) answer different questions.\&quot;,\&quot;Expected counts for 10,000 objects are probability times 10,000. They are not rounded tiles, observed integer counts, or a Monte Carlo result.\&quot;,\&quot;The detector rates are assumed fixed for this population. The model makes no claim that a real detector has constant sensitivity or false-alarm rate across changing populations.\&quot;,\&quot;A likelihood ratio multiplies prior odds, not prior probability. The resulting posterior is a consequence of the stated joint model, not a measure of certainty independent of its assumptions.\&quot;],\&quot;lesson\&quot;:\&quot;bayes\&quot;,\&quot;metrics\&quot;:[{\&quot;id\&quot;:\&quot;posterior\&quot;,\&quot;label\&quot;:\&quot;Tagged among positive results\&quot;,\&quot;note\&quot;:\&quot;This conditional probability is the mint share of the right panel.\&quot;,\&quot;unit\&quot;:\&quot;%\&quot;,\&quot;value\&quot;:50.0},{\&quot;id\&quot;:\&quot;expected_tp\&quot;,\&quot;label\&quot;:\&quot;Expected true positives\&quot;,\&quot;note\&quot;:\&quot;Expected counts may be fractional; no random population was simulated.\&quot;,\&quot;unit\&quot;:\&quot;per 10,000\&quot;,\&quot;value\&quot;:99.00000000000001},{\&quot;id\&quot;:\&quot;expected_fp\&quot;,\&quot;label\&quot;:\&quot;Expected false positives\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;per 10,000\&quot;,\&quot;value\&quot;:99.00000000000001},{\&quot;id\&quot;:\&quot;positive\&quot;,\&quot;label\&quot;:\&quot;All positive results\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;% of all objects\&quot;,\&quot;value\&quot;:1.9800000000000002},{\&quot;id\&quot;:\&quot;likelihood_ratio\&quot;,\&quot;label\&quot;:\&quot;Positive likelihood ratio\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;× prior odds\&quot;,\&quot;value\&quot;:99.0},{\&quot;id\&quot;:\&quot;threshold\&quot;,\&quot;label\&quot;:\&quot;Prior threshold for posterior &gt;50%\&quot;,\&quot;note\&quot;:\&quot;The posterior exceeds one half precisely when the prior exceeds this threshold.\&quot;,\&quot;unit\&quot;:\&quot;%\&quot;,\&quot;value\&quot;:1.0}],\&quot;parameters\&quot;:{\&quot;false_positive\&quot;:0.01,\&quot;prior\&quot;:0.01,\&quot;sensitivity\&quot;:0.99},\&quot;sample_schema\&quot;:\&quot;mathlab.sample/1\&quot;,\&quot;sample_sha256\&quot;:\&quot;2fbe16cf995a670d45767fd95d425add8e74258c413f420099b32284d35ba66d\&quot;,\&quot;scope\&quot;:\&quot;Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint.\&quot;,\&quot;title\&quot;:\&quot;A Positive Signal Changes the Denominator\&quot;,\&quot;view\&quot;:\&quot;planar\&quot;}&quot;" />
+    </WorldInfo>
+    <Background skyColor="0.018 0.035 0.075" />
+    <NavigationInfo DEF="MathLabNavigation" type="&quot;EXAMINE&quot; &quot;ANY&quot;" headlight="true" speed="1" />
+    <Viewpoint DEF="MathLabView" description="Math Lab • A Positive Signal Changes the Denominator" position="-0.75 0 17.611881904621352" orientation="0 0 1 0" centerOfRotation="-0.75 0 0.03125" fieldOfView="0.70" />
+    <DirectionalLight direction="-0.4 -0.7 -1" color="0.78 0.88 1" intensity="0.8" />
+    <DirectionalLight direction="0.8 0.4 0.6" color="1 0.76 0.49" intensity="0.35" />
+    <Group DEF="MathLabReferenceGrid">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.065000000000000002 0.13 0.20999999999999999" emissiveColor="0.065000000000000002 0.13 0.20999999999999999" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1 2 3 -1 4 5 -1 6 7 -1 8 9 -1 10 11 -1 12 13 -1 14 15 -1 16 17 -1 18 19 -1 20 21 -1 22 23 -1 24 25 -1 26 27 -1 28 29 -1 30 31 -1 32 33 -1 34 35 -1 36 37 -1 38 39 -1 40 41 -1 42 43 -1">
+          <Coordinate point="-5.4249999999999998 -2.25 -0.043550000000000005 -5.4249999999999998 2.25 -0.043550000000000005 -5.4249999999999998 -2.25 -0.043550000000000005 3.9249999999999998 -2.25 -0.043550000000000005 -4.4900000000000002 -2.25 -0.043550000000000005 -4.4900000000000002 2.25 -0.043550000000000005 -5.4249999999999998 -1.8 -0.043550000000000005 3.9249999999999998 -1.8 -0.043550000000000005 -3.5549999999999997 -2.25 -0.043550000000000005 -3.5549999999999997 2.25 -0.043550000000000005 -5.4249999999999998 -1.3499999999999999 -0.043550000000000005 3.9249999999999998 -1.3499999999999999 -0.043550000000000005 -2.6200000000000001 -2.25 -0.043550000000000005 -2.6200000000000001 2.25 -0.043550000000000005 -5.4249999999999998 -0.90000000000000002 -0.043550000000000005 3.9249999999999998 -0.90000000000000002 -0.043550000000000005 -1.6849999999999996 -2.25 -0.043550000000000005 -1.6849999999999996 2.25 -0.043550000000000005 -5.4249999999999998 -0.4499999999999999 -0.043550000000000005 3.9249999999999998 -0.4499999999999999 -0.043550000000000005 -0.75 -2.25 -0.043550000000000005 -0.75 2.25 -0.043550000000000005 -5.4249999999999998 0 -0.043550000000000005 3.9249999999999998 0 -0.043550000000000005 0.18499999999999972 -2.25 -0.043550000000000005 0.18499999999999972 2.25 -0.043550000000000005 -5.4249999999999998 0.4499999999999999 -0.043550000000000005 3.9249999999999998 0.4499999999999999 -0.043550000000000005 1.1199999999999994 -2.25 -0.043550000000000005 1.1199999999999994 2.25 -0.043550000000000005 -5.4249999999999998 0.8999999999999998 -0.043550000000000005 3.9249999999999998 0.8999999999999998 -0.043550000000000005 2.0550000000000002 -2.25 -0.043550000000000005 2.0550000000000002 2.25 -0.043550000000000005 -5.4249999999999998 1.3500000000000001 -0.043550000000000005 3.9249999999999998 1.3500000000000001 -0.043550000000000005 2.9900000000000002 -2.25 -0.043550000000000005 2.9900000000000002 2.25 -0.043550000000000005 -5.4249999999999998 1.8 -0.043550000000000005 3.9249999999999998 1.8 -0.043550000000000005 3.9249999999999998 -2.25 -0.043550000000000005 3.9249999999999998 2.25 -0.043550000000000005 -5.4249999999999998 2.25 -0.043550000000000005 3.9249999999999998 2.25 -0.043550000000000005" />
+        </IndexedLineSet>
+      </Shape>
+    </Group>
+    <Group DEF="MathLabModel">
+      <Transform translation="-4.9699999999999998 0.020000000000000018 0">
+        <Shape DEF="MathLabPrimitive_0000">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;population_true_positive&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.10000000000000001" />
+          </Appearance>
+          <Box size="0.059999999999999998 3.96 0.035000000000000003" />
+        </Shape>
+      </Transform>
+      <Transform translation="-4.9699999999999998 -1.98 0">
+        <Shape DEF="MathLabPrimitive_0001">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;population_false_negative&quot;" />
+          <Appearance>
+            <Material diffuseColor="1 0.34999999999999998 0.66000000000000003" emissiveColor="0.044999999999999998 0.01575 0.029700000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.10000000000000001" />
+          </Appearance>
+          <Box size="0.059999999999999998 0.040000000000000036 0.035000000000000003" />
+        </Shape>
+      </Transform>
+      <Transform translation="-1.9700000000000006 1.98 0">
+        <Shape DEF="MathLabPrimitive_0002">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;population_false_positive&quot;" />
+          <Appearance>
+            <Material diffuseColor="1 0.72999999999999998 0.32000000000000001" emissiveColor="0.044999999999999998 0.032849999999999997 0.0144" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.10000000000000001" />
+          </Appearance>
+          <Box size="5.9399999999999995 0.040000000000000001 0.035000000000000003" />
+        </Shape>
+      </Transform>
+      <Transform translation="-1.9700000000000006 -0.020000000000000018 0">
+        <Shape DEF="MathLabPrimitive_0003">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;population_true_negative&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.0053999999999999994 0.01125 0.01755" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.10000000000000001" />
+          </Appearance>
+          <Box size="5.9399999999999995 3.96 0.035000000000000003" />
+        </Shape>
+      </Transform>
+      <Transform translation="2.8999999999999999 1 0">
+        <Shape DEF="MathLabPrimitive_0004">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;positive_true_share&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.10000000000000001" />
+          </Appearance>
+          <Box size="1.2 2 0.035000000000000003" />
+        </Shape>
+      </Transform>
+      <Transform translation="2.8999999999999999 -1 0">
+        <Shape DEF="MathLabPrimitive_0005">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;positive_false_share&quot;" />
+          <Appearance>
+            <Material diffuseColor="1 0.72999999999999998 0.32000000000000001" emissiveColor="0.044999999999999998 0.032849999999999997 0.0144" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.10000000000000001" />
+          </Appearance>
+          <Box size="1.2 2 0.035000000000000003" />
+        </Shape>
+      </Transform>
+      <Shape DEF="MathLabPrimitive_0006">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;population_frame&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.82999999999999996 0.91000000000000003 1" emissiveColor="0.82999999999999996 0.91000000000000003 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 3 4 -1">
+          <Coordinate point="-5 -2 0.050000000000000003 1 -2 0.050000000000000003 1 2 0.050000000000000003 -5 2 0.050000000000000003 -5 -2 0.050000000000000003" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0007">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;conditioned_frame&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.82999999999999996 0.91000000000000003 1" emissiveColor="0.82999999999999996 0.91000000000000003 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 3 4 -1">
+          <Coordinate point="2.2999999999999998 -2 0.050000000000000003 3.5 -2 0.050000000000000003 3.5 2 0.050000000000000003 2.2999999999999998 2 0.050000000000000003 2.2999999999999998 -2 0.050000000000000003" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0008">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;conditioning_arrow&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.82999999999999996 0.91000000000000003 1" emissiveColor="0.82999999999999996 0.91000000000000003 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 3 4 -1">
+          <Coordinate point="1.3 0 0.080000000000000002 2.0499999999999998 0 0.080000000000000002 1.8799999999999999 0.11 0.080000000000000002 2.0499999999999998 0 0.080000000000000002 1.8799999999999999 -0.11 0.080000000000000002" />
+        </IndexedLineSet>
+      </Shape>
+    </Group>
+  </Scene>
+</X3D>

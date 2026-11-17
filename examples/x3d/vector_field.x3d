@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+  <head>
+    <meta name="title" content="A Source Is Not a Whirlpool.x3d" />
+    <meta name="generator" content="mathlab.x3d/1" />
+    <meta name="description" content="Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint." />
+    <meta name="mathlab.lesson" content="vector_field" />
+    <meta name="mathlab.configuration_sha256" content="dff3d499b9553f4680bd7696e028c01842b2ab7b0cd0f6ae4b76410e7a2812de" />
+  </head>
+  <Scene>
+    <WorldInfo title="A Source Is Not a Whirlpool" info="&quot;X3D Math Lab • Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint.&quot;">
+      <MetadataString containerField="metadata" name="mathlab.sample" reference="mathlab.x3d/1" value="&quot;{\&quot;adapter\&quot;:\&quot;mathlab.x3d/1\&quot;,\&quot;axes\&quot;:\&quot;XY plane: field positions. Cyan velocities use common scale 0.28; the integration circle stays fixed while tracers move.\&quot;,\&quot;bounds\&quot;:{\&quot;center\&quot;:[0.0,0.0,0.08],\&quot;size\&quot;:[5.94,5.94,0.74]},\&quot;configuration_sha256\&quot;:\&quot;dff3d499b9553f4680bd7696e028c01842b2ab7b0cd0f6ae4b76410e7a2812de\&quot;,\&quot;insights\&quot;:[\&quot;Cyan velocity arrows use one common display scale 0.28; they are not normalized independently. Their lengths remain comparable.\&quot;,\&quot;The amber disk boundary is fixed at radius R. The mint ring is a separate set of moving fluid tracers. Flux/circulation refer to amber; area growth refers to mint.\&quot;,\&quot;This field has exact flow X(t)=exp(at)R(bt)X(0), so the tracer picture has no numerical ODE-step error. Counterclockwise b&gt;0 is positive rotation.\&quot;,\&quot;The 128-point parametric boundary sums independently check the analytic flux and circulation. Constant integrands make this an especially clean Green's-theorem example, not a test of quadrature accuracy on arbitrary fields.\&quot;,\&quot;Changing R changes total flux and circulation in proportion to area; the local divergence and curl stay fixed. One rotating marker reveals motion a perfectly unmarked circle would hide.\&quot;],\&quot;lesson\&quot;:\&quot;vector_field\&quot;,\&quot;metrics\&quot;:[{\&quot;id\&quot;:\&quot;divergence\&quot;,\&quot;label\&quot;:\&quot;Divergence\&quot;,\&quot;note\&quot;:\&quot;Instantaneous fractional area-growth rate for this velocity field.\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:0.4},{\&quot;id\&quot;:\&quot;curl\&quot;,\&quot;label\&quot;:\&quot;Out-of-plane curl\&quot;,\&quot;note\&quot;:\&quot;Counterclockwise is positive. Rigid-body angular speed is b, half this curl.\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:1.6},{\&quot;id\&quot;:\&quot;flux\&quot;,\&quot;label\&quot;:\&quot;Outward flux: fixed circle\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:2.1237166338267004},{\&quot;id\&quot;:\&quot;circulation\&quot;,\&quot;label\&quot;:\&quot;CCW circulation: fixed circle\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:8.494866535306802},{\&quot;id\&quot;:\&quot;area\&quot;,\&quot;label\&quot;:\&quot;Tracer area ÷ initial area\&quot;,\&quot;note\&quot;:\&quot;Exact flow determinant exp(2at); the integration circle remains fixed.\&quot;,\&quot;unit\&quot;:\&quot;×\&quot;,\&quot;value\&quot;:1.3771277643359572}],\&quot;parameters\&quot;:{\&quot;a\&quot;:0.2,\&quot;b\&quot;:0.8,\&quot;radius\&quot;:1.3,\&quot;time\&quot;:0.8},\&quot;sample_schema\&quot;:\&quot;mathlab.sample/1\&quot;,\&quot;sample_sha256\&quot;:\&quot;7d819790ada24ca0df433d329ce865b487da11aafcd761a009de503eed8d0e4e\&quot;,\&quot;scope\&quot;:\&quot;Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint.\&quot;,\&quot;title\&quot;:\&quot;A Source Is Not a Whirlpool\&quot;,\&quot;view\&quot;:\&quot;planar\&quot;}&quot;" />
+    </WorldInfo>
+    <Background skyColor="0.018 0.035 0.075" />
+    <NavigationInfo DEF="MathLabNavigation" type="&quot;EXAMINE&quot; &quot;ANY&quot;" headlight="true" speed="1" />
+    <Viewpoint DEF="MathLabView" description="Math Lab • A Source Is Not a Whirlpool" position="0 0 14.344064102410938" orientation="0 0 1 0" centerOfRotation="0 0 0.080000000000000002" fieldOfView="0.70" />
+    <DirectionalLight direction="-0.4 -0.7 -1" color="0.78 0.88 1" intensity="0.8" />
+    <DirectionalLight direction="0.8 0.4 0.6" color="1 0.76 0.49" intensity="0.35" />
+    <Group DEF="MathLabReferenceGrid">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.065000000000000002 0.13 0.20999999999999999" emissiveColor="0.065000000000000002 0.13 0.20999999999999999" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1 2 3 -1 4 5 -1 6 7 -1 8 9 -1 10 11 -1 12 13 -1 14 15 -1 16 17 -1 18 19 -1 20 21 -1 22 23 -1 24 25 -1 26 27 -1 28 29 -1 30 31 -1 32 33 -1 34 35 -1 36 37 -1 38 39 -1 40 41 -1 42 43 -1">
+          <Coordinate point="-2.9700000000000002 -2.9700000000000002 0.032479999999999995 -2.9700000000000002 2.9700000000000002 0.032479999999999995 -2.9700000000000002 -2.9700000000000002 0.032479999999999995 2.9700000000000002 -2.9700000000000002 0.032479999999999995 -2.3760000000000003 -2.9700000000000002 0.032479999999999995 -2.3760000000000003 2.9700000000000002 0.032479999999999995 -2.9700000000000002 -2.3760000000000003 0.032479999999999995 2.9700000000000002 -2.3760000000000003 0.032479999999999995 -1.782 -2.9700000000000002 0.032479999999999995 -1.782 2.9700000000000002 0.032479999999999995 -2.9700000000000002 -1.782 0.032479999999999995 2.9700000000000002 -1.782 0.032479999999999995 -1.1880000000000002 -2.9700000000000002 0.032479999999999995 -1.1880000000000002 2.9700000000000002 0.032479999999999995 -2.9700000000000002 -1.1880000000000002 0.032479999999999995 2.9700000000000002 -1.1880000000000002 0.032479999999999995 -0.59399999999999986 -2.9700000000000002 0.032479999999999995 -0.59399999999999986 2.9700000000000002 0.032479999999999995 -2.9700000000000002 -0.59399999999999986 0.032479999999999995 2.9700000000000002 -0.59399999999999986 0.032479999999999995 0 -2.9700000000000002 0.032479999999999995 0 2.9700000000000002 0.032479999999999995 -2.9700000000000002 0 0.032479999999999995 2.9700000000000002 0 0.032479999999999995 0.59399999999999986 -2.9700000000000002 0.032479999999999995 0.59399999999999986 2.9700000000000002 0.032479999999999995 -2.9700000000000002 0.59399999999999986 0.032479999999999995 2.9700000000000002 0.59399999999999986 0.032479999999999995 1.1879999999999997 -2.9700000000000002 0.032479999999999995 1.1879999999999997 2.9700000000000002 0.032479999999999995 -2.9700000000000002 1.1879999999999997 0.032479999999999995 2.9700000000000002 1.1879999999999997 0.032479999999999995 1.7820000000000005 -2.9700000000000002 0.032479999999999995 1.7820000000000005 2.9700000000000002 0.032479999999999995 -2.9700000000000002 1.7820000000000005 0.032479999999999995 2.9700000000000002 1.7820000000000005 0.032479999999999995 2.3760000000000003 -2.9700000000000002 0.032479999999999995 2.3760000000000003 2.9700000000000002 0.032479999999999995 -2.9700000000000002 2.3760000000000003 0.032479999999999995 2.9700000000000002 2.3760000000000003 0.032479999999999995 2.9700000000000002 -2.9700000000000002 0.032479999999999995 2.9700000000000002 2.9700000000000002 0.032479999999999995 -2.9700000000000002 2.9700000000000002 0.032479999999999995 2.9700000000000002 2.9700000000000002 0.032479999999999995" />
+        </IndexedLineSet>
+      </Shape>
+    </Group>
+    <Group DEF="MathLabModel">
+      <Shape DEF="MathLabPrimitive_0000">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;axis_x&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.27000000000000002 0.42999999999999999 0.57999999999999996" emissiveColor="0.27000000000000002 0.42999999999999999 0.57999999999999996" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2.7000000000000002 0 0 2.7000000000000002 0 0" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0001">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;axis_y&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.27000000000000002 0.42999999999999999 0.57999999999999996" emissiveColor="0.27000000000000002 0.42999999999999999 0.57999999999999996" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 -2.7000000000000002 0 0 2.7000000000000002 0" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0002">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_x_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 -2.5 -0.040000000000000001 -2 2.5 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0003">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_y_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2.5 -2 -0.040000000000000001 2.5 -2 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0004">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 -2 0.040000000000000001 -1.6639999999999999 -2.5600000000000001 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0005">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_-2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-1.6781486332742568 -2.4402082382779575 0.040000000000000001 -1.6639999999999999 -2.5600000000000001 0.040000000000000001 -1.7630404329197988 -2.4911433180652827 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0006">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 -1 0.040000000000000001 -1.8879999999999999 -1.504 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0007">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_-1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-1.8635410908809464 -1.3858813657177418 0.040000000000000001 -1.8879999999999999 -1.504 0.040000000000000001 -1.9601836098391576 -1.4073574810417888 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0008">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 0 0.040000000000000001 -2.1120000000000001 -0.44800000000000006 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0009">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_0_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-2.0372990274888099 -0.35328983842331207 0.040000000000000001 -2.1120000000000001 -0.44800000000000006 0.040000000000000001 -2.1333431350031975 -0.32927881154471506 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0010">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 1 0.040000000000000001 -2.3360000000000003 0.60799999999999987 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0011">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-2.2268297471027614 0.65930405327411201 0.040000000000000001 -2.3360000000000003 0.60799999999999987 0.040000000000000001 -2.301996150736926 0.72373239924625288 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0012">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 2 0.040000000000000001 -2.5600000000000001 1.6639999999999999 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0013">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-2_2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-2.4402082382779575 1.6781486332742568 0.040000000000000001 -2.5600000000000001 1.6639999999999999 0.040000000000000001 -2.4911433180652827 1.7630404329197988 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0014">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_x_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 -2.5 -0.040000000000000001 -1 2.5 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0015">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_y_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2.5 -1 -0.040000000000000001 2.5 -1 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0016">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 -2 0.040000000000000001 -0.60799999999999987 -2.3360000000000003 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0017">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_-2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-0.65930405327411201 -2.2268297471027614 0.040000000000000001 -0.60799999999999987 -2.3360000000000003 0.040000000000000001 -0.72373239924625288 -2.301996150736926 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0018">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 -1 0.040000000000000001 -0.83199999999999996 -1.28 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0019">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_-1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-0.84460000000000002 -1.1733199999999999 0.040000000000000001 -0.83199999999999996 -1.28 0.040000000000000001 -0.92019999999999991 -1.21868 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0020">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 0 0.040000000000000001 -1.056 -0.22400000000000003 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0021">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_0_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-1.0089600000000001 -0.16436000000000003 0.040000000000000001 -1.056 -0.22400000000000003 0.040000000000000001 -1.0694400000000002 -0.14924000000000001 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0022">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 1 0.040000000000000001 -1.28 0.83199999999999996 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0023">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-1.1733199999999999 0.84460000000000002 0.040000000000000001 -1.28 0.83199999999999996 0.040000000000000001 -1.21868 0.92019999999999991 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0024">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 2 0.040000000000000001 -1.504 1.8879999999999999 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0025">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_-1_2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-1.3858813657177418 1.8635410908809464 0.040000000000000001 -1.504 1.8879999999999999 0.040000000000000001 -1.4073574810417888 1.9601836098391576 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0026">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_x_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 -2.5 -0.040000000000000001 0 2.5 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0027">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_y_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2.5 0 -0.040000000000000001 2.5 0 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0028">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 -2 0.040000000000000001 0.44800000000000006 -2.1120000000000001 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0029">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_-2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="0.35328983842331207 -2.0372990274888099 0.040000000000000001 0.44800000000000006 -2.1120000000000001 0.040000000000000001 0.32927881154471506 -2.1333431350031975 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0030">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 -1 0.040000000000000001 0.22400000000000003 -1.056 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0031">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_-1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="0.16436000000000003 -1.0089600000000001 0.040000000000000001 0.22400000000000003 -1.056 0.040000000000000001 0.14924000000000001 -1.0694400000000002 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0032">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 1 0.040000000000000001 -0.22400000000000003 1.056 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0033">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-0.16436000000000003 1.0089600000000001 0.040000000000000001 -0.22400000000000003 1.056 0.040000000000000001 -0.14924000000000001 1.0694400000000002 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0034">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 2 0.040000000000000001 -0.44800000000000006 2.1120000000000001 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0035">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_0_2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="-0.35328983842331207 2.0372990274888099 0.040000000000000001 -0.44800000000000006 2.1120000000000001 0.040000000000000001 -0.32927881154471506 2.1333431350031975 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0036">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_x_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 -2.5 -0.040000000000000001 1 2.5 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0037">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_y_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2.5 1 -0.040000000000000001 2.5 1 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0038">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 -2 0.040000000000000001 1.504 -1.8879999999999999 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0039">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_-2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="1.3858813657177418 -1.8635410908809464 0.040000000000000001 1.504 -1.8879999999999999 0.040000000000000001 1.4073574810417888 -1.9601836098391576 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0040">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 -1 0.040000000000000001 1.28 -0.83199999999999996 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0041">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_-1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="1.1733199999999999 -0.84460000000000002 0.040000000000000001 1.28 -0.83199999999999996 0.040000000000000001 1.21868 -0.92019999999999991 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0042">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 0 0.040000000000000001 1.056 0.22400000000000003 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0043">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_0_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="1.0089600000000001 0.16436000000000003 0.040000000000000001 1.056 0.22400000000000003 0.040000000000000001 1.0694400000000002 0.14924000000000001 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0044">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 1 0.040000000000000001 0.83199999999999996 1.28 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0045">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="0.84460000000000002 1.1733199999999999 0.040000000000000001 0.83199999999999996 1.28 0.040000000000000001 0.92019999999999991 1.21868 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0046">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 2 0.040000000000000001 0.60799999999999987 2.3360000000000003 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0047">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_1_2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="0.65930405327411201 2.2268297471027614 0.040000000000000001 0.60799999999999987 2.3360000000000003 0.040000000000000001 0.72373239924625288 2.301996150736926 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0048">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_x_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 -2.5 -0.040000000000000001 2 2.5 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0049">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;grid_y_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2.5 2 -0.040000000000000001 2.5 2 -0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0050">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 -2 0.040000000000000001 2.5600000000000001 -1.6639999999999999 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0051">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_-2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="2.4402082382779575 -1.6781486332742568 0.040000000000000001 2.5600000000000001 -1.6639999999999999 0.040000000000000001 2.4911433180652827 -1.7630404329197988 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0052">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 -1 0.040000000000000001 2.3360000000000003 -0.60799999999999987 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0053">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_-1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="2.2268297471027614 -0.65930405327411201 0.040000000000000001 2.3360000000000003 -0.60799999999999987 0.040000000000000001 2.301996150736926 -0.72373239924625288 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0054">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 0 0.040000000000000001 2.1120000000000001 0.44800000000000006 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0055">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_0_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="2.0372990274888099 0.35328983842331207 0.040000000000000001 2.1120000000000001 0.44800000000000006 0.040000000000000001 2.1333431350031975 0.32927881154471506 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0056">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 1 0.040000000000000001 1.8879999999999999 1.504 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0057">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_1_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="1.8635410908809464 1.3858813657177418 0.040000000000000001 1.8879999999999999 1.504 0.040000000000000001 1.9601836098391576 1.4073574810417888 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0058">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 2 0.040000000000000001 1.6639999999999999 2.5600000000000001 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0059">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;field_2_2_head&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="1.6781486332742568 2.4402082382779575 0.040000000000000001 1.6639999999999999 2.5600000000000001 0.040000000000000001 1.7630404329197988 2.4911433180652827 0.040000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0060">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;integration_circle&quot;" />
+        <Appearance>
+          <Material diffuseColor="1 0.72999999999999998 0.32000000000000001" emissiveColor="1 0.72999999999999998 0.32000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 -1">
+          <Coordinate point="1.3 0 0.070000000000000007 1.2984340930667242 0.063787976625643422 0.070000000000000007 1.2937401446738561 0.12742228242842879 0.070000000000000007 1.2859294629542153 0.19074961679197028 0.070000000000000007 1.2750208645241996 0.25361741862096671 0.070000000000000007 1.2610406291529073 0.31587423387424302 0.070000000000000007 1.2440224364518715 0.37737008043080106 0.070000000000000007 1.2240072847379271 0.43795680940988607 0.070000000000000007 1.2010433922646728 0.49748846207461672 0.070000000000000007 1.1751860810604764 0.55582162145936675 0.070000000000000007 1.1464976436528616 0.61281575787379694 0.070000000000000007 1.1150471930003538 0.66833356745118822 0.070000000000000007 1.0809104959933089 0.72224130292548283 0.070000000000000007 1.0441697909248384 0.77440909584016338 0.070000000000000007 1.0049135893715582 0.8247112694127392 0.070000000000000007 0.96323646296144683 0.87302664130112384 0.070000000000000007 0.91923881554251186 0.91923881554251174 0.070000000000000007 0.87302664130112384 0.96323646296144683 0.070000000000000007 0.8247112694127392 1.0049135893715582 0.070000000000000007 0.77440909584016349 1.0441697909248384 0.070000000000000007 0.72224130292548305 1.0809104959933089 0.070000000000000007 0.66833356745118822 1.1150471930003538 0.070000000000000007 0.61281575787379716 1.1464976436528616 0.070000000000000007 0.55582162145936687 1.1751860810604764 0.070000000000000007 0.49748846207461683 1.2010433922646728 0.070000000000000007 0.43795680940988607 1.2240072847379271 0.070000000000000007 0.37737008043080106 1.2440224364518717 0.070000000000000007 0.31587423387424318 1.2610406291529073 0.070000000000000007 0.25361741862096682 1.2750208645241996 0.070000000000000007 0.19074961679197028 1.2859294629542153 0.070000000000000007 0.12742228242842901 1.2937401446738559 0.070000000000000007 0.063787976625643561 1.2984340930667242 0.070000000000000007 7.9602041944577967e-17 1.3 0.070000000000000007 -0.063787976625643408 1.2984340930667242 0.070000000000000007 -0.12742228242842885 1.2937401446738561 0.070000000000000007 -0.19074961679197014 1.2859294629542153 0.070000000000000007 -0.25361741862096665 1.2750208645241996 0.070000000000000007 -0.31587423387424302 1.2610406291529073 0.070000000000000007 -0.37737008043080084 1.2440224364518717 0.070000000000000007 -0.43795680940988596 1.2240072847379271 0.070000000000000007 -0.49748846207461667 1.2010433922646728 0.070000000000000007 -0.55582162145936642 1.1751860810604766 0.070000000000000007 -0.61281575787379705 1.1464976436528616 0.070000000000000007 -0.66833356745118822 1.1150471930003538 0.070000000000000007 -0.72224130292548261 1.0809104959933091 0.070000000000000007 -0.77440909584016338 1.0441697909248384 0.070000000000000007 -0.82471126941273898 1.0049135893715582 0.070000000000000007 -0.87302664130112395 0.96323646296144672 0.070000000000000007 -0.91923881554251174 0.91923881554251186 0.070000000000000007 -0.9632364629614466 0.87302664130112417 0.070000000000000007 -1.0049135893715582 0.8247112694127392 0.070000000000000007 -1.0441697909248384 0.77440909584016349 0.070000000000000007 -1.0809104959933089 0.72224130292548283 0.070000000000000007 -1.1150471930003536 0.66833356745118833 0.070000000000000007 -1.1464976436528616 0.61281575787379727 0.070000000000000007 -1.1751860810604764 0.55582162145936664 0.070000000000000007 -1.2010433922646728 0.49748846207461689 0.070000000000000007 -1.2240072847379269 0.43795680940988646 0.070000000000000007 -1.2440224364518715 0.37737008043080111 0.070000000000000007 -1.2610406291529073 0.31587423387424329 0.070000000000000007 -1.2750208645241996 0.25361741862096721 0.070000000000000007 -1.2859294629542153 0.19074961679197036 0.070000000000000007 -1.2937401446738559 0.12742228242842907 0.070000000000000007 -1.2984340930667242 0.063787976625643353 0.070000000000000007 -1.3 1.5920408388915593e-16 0.070000000000000007 -1.2984340930667242 -0.063787976625643047 0.070000000000000007 -1.2937401446738561 -0.12742228242842876 0.070000000000000007 -1.2859294629542153 -0.19074961679197006 0.070000000000000007 -1.2750208645241996 -0.25361741862096687 0.070000000000000007 -1.2610406291529073 -0.31587423387424296 0.070000000000000007 -1.2440224364518717 -0.37737008043080078 0.070000000000000007 -1.2240072847379271 -0.43795680940988613 0.070000000000000007 -1.201043392264673 -0.49748846207461661 0.070000000000000007 -1.1751860810604766 -0.55582162145936642 0.070000000000000007 -1.1464976436528616 -0.61281575787379694 0.070000000000000007 -1.1150471930003538 -0.66833356745118799 0.070000000000000007 -1.0809104959933091 -0.72224130292548261 0.070000000000000007 -1.0441697909248384 -0.77440909584016326 0.070000000000000007 -1.0049135893715582 -0.82471126941273887 0.070000000000000007 -0.96323646296144683 -0.87302664130112395 0.070000000000000007 -0.91923881554251197 -0.91923881554251174 0.070000000000000007 -0.87302664130112428 -0.9632364629614466 0.070000000000000007 -0.82471126941273976 -1.0049135893715577 0.070000000000000007 -0.77440909584016315 -1.0441697909248386 0.070000000000000007 -0.72224130292548283 -1.0809104959933089 0.070000000000000007 -0.66833356745118833 -1.1150471930003536 0.070000000000000007 -0.61281575787379727 -1.1464976436528616 0.070000000000000007 -0.5558216214593672 -1.1751860810604762 0.070000000000000007 -0.49748846207461744 -1.2010433922646726 0.070000000000000007 -0.43795680940988596 -1.2240072847379271 0.070000000000000007 -0.37737008043080117 -1.2440224364518715 0.070000000000000007 -0.31587423387424335 -1.2610406291529073 0.070000000000000007 -0.25361741862096726 -1.2750208645241994 0.070000000000000007 -0.190749616791971 -1.2859294629542153 0.070000000000000007 -0.1274222824284286 -1.2937401446738561 0.070000000000000007 -0.063787976625643436 -1.2984340930667242 0.070000000000000007 -2.3880612583373386e-16 -1.3 0.070000000000000007 0.063787976625642964 -1.2984340930667242 0.070000000000000007 0.12742228242842812 -1.2937401446738561 0.070000000000000007 0.19074961679197053 -1.2859294629542153 0.070000000000000007 0.25361741862096682 -1.2750208645241996 0.070000000000000007 0.3158742338742429 -1.2610406291529073 0.070000000000000007 0.37737008043080067 -1.2440224364518717 0.070000000000000007 0.43795680940988552 -1.2240072847379273 0.070000000000000007 0.497488462074617 -1.2010433922646726 0.070000000000000007 0.55582162145936675 -1.1751860810604764 0.070000000000000007 0.61281575787379683 -1.1464976436528616 0.070000000000000007 0.66833356745118799 -1.115047193000354 0.070000000000000007 0.72224130292548239 -1.0809104959933091 0.070000000000000007 0.77440909584016282 -1.0441697909248389 0.070000000000000007 0.82471126941273931 -1.0049135893715579 0.070000000000000007 0.87302664130112384 -0.96323646296144683 0.070000000000000007 0.91923881554251163 -0.91923881554251197 0.070000000000000007 0.9632364629614466 -0.87302664130112428 0.070000000000000007 1.0049135893715577 -0.82471126941273976 0.070000000000000007 1.0441697909248386 -0.77440909584016326 0.070000000000000007 1.0809104959933089 -0.72224130292548283 0.070000000000000007 1.1150471930003536 -0.66833356745118844 0.070000000000000007 1.1464976436528613 -0.61281575787379727 0.070000000000000007 1.1751860810604762 -0.55582162145936731 0.070000000000000007 1.2010433922646726 -0.49748846207461755 0.070000000000000007 1.2240072847379271 -0.43795680940988602 0.070000000000000007 1.2440224364518715 -0.37737008043080128 0.070000000000000007 1.2610406291529073 -0.31587423387424346 0.070000000000000007 1.2750208645241994 -0.25361741862096737 0.070000000000000007 1.2859294629542153 -0.19074961679197111 0.070000000000000007 1.2937401446738561 -0.12742228242842865 0.070000000000000007 1.2984340930667242 -0.063787976625643519 0.070000000000000007 1.3 -3.1840816777831187e-16 0.070000000000000007" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0061">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_ring&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.35999999999999999 1 0.72999999999999998" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 -1">
+          <Coordinate point="1.2236485188897221 0.91105994530917511 0.10000000000000001 1.1774709879700576 0.97000412072144537 0.10000000000000001 1.1284568263060955 1.0266114712445711 0.10000000000000001 1.0767241133064174 1.0807456248129237 0.10000000000000001 1.0223974776078906 1.1322761675089654 0.10000000000000001 0.96560779683436349 1.1810789577417991 0.10000000000000001 0.90649188230100863 1.2270364253151338 0.10000000000000001 0.84519214942387921 1.2700378546641871 0.10000000000000001 0.78185627462869878 1.3099796515791764 0.10000000000000001 0.71663683958541602 1.3467655927728457 0.10000000000000001 0.64969096362559842 1.3803070576907912 0.10000000000000001 0.5811799252281995 1.4105232420061402 0.10000000000000001 0.51126877348557642 1.437341352284252 0.10000000000000001 0.44012593048577087 1.4606967813484777 0.10000000000000001 0.36792278556894692 1.4805332639245072 0.10000000000000001 0.29483328243545714 1.4968030121883447 0.10000000000000001 0.22103350010023481 1.5094668308913606 0.10000000000000001 0.14670122870302291 1.5184942117850799 0.10000000000000001 0.072015541196355379 1.5238634071182244 0.10000000000000001 -0.0028436380568702358 1.5255614820289509 0.10000000000000001 -0.077695966736943914 1.5235843457060654 0.10000000000000001 -0.15236111902778535 1.5179367612441463 0.10000000000000001 -0.22665922003763064 1.5086323341688328 0.10000000000000001 -0.30041127913340271 1.4956934796599204 0.10000000000000001 -0.37343962114482199 1.479151368551231 0.10000000000000001 -0.44556831439945577 1.4590458522373433 0.10000000000000001 -0.51662359455752627 1.4354253666680927 0.10000000000000001 -0.58643428322542479 1.4083468156621259 0.10000000000000001 -0.6548322003394571 1.3778754338206167 0.10000000000000001 -0.72165256932634458 1.3440846293713997 0.10000000000000001 -0.78673441406442512 1.3070558073221179 0.10000000000000001 -0.84992094668922846 1.2668781733484296 0.10000000000000001 -0.91105994530917511 1.2236485188897221 0.10000000000000001 -0.9700041207214456 1.1774709879700573 0.10000000000000001 -1.0266114712445711 1.1284568263060955 0.10000000000000001 -1.0807456248129237 1.0767241133064176 0.10000000000000001 -1.1322761675089652 1.0223974776078908 0.10000000000000001 -1.1810789577417991 0.96560779683436349 0.10000000000000001 -1.2270364253151336 0.90649188230100897 0.10000000000000001 -1.2700378546641871 0.8451921494238791 0.10000000000000001 -1.3099796515791764 0.78185627462869878 0.10000000000000001 -1.3467655927728455 0.71663683958541646 0.10000000000000001 -1.3803070576907912 0.64969096362559853 0.10000000000000001 -1.4105232420061402 0.58117992522819961 0.10000000000000001 -1.4373413522842517 0.51126877348557687 0.10000000000000001 -1.4606967813484777 0.44012593048577092 0.10000000000000001 -1.4805332639245072 0.36792278556894703 0.10000000000000001 -1.4968030121883447 0.29483328243545687 0.10000000000000001 -1.5094668308913606 0.2210335001002349 0.10000000000000001 -1.5184942117850799 0.14670122870302332 0.10000000000000001 -1.5238634071182244 0.072015541196355476 0.10000000000000001 -1.5255614820289509 -0.0028436380568701422 0.10000000000000001 -1.5235843457060654 -0.077695966736944164 0.10000000000000001 -1.5179367612441463 -0.15236111902778526 0.10000000000000001 -1.5086323341688328 -0.22665922003763056 0.10000000000000001 -1.4956934796599204 -0.30041127913340293 0.10000000000000001 -1.479151368551231 -0.37343962114482188 0.10000000000000001 -1.4590458522373435 -0.44556831439945538 0.10000000000000001 -1.4354253666680927 -0.51662359455752616 0.10000000000000001 -1.4083468156621259 -0.58643428322542468 0.10000000000000001 -1.3778754338206169 -0.65483220033945644 0.10000000000000001 -1.3440846293713999 -0.72165256932634447 0.10000000000000001 -1.3070558073221181 -0.7867344140644249 0.10000000000000001 -1.2668781733484293 -0.8499209466892288 0.10000000000000001 -1.2236485188897221 -0.911059945309175 0.10000000000000001 -1.1774709879700578 -0.97000412072144504 0.10000000000000001 -1.1284568263060955 -1.0266114712445711 0.10000000000000001 -1.0767241133064176 -1.0807456248129235 0.10000000000000001 -1.0223974776078903 -1.1322761675089656 0.10000000000000001 -0.96560779683436426 -1.1810789577417984 0.10000000000000001 -0.90649188230100941 -1.2270364253151331 0.10000000000000001 -0.84519214942387921 -1.2700378546641871 0.10000000000000001 -0.78185627462869889 -1.3099796515791764 0.10000000000000001 -0.71663683958541657 -1.3467655927728455 0.10000000000000001 -0.64969096362559797 -1.3803070576907914 0.10000000000000001 -0.58117992522819917 -1.4105232420061402 0.10000000000000001 -0.5112687734855762 -1.437341352284252 0.10000000000000001 -0.44012593048577103 -1.4606967813484777 0.10000000000000001 -0.36792278556894709 -1.4805332639245072 0.10000000000000001 -0.29483328243545764 -1.4968030121883447 0.10000000000000001 -0.22103350010023565 -1.5094668308913604 0.10000000000000001 -0.1467012287030241 -1.5184942117850797 0.10000000000000001 -0.072015541196356919 -1.5238634071182244 0.10000000000000001 0.0028436380568714042 -1.5255614820289509 0.10000000000000001 0.077695966736944747 -1.5235843457060654 0.10000000000000001 0.15236111902778585 -1.5179367612441463 0.10000000000000001 0.22665922003763114 -1.5086323341688326 0.10000000000000001 0.30041127913340282 -1.4956934796599204 0.10000000000000001 0.37343962114482182 -1.479151368551231 0.10000000000000001 0.44556831439945527 -1.4590458522373435 0.10000000000000001 0.51662359455752538 -1.4354253666680932 0.10000000000000001 0.5864342832254239 -1.4083468156621262 0.10000000000000001 0.65483220033945577 -1.3778754338206174 0.10000000000000001 0.72165256932634325 -1.3440846293714006 0.10000000000000001 0.78673441406442612 -1.3070558073221172 0.10000000000000001 0.84992094668922924 -1.2668781733484289 0.10000000000000001 0.91105994530917545 -1.2236485188897219 0.10000000000000001 0.97000412072144537 -1.1774709879700573 0.10000000000000001 1.0266114712445709 -1.1284568263060955 0.10000000000000001 1.0807456248129235 -1.0767241133064176 0.10000000000000001 1.132276167508965 -1.0223974776078908 0.10000000000000001 1.1810789577417984 -0.96560779683436426 0.10000000000000001 1.2270364253151331 -0.90649188230100963 0.10000000000000001 1.2700378546641862 -0.84519214942388043 0.10000000000000001 1.3099796515791771 -0.78185627462869778 0.10000000000000001 1.3467655927728459 -0.71663683958541546 0.10000000000000001 1.3803070576907914 -0.64969096362559808 0.10000000000000001 1.4105232420061402 -0.58117992522819917 0.10000000000000001 1.437341352284252 -0.51126877348557631 0.10000000000000001 1.4606967813484775 -0.44012593048577109 0.10000000000000001 1.480533263924507 -0.3679227855689472 0.10000000000000001 1.4968030121883444 -0.29483328243545776 0.10000000000000001 1.5094668308913604 -0.22103350010023573 0.10000000000000001 1.5184942117850797 -0.14670122870302418 0.10000000000000001 1.5238634071182244 -0.072015541196357016 0.10000000000000001 1.5255614820289509 0.0028436380568713105 0.10000000000000001 1.5235843457060654 0.077695966736944649 0.10000000000000001 1.5179367612441463 0.15236111902778576 0.10000000000000001 1.5086323341688326 0.22665922003763103 0.10000000000000001 1.4956934796599204 0.30041127913340276 0.10000000000000001 1.479151368551231 0.37343962114482171 0.10000000000000001 1.4590458522373435 0.44556831439945521 0.10000000000000001 1.4354253666680932 0.51662359455752527 0.10000000000000001 1.4083468156621262 0.58643428322542379 0.10000000000000001 1.3778754338206176 0.65483220033945566 0.10000000000000001 1.3440846293714006 0.72165256932634314 0.10000000000000001 1.3070558073221172 0.7867344140644259 0.10000000000000001 1.2668781733484291 0.84992094668922924 0.10000000000000001 1.2236485188897219 0.91105994530917545 0.10000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Transform translation="1.2236485188897221 0.91105994530917511 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0062">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_0&quot;" />
+          <Appearance>
+            <Material diffuseColor="1 0.34999999999999998 0.66000000000000003" emissiveColor="0.044999999999999998 0.01575 0.029700000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.10000000000000001" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.60418073000711447 1.400825316453068 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0063">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_1&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="-0.17717679756334584 1.5152406753162895 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0064">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_2&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="-0.91105994530917511 1.2236485188897221 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0065">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_3&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="-1.400825316453068 0.60418073000711459 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0066">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_4&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="-1.5152406753162893 -0.17717679756334612 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0067">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_5&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="-1.2236485188897221 -0.911059945309175 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0068">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_6&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="-0.60418073000711459 -1.400825316453068 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0069">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_7&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.17717679756334467 -1.5152406753162895 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0070">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_8&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.91105994530917545 -1.2236485188897219 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0071">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_9&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="1.4008253164530677 -0.6041807300071147 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0072">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_10&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="1.5152406753162897 0.17717679756334459 0.10000000000000001">
+        <Shape DEF="MathLabPrimitive_0073">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;tracer_11&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Shape DEF="MathLabPrimitive_0074">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;marked_trajectory&quot;" />
+        <Appearance>
+          <Material diffuseColor="1 0.34999999999999998 0.66000000000000003" emissiveColor="1 0.34999999999999998 0.66000000000000003" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 -1">
+          <Coordinate point="1.3 0 0.10000000000000001 1.3025609186732554 0.010420709658807287 0.10000000000000001 1.3050433505116319 0.020882475609851205 0.10000000000000001 1.3074468117965901 0.031384749586444945 0.10000000000000001 1.3097708222515616 0.041926978364396385 0.10000000000000001 1.3120149050884711 0.05250860377983281 0.10000000000000001 1.3141785870542029 0.063129062747433518 0.10000000000000001 1.3162613984770151 0.073787787279070774 0.10000000000000001 1.3182628733128952 0.08448420450285983 0.10000000000000001 1.3201825491918535 0.09521773668261764 0.10000000000000001 1.3220199674641557 0.10598780123773154 0.10000000000000001 1.3237746732464799 0.11679381076343677 0.10000000000000001 1.3254462154680089 0.12763517305150504 0.10000000000000001 1.3270341469164444 0.13851129111134258 0.10000000000000001 1.3285380242839429 0.14942156319149874 0.10000000000000001 1.3299574082129695 0.16036538280158527 0.10000000000000001 1.3312918633420678 0.17134213873460644 0.10000000000000001 1.3325409583515393 0.18235121508969965 0.10000000000000001 1.333704266009031 0.19339199129528745 0.10000000000000001 1.334781363215028 0.20446384213264049 0.10000000000000001 1.3357718310482447 0.21556613775985112 0.10000000000000001 1.3366752548109173 0.22669824373621872 0.10000000000000001 1.337491224073984 0.23785952104704569 0.10000000000000001 1.3382193327221621 0.24904932612884464 0.10000000000000001 1.3388591789989077 0.26026701089495663 0.10000000000000001 1.3394103655512581 0.27151192276157954 0.10000000000000001 1.3398724994745572 0.28278340467420887 0.10000000000000001 1.3402451923570549 0.29408079513448709 0.10000000000000001 1.3405280603243777 0.30540342822746464 0.10000000000000001 1.3407207240838737 0.31675063364927109 0.10000000000000001 1.3408228089688154 0.3281217367351954 0.10000000000000001 1.3408339449824722 0.33951605848817745 0.10000000000000001 1.3407537668420351 0.35093291560770656 0.10000000000000001 1.3405819140224016 0.3623716205191318 0.10000000000000001 1.3403180307998068 0.37383148140337852 0.10000000000000001 1.3399617662953067 0.38531180222707517 0.10000000000000001 1.3395127745181015 0.3968118827730866 0.10000000000000001 1.3389707144087049 0.4083310186714556 0.10000000000000001 1.3383352498819441 0.41986850143075105 0.10000000000000001 1.3376060498697977 0.43142361846982236 0.10000000000000001 1.3367827883640631 0.44299565314996087 0.10000000000000001 1.3358651444588461 0.45458388480746492 0.10000000000000001 1.3348528023928798 0.46618758878661154 0.10000000000000001 1.3337454515916574 0.47780603647303066 0.10000000000000001 1.33254278670938 0.48943849532748418 0.10000000000000001 1.3312445076707218 0.501084228920046 0.10000000000000001 1.3298503197123983 0.51274249696468732 0.10000000000000001 1.3283599334245402 0.5244125553542589 0.10000000000000001 1.3267730647918721 0.53609365619587901 0.10000000000000001 1.3250894352346809 0.54778504784671556 0.10000000000000001 1.3233087716495884 0.5594859749501726 0.10000000000000001 1.321430806450103 0.57119567847247066 0.10000000000000001 1.3194552776069688 0.58291339573962675 0.10000000000000001 1.3173819286882897 0.59463836047482943 0.10000000000000001 1.3152105088994355 0.60636980283620945 0.10000000000000001 1.3129407731227258 0.61810694945500533 0.10000000000000001 1.3105724819568847 0.62984902347412075 0.10000000000000001 1.3081054017562621 0.64159524458707573 0.10000000000000001 1.3055393046698238 0.65334482907734825 0.10000000000000001 1.3028739686799005 0.66509698985810561 0.10000000000000001 1.3001091776406946 0.67685093651232442 0.10000000000000001 1.2972447213165437 0.68860587533330075 0.10000000000000001 1.2942803954199318 0.70036100936554235 0.10000000000000001 1.2912160016492482 0.71211553844605147 0.10000000000000001 1.2880513477262927 0.72386865924598554 0.10000000000000001 1.2847862474335168 0.73561956531270745 0.10000000000000001 1.2814205206510032 0.74736744711221081 0.10000000000000001 1.2779539933931781 0.75911149207192963 0.10000000000000001 1.2743864978452517 0.77085088462392448 0.10000000000000001 1.270717872399387 0.78258480624844629 0.10000000000000001 1.2669479616905852 0.794312435517876 0.10000000000000001 1.2630766166322962 0.8060329481410391 0.10000000000000001 1.2591036944517389 0.81774551700789044 0.10000000000000001 1.2550290587249353 0.82944931223457485 0.10000000000000001 1.2508525794114529 0.84114350120885084 0.10000000000000001 1.2465741328888482 0.85282724863588955 0.10000000000000001 1.2421936019868161 0.86449971658443314 0.10000000000000001 1.2377108760210302 0.87616006453332351 0.10000000000000001 1.2331258508266838 0.8878074494183904 0.10000000000000001 1.2284384287917152 0.8994410256797023 0.10000000000000001 1.2236485188897221 0.91105994530917511 0.10000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0075">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;marked_radius&quot;" />
+        <Appearance>
+          <Material diffuseColor="1 0.34999999999999998 0.66000000000000003" emissiveColor="1 0.34999999999999998 0.66000000000000003" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 0 0.10000000000000001 1.2236485188897221 0.91105994530917511 0.10000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+    </Group>
+  </Scene>
+</X3D>

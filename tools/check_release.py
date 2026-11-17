@@ -66,7 +66,11 @@ def main():
         report['assets'] = verify_assets()
         commands = [[sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'],
                     ['node', 'tests/ui_state.test.mjs'],
+                    ['node', 'tests/learning_ui.test.mjs'],
+                    ['node', 'tests/connections_ui.test.mjs'],
                     [sys.executable, 'tools/independent_probe.py'],
+                    [sys.executable, 'tools/probe_aha.py'],
+                    [sys.executable, 'tools/probe_expeditions.py'],
                     [sys.executable, 'tools/probe_math_mcp.py'],
                     [sys.executable, 'tools/validate_x3d.py']]
         for command in commands:
@@ -86,7 +90,8 @@ def main():
                 failed = True
             report['tests'].append(row)
             print(('PASS ' if process.returncode == 0 else 'FAIL ') + ' '.join(command[1:]), flush=True)
-        for name in ('independent-math.json', 'math-mcp.json', 'x3d-validation.json'):
+        for name in ('independent-math.json', 'aha-independent.json', 'expeditions-independent.json',
+                     'math-mcp.json', 'x3d-validation.json'):
             evidence = json.loads((ROOT / 'receipts' / name).read_text())
             if evidence.get('status') != 'pass':
                 failed = True

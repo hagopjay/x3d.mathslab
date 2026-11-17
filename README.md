@@ -1,13 +1,14 @@
 # x3d.mathlab · Make a question visible
 
 A local, inspectable mathematics laboratory for **curious to advanced** learners.
-Six connected experiments pair manipulable geometry with equations, numerical
-references, prediction questions and a path into the source. This is the first
-working Math Lab edition, built on the supplied Manim MCP archive.
+Eighteen connected experiments pair manipulable geometry with equations, numerical
+references, prediction questions and a path into the source. The Insight Expeditions edition extends the original laboratory for precocious
+grade 10 students through second- and third-year undergraduates.
 
 ## Live (no install)
 
-**https://hagopjay.github.io/x3d.mathslab/** runs the same six lessons on GitHub Pages. With no server there,
+**https://hagopjay.github.io/x3d.mathslab/** is the upstream GitHub Pages site. This patch
+provides eighteen lessons when applied and deployed; the live site is not updated by this delivery. With no server there,
 `web/static-api.js` loads pinned Pyodide 0.27.7 (CPython 3.12.7 on WebAssembly, SRI-checked) and runs the
 unmodified `mathlab/*.py` kernels behind the same request gate. First visit downloads about 10 MB, cached after.
 The page generates Manim **source text** only; rendering executes Python and stays local
@@ -29,7 +30,7 @@ The interactive lab uses the standard library and the bundled X_ITE 16.8.0
 runtime. No npm install, Manim installation, LaTeX or API key is needed to play.
 Do not open `web/index.html` directly: the local model API must be running.
 
-## Six ways of seeing
+## Eighteen ways of seeing
 
 | Experiment | Try this first | Go deeper |
 |---|---|---|
@@ -39,6 +40,27 @@ Do not open `web/index.html` directly: the local model API must be running.
 | Fourier motion | Animate rotating vectors, then add odd harmonics | Whole-period RMS, ringing and pointwise convergence distinctions |
 | Lorenz dynamics | Compare two almost-identical beginnings | RK4, actual time step, initial-data sensitivity versus refinement error |
 | Gradient descent | Increase the learning rate in a narrow valley | Hessian eigenvalues, exact recurrence and the stability boundary |
+| Complex multiplication | Sweep multiplication progress; compare roots of unity | Polar products, spirals, closure and primitive roots |
+| Taylor approximation | Widen the window while holding degree fixed | Shifted sine polynomials, actual error and a rigorous remainder bound |
+| Standing waves | Try “Flat, still moving” | Counterpropagating components, fixed nodes and energy exchange |
+| Probability | Compare n=30 at p=0.5 and p=0.05 | Exact binomial mass, standardized density bars and the normal limit |
+| Least squares | Make the columns almost parallel | Orthogonal residual, QR geometry and coordinate conditioning |
+| Vector fields | Compare pure rotation and pure expansion | Divergence, curl, fixed-circle integrals and material-ring flow |
+| Singular value decomposition | Reveal right rotation, stretch, then left rotation | Distinct input/output directions, reconstruction, condition and rank loss |
+| Bayesian evidence | Keep the detector fixed and make the target rare | Joint areas, expected natural counts and the positive-result denominator |
+| Constrained optimization | Slide objective contours against an ellipse | Tangent stationarity, nonzero gradients and exact extrema |
+| Sampling and aliasing | Compare 7 Hz and its signed alias at 8 samples/s | Equal samples can conceal different continuous signals |
+| Heat diffusion | Watch fine detail disappear before the broad pattern | A 3D time-history sheet, modal decay, conserved mean and decreasing roughness |
+| Refraction | Move the interface crossing away from the straight line | Convex travel time, Snell’s law and fastest versus shortest |
+
+Search the collection or filter by suggested preparation. Named presets explain
+what each case reveals; color keys identify the geometry. Each lesson links a
+primary study resource in **Understand**. Suggested levels are invitations, not
+prerequisite gates. The [Insight Expeditions](docs/Insight-Expeditions.html) adds six worked investigations
+and new routes through maths and science. The earlier [Aha Atlas](docs/Aha-Atlas.html)
+and [text companion](docs/AHA-ATLAS.md) remain available. **Connect this idea**
+buttons carry a specific mathematical question into a related scene. Coordinate
+captions explain chart lanes, display scales and spatial mappings.
 
 Use **Explore** for controls, **Understand** for short guided steps and the
 prediction/reasoning loop, and **Source** for the current X3D document. Floating
@@ -55,6 +77,10 @@ or hardware-performance claim.
 Read the self-contained [Mathlab Field Guide](docs/Mathlab-Field-Guide.html) for
 roughly 6,000 words of derivations, experiments, heuristics and future vision.
 
+[Preview the six new sampled models](docs/Insight-Preview.png). This exact
+geometry projection is reproducible with the optional Matplotlib renderer;
+it is distinct from native X_ITE rendering.
+
 ## Why X3D belongs in the model loop
 
 One normalized lesson configuration produces mathematical samples, native X3D,
@@ -70,7 +96,7 @@ arithmetic have representation limits distinct from Python's numerical checks.
 The [X3D contract](docs/X3D-CONTRACT.md) names these boundaries.
 
 **Keep this experiment** saves a JSON lesson card; **Open lesson card** restores
-and recomputes it. `schemas/lesson-card.schema.json` derives its six domains from
+and recomputes it. `schemas/lesson-card.schema.json` derives its eighteen domains from
 the same catalog. Missing parameters take declared defaults. These are parameter
 cards, not arbitrary programs. You can also recover a card from exported X3D:
 
@@ -89,7 +115,7 @@ movies or an existing X3D Math Lab interface. Those historical documents remain
 unchanged as input evidence.
 
 **Download Manim source** creates a `MathlabScene` using the exact current sampled
-data. Six default scripts are already in `examples/manim/`. They use `Text` rather
+data. Eighteen default scripts are already in `examples/manim/`. They use `Text` rather
 than LaTeX, and bake geometry rather than independently re-solving the lesson.
 See [BRIDGE-CONTRACT.md](docs/BRIDGE-CONTRACT.md). On a machine with Manim CE:
 
@@ -137,10 +163,14 @@ Manim renderer's packaging; this complete Math Lab launches from its source ZIP.
 ```sh
 python3 -m unittest discover -s tests -v
 node tests/ui_state.test.mjs
+node tests/learning_ui.test.mjs
+node tests/connections_ui.test.mjs
 python3 tools/export_examples.py
 python3 -m pip install -r tools/requirements-validation.txt
 python3 tools/validate_x3d.py
 python3 tools/independent_probe.py
+python3 tools/probe_aha.py
+python3 tools/probe_expeditions.py
 python3 tools/probe_math_mcp.py
 python3 tools/check_release.py
 ```
@@ -157,6 +187,9 @@ The running server refuses changed producer files so it cannot label cached
 Python code with a new disk hash; restart after editing a model producer.
 The browser's accepted model/source is separate from a requested control state.
 
-See [FOLDBACK.md](docs/FOLDBACK.md) and [PR.md](docs/PR.md) for portable findings
-and a ready review description. The delivery includes a patch against the
-supplied source archive. No external Git repository or pull request was changed.
+See [FOLDBACK.md](docs/FOLDBACK.md), [EXPEDITIONS-FOLDBACK.md](docs/EXPEDITIONS-FOLDBACK.md), and
+[PR.md](docs/PR.md) for portable findings and a ready review description. This
+iteration targets upstream commit `24c9bbd8ad92e477c56f239476cd3dff7c05ecb2`.
+The delivery includes a Git patch; no upstream commit, pull request or Pages
+deployment was made. Current verification and browser limitations are recorded
+in [EXPEDITIONS-VALIDATION.md](docs/EXPEDITIONS-VALIDATION.md).

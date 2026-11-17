@@ -1,3 +1,12 @@
+# Insight Expeditions foldback
+
+Current expansion: [EXPEDITIONS-FOLDBACK.md](EXPEDITIONS-FOLDBACK.md). Earlier edition findings follow.
+
+# Aha Atlas foldback
+
+The current twelve-lesson iteration and portable lessons are documented in
+[AHA-FOLDBACK.md](AHA-FOLDBACK.md). The original foundation analysis follows.
+
 # Math Lab: portable lessons and design boundaries
 
 This extension starts from the supplied `manimV2.zip` source, not from an already

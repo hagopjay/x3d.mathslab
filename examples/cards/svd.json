@@ -1,0 +1,11 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "svd",
+  "params": {
+    "sigma1": 2,
+    "ratio": 0.35,
+    "angle_u": 0.65,
+    "angle_v": -0.45,
+    "progress": 3
+  }
+}

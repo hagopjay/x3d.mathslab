@@ -1,0 +1,12 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "refraction",
+  "params": {
+    "n1": 1,
+    "n2": 1.5,
+    "height": 1.1,
+    "depth": 1.2,
+    "span": 3,
+    "crossing": 0.5
+  }
+}

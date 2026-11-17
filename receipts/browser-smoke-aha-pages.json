@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8851/web/",
+  "status": "not_run",
+  "playwright": "1.62.1",
+  "lessons": [],
+  "checks": {},
+  "scope": "Native browser smoke; no learning-outcome or GPU benchmark claim.",
+  "blocker": "Browser launch failed: browserType.launch: Target page, context or browser has been closed"
+}

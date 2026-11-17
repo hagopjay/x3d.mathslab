@@ -1,0 +1,140 @@
+{
+  "schema": "mathlab.expeditions-independent/1",
+  "created_utc": "2026-11-17T19:24:51.879424+00:00",
+  "source_sha256": {
+    "mathlab/catalog.py": "669442e4652ce772e2c27f6770fb7efcb6c6f8cc273a73f82b0a7bccd7e1a68d",
+    "mathlab/kernel.py": "6734f505fb9e8e2db7f0c68fb09fbf3585e8561c8091a97d168126e2680c97b6",
+    "mathlab/lessons_inference.py": "a33e3ec1106beed568e532f84f5f4dd97a102c0b02203906c52354d0dd014aa7",
+    "mathlab/lessons_science.py": "1a70c6c834558097ddf3f0f4a8651e702753268897dcb60fabd2c14f067d63fa",
+    "mathlab/x3d.py": "b1f82c9940b75aec4a6da5e5b165dad1ef26d5d385143eada98a635cedab2e98",
+    "mathlab/manim_bridge.py": "1f94c86ce34cc1f028957a73aeff47dd231023bbe3bf7452be09ef8595ffc8a3",
+    "mathlab/cards.py": "c1d3fd9ee31b6332c3c0ba279afd3263acb2c10eb54d8ad6e98332fb695c3a4e",
+    "tools/probe_expeditions.py": "884a36c91d05723522d768a66dc733d1f4a2348ee58b73cfcbc6769994bda84a"
+  },
+  "seed": 53117,
+  "cases_per_new_model": 60,
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "checks": [
+    {
+      "id": "bayes_decimal_emitted_areas",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "max_posterior_difference": 1.1102230246251565e-16,
+        "max_emitted_probability_area_difference": 2.220446049250313e-16,
+        "max_relative_odds_difference": 1.8854605938355736e-16,
+        "absolute_tolerance": 2e-14,
+        "reference": "50-digit Decimal joint-probability law, emitted box areas, and separate odds update"
+      },
+      "elapsed_seconds": 0.019478221999996492
+    },
+    {
+      "id": "alias_complex_samples_and_nyquist_phase",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "max_sample_or_position_difference": 2.6728619317850644e-14,
+        "max_curve_difference": 0.0,
+        "sample_absolute_tolerance": 2e-12,
+        "nyquist_phase_sample_magnitude": 3.6757973393518245e-15,
+        "nyquist_absolute_tolerance": 2e-13,
+        "reference": "Complex exponentials at every emitted sample; explicit exact-Nyquist phase-loss control"
+      },
+      "elapsed_seconds": 0.16137424300000447
+    },
+    {
+      "id": "svd_numpy_and_emitted_circle",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "max_singular_value_difference": 8.881784197001252e-16,
+        "max_singular_pair_residual": 4.440892098500626e-16,
+        "max_numpy_reconstruction_residual": 2.220446049250313e-15,
+        "max_emitted_circle_difference": 6.661338147750939e-16,
+        "absolute_tolerance": 2e-12,
+        "reference": "NumPy SVD, independent staged NumPy matrix product, complex unit-circle samples; no unique-basis assumption"
+      },
+      "elapsed_seconds": 0.2021063740000031
+    },
+    {
+      "id": "lagrange_scipy_and_emitted_maximum",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "max_objective_difference": 4.440892098500626e-16,
+        "max_emitted_maximum_point_difference": 3.7442244618633045e-08,
+        "max_emitted_constraint_residual": 6.661338147750939e-16,
+        "max_normal_parallel_residual": 2.220446049250313e-16,
+        "value_absolute_tolerance": 2e-11,
+        "optimizer_point_absolute_tolerance": 2e-06,
+        "reference": "Global coarse bracket plus independent SciPy bounded scalar solve on the ellipse; emitted point feasibility and normal determinant"
+      },
+      "elapsed_seconds": 0.0287466039999984
+    },
+    {
+      "id": "heat_adaptive_integrals_and_emitted_history",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "max_mean_difference": 1.7763568394002505e-15,
+        "max_energy_difference": 5.2735593669694936e-15,
+        "max_dissipation_difference": 1.3090223349720986e-14,
+        "max_geometry_difference": 4.440892098500626e-16,
+        "integral_absolute_tolerance": 2e-12,
+        "dissipation_absolute_tolerance": 2e-11,
+        "reference": "Adaptive spatial integrals of u, (u−1)² and u_x² plus decoded mesh/line coordinates"
+      },
+      "elapsed_seconds": 0.23744088799999474
+    },
+    {
+      "id": "refraction_scipy_and_emitted_ray",
+      "status": "pass",
+      "observation": {
+        "cases": 60,
+        "max_optimal_crossing_difference": 4.569207501248229e-08,
+        "max_minimum_cost_difference": 8.881784197001252e-16,
+        "max_snell_residual": 8.881784197001252e-16,
+        "max_emitted_ray_difference": 0.0,
+        "optimizer_point_absolute_tolerance": 2e-06,
+        "cost_absolute_tolerance": 2e-11,
+        "snell_absolute_tolerance": 2e-12,
+        "reference": "SciPy bounded scalar minimization of optical length, independent sine ratios and emitted ray coordinates"
+      },
+      "elapsed_seconds": 0.039791850000000295
+    },
+    {
+      "id": "six_model_export_boundaries",
+      "status": "pass",
+      "observation": {
+        "cases": 18,
+        "configurations": "default, simultaneous minimum, simultaneous maximum for all six new lessons",
+        "largest_x3d_bytes": 209864,
+        "largest_manim_source_bytes": 208410,
+        "scope": "Adapter budgets, parameter-card recovery, generated Python compilation; no renderer execution"
+      },
+      "elapsed_seconds": 0.3644389229999945
+    },
+    {
+      "id": "instrument_refusal_controls",
+      "status": "pass",
+      "observation": {
+        "paired_bad_controls_caught": 3,
+        "scope": "Checks the instrument comparator rejects nonfinite and excessive reference differences"
+      },
+      "elapsed_seconds": 1.7427999999597432e-05
+    }
+  ],
+  "scope": "Finite seeded development corroboration with independent references and explicit tolerances; not a proof or learning-outcome study.",
+  "limitations": [
+    "One numerical host; random coverage is not exhaustive.",
+    "No native X3D pixels, browser runtime, Manim video or GPU performance is measured."
+  ],
+  "source_drift": "none",
+  "status": "pass",
+  "report_sha256": "2897e590cc4c3fd30f142f471f0011610db709ae3aaa30796518fe66186e99b7"
+}

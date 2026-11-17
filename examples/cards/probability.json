@@ -1,0 +1,8 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "probability",
+  "params": {
+    "n": 12,
+    "p": 0.35
+  }
+}

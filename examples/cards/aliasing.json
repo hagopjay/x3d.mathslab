@@ -1,0 +1,9 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "aliasing",
+  "params": {
+    "frequency": 7,
+    "sample_rate": 8,
+    "phase": 0.65
+  }
+}

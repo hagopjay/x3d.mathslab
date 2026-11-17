@@ -78,7 +78,7 @@ class MathlabScene(ThreeDScene):
 
     def construct(self):
         self.camera.background_color = "#071421"
-        is_3d = SAMPLE["lesson"] in ("lorenz", "gradient")
+        is_3d = SAMPLE.get("view") == "spatial" or SAMPLE["lesson"] in ("lorenz", "gradient")
         center = np.array(SAMPLE["bounds"]["center"], dtype=float)
         size = np.array(SAMPLE["bounds"]["size"], dtype=float)
         if is_3d:

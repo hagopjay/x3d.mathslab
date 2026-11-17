@@ -1,13 +1,20 @@
 {
   "schema": "mathlab.distribution/1",
-  "edition": "0.1.1",
-  "target": "Curious to advanced",
+  "edition": "0.3.1",
+  "target": "Precocious grade 10 through undergraduate years 2\u20133",
   "source_attachment": "manimV2.zip",
   "source_attachment_sha256": "58df499d06a48605cd497e04ec44ceaa8e30174c43d52e636979167796b21d5e",
   "validation": "receipts/release-checks.json",
   "validation_status": "pass",
-  "python_tests": 93,
-  "scope": "First working six-lesson edition. No actual Manim video or hardware GPU benchmark. 0.1.1 adds GitHub Pages mode (Pyodide), mcp 2.x compatibility and scene framing; see docs/PAGES.md and receipts/.",
-  "base_commit": "a8396b6a8778ad9521c51076d3c046c66027834a",
-  "base_git_tree": "a9edd496fa4ba248368d0e73fe92851b0e1420c0"
+  "python_tests": 148,
+  "scope": "Insight Expeditions: six new maths/science lessons, eighteen total, fifty presets, conceptual connections, coordinate captions, worked guide and exact-geometry contact sheet. All automated numerical/export/HTTP/MCP checks pass. Native X_ITE and Pyodide rendering verified afterwards in headless Chromium (see browser_validation); no Manim video or learner study. Incremental and cumulative patches supplied; no upstream push or deployment.",
+  "base_commit": "24c9bbd8ad92e477c56f239476cd3dff7c05ecb2",
+  "base_git_tree": "33e7d38abdee73c8ea1dd1326f85c539ad08896b",
+  "base_repository": "https://github.com/hagopjay/x3d.mathslab",
+  "lesson_count": 18,
+  "preset_count": 50,
+  "browser_validation_status": "pass",
+  "previous_edition": "0.2.0",
+  "previous_edition_git_tree": "9b653b4070c69181bf6c59a0211a7fa5db34d550",
+  "browser_validation": "receipts/browser-smoke-pages-18.json, receipts/browser-smoke-server-18.json: 18 of 18 lessons render native X_ITE, 0 console errors, Chromium 153.0.8010.12, Playwright 1.63.0, Pyodide 0.27.7 and loopback server transports"
 }

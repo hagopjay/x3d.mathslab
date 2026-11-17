@@ -1,3 +1,13 @@
+# Current Insight Expeditions verification
+
+See [docs/EXPEDITIONS-VALIDATION.md](docs/EXPEDITIONS-VALIDATION.md) for the eighteen-lesson iteration. Earlier edition evidence follows as history.
+
+# Current Aha Atlas verification
+
+See [docs/AHA-VALIDATION.md](docs/AHA-VALIDATION.md) for the twelve-lesson iteration.
+The earlier six-lesson evidence below is retained as history and does not certify
+the current browser pixels or Pyodide execution.
+
 # Validation record
 
 This is evidence for the delivered first Math Lab edition. It is not a formal

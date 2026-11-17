@@ -1,11 +1,11 @@
 {
   "schema": "mathlab.mcp-stdio-probe/1",
-  "started_utc": "2026-11-17T05:01:30.679964+00:00",
-  "finished_utc": "2026-11-17T05:01:31.518831+00:00",
+  "started_utc": "2026-11-17T19:24:54.046454+00:00",
+  "finished_utc": "2026-11-17T19:24:55.456484+00:00",
   "status": "pass",
   "python": "3.13.18",
   "mcp_sdk": "2.3.0",
-  "instrument_sha256": "c4f66388cd2eda69f08cacf352525ac196a419ef109606465350c49fac0b5536",
+  "instrument_sha256": "51bbdf970de63502ce0625968676be5e596f590abafba18ae596219b9230f329",
   "adapter_sha256": "54dda98b3bd29872d6d65fb1f03c61306d3634271aeb53b4f1833f78f535f9e9",
   "checks": [
     {
@@ -39,27 +39,128 @@
         "integral",
         "fourier",
         "lorenz",
-        "gradient"
+        "gradient",
+        "complex",
+        "taylor",
+        "waves",
+        "probability",
+        "least_squares",
+        "vector_field",
+        "svd",
+        "bayes",
+        "lagrange",
+        "aliasing",
+        "heat",
+        "refraction"
       ]
     },
     {
       "id": "derivative_scene_call",
       "pass": true,
-      "x3d_bytes": 25993,
-      "sample_sha256": "a6e0832dd748bf862746dffa5a7041b7ea3907a77a03c3296890f93cc7e2d43d",
-      "x3d_sha256": "2bd4960087c34a05555a9ec0b496f771e4a750fd11b73f2fe7caee96ffdd81d3",
+      "x3d_bytes": 26147,
+      "sample_sha256": "5fc99e9227ba2f226a41366ffc33c03aae9335a532bf45a3752080007b6d9b6d",
+      "x3d_sha256": "b26d8744fb69b626cab6c3034a05dcc0bc9a1a585a5170d302e2350984f9e06f",
       "source_sha256": {
-        "catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
-        "kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
-        "x3d.py": "39fb7f5cedd965e6dd7163b2df381bee73bf27539804cfc8eec2eb93722d5850",
-        "manim_bridge.py": "27f836c06180ed799b7b0f4c462770cb9d5709e02d2d7f153593d34a4c2946f0"
+        "catalog.py": "669442e4652ce772e2c27f6770fb7efcb6c6f8cc273a73f82b0a7bccd7e1a68d",
+        "kernel.py": "6734f505fb9e8e2db7f0c68fb09fbf3585e8561c8091a97d168126e2680c97b6",
+        "lessons_analysis.py": "119f37a86b41356f1f66405e32ffd20697e775842af465e0900fc07e5238c928",
+        "lessons_structures.py": "0b15b886ca89e25538ecd453993758c7822bef16eb5ebaabe884a4d3b10d9495",
+        "lessons_inference.py": "a33e3ec1106beed568e532f84f5f4dd97a102c0b02203906c52354d0dd014aa7",
+        "lessons_science.py": "1a70c6c834558097ddf3f0f4a8651e702753268897dcb60fabd2c14f067d63fa",
+        "x3d.py": "b1f82c9940b75aec4a6da5e5b165dad1ef26d5d385143eada98a635cedab2e98",
+        "manim_bridge.py": "1f94c86ce34cc1f028957a73aeff47dd231023bbe3bf7452be09ef8595ffc8a3"
       }
     },
     {
       "id": "baked_source_same_sample",
       "pass": true,
-      "source_bytes": 18401,
-      "source_sha256": "ffea2b04ec91fe71455e8ff3084c05bf1d1e7c8a687edb39e16917764360c1e5"
+      "source_bytes": 18542,
+      "source_sha256": "3fa719754f3b98d7f4b3ec3752c9efaba115981cfe3170fc5a65fa5977cab305"
+    },
+    {
+      "id": "aliasing_scene_call",
+      "pass": true,
+      "x3d_bytes": 164586
+    },
+    {
+      "id": "bayes_scene_call",
+      "pass": true,
+      "x3d_bytes": 13873
+    },
+    {
+      "id": "complex_scene_call",
+      "pass": true,
+      "x3d_bytes": 42334
+    },
+    {
+      "id": "fourier_scene_call",
+      "pass": true,
+      "x3d_bytes": 65538
+    },
+    {
+      "id": "gradient_scene_call",
+      "pass": true,
+      "x3d_bytes": 133709
+    },
+    {
+      "id": "heat_scene_call",
+      "pass": true,
+      "x3d_bytes": 206000
+    },
+    {
+      "id": "integral_scene_call",
+      "pass": true,
+      "x3d_bytes": 37493
+    },
+    {
+      "id": "lagrange_scene_call",
+      "pass": true,
+      "x3d_bytes": 31202
+    },
+    {
+      "id": "least_squares_scene_call",
+      "pass": true,
+      "x3d_bytes": 26457
+    },
+    {
+      "id": "linear_scene_call",
+      "pass": true,
+      "x3d_bytes": 50331
+    },
+    {
+      "id": "lorenz_scene_call",
+      "pass": true,
+      "x3d_bytes": 138144
+    },
+    {
+      "id": "probability_scene_call",
+      "pass": true,
+      "x3d_bytes": 41237
+    },
+    {
+      "id": "refraction_scene_call",
+      "pass": true,
+      "x3d_bytes": 32603
+    },
+    {
+      "id": "svd_scene_call",
+      "pass": true,
+      "x3d_bytes": 51939
+    },
+    {
+      "id": "taylor_scene_call",
+      "pass": true,
+      "x3d_bytes": 48633
+    },
+    {
+      "id": "vector_field_scene_call",
+      "pass": true,
+      "x3d_bytes": 80638
+    },
+    {
+      "id": "waves_scene_call",
+      "pass": true,
+      "x3d_bytes": 82947
     },
     {
       "id": "boolean_parameter_refused",
@@ -70,5 +171,5 @@
     "One local Python/SDK executor using the actual stdio transport.",
     "No Manim rendering or generated/user-supplied code execution, network transport, browser or formal acceptance ran."
   ],
-  "report_sha256": "2fef482063af3dda6fde0180b2634307ddcaf30619b34731e95a5558df42dc31"
+  "report_sha256": "66a03b78719e14bb660ff8dffee1034e8a78f0b19408be45ab762d98fa68aaf4"
 }

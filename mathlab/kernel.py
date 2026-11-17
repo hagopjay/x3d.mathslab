@@ -1,4 +1,4 @@
-"""Six bounded mathematical models, independent of renderers and browser state.
+"""Bounded mathematical models, independent of renderers and browser state.
 
 All geometry is a sampled view, never the authority for a theorem. Analytic
 references and numeric-method diagnostics retain their own names and scopes.
@@ -290,6 +290,16 @@ def _gradient(p):
 
 _MODELS={"linear":_linear,"derivative":_derivative,"integral":_integral,"fourier":_fourier,"lorenz":_lorenz,"gradient":_gradient}
 
+# Extensions depend on these geometry helpers only while evaluating a model.
+from .lessons_analysis import MODELS as _ANALYSIS_MODELS
+from .lessons_structures import MODELS as _STRUCTURE_MODELS
+from .lessons_inference import MODELS as _INFERENCE_MODELS
+from .lessons_science import MODELS as _SCIENCE_MODELS
+_MODELS.update(_ANALYSIS_MODELS)
+_MODELS.update(_STRUCTURE_MODELS)
+_MODELS.update(_INFERENCE_MODELS)
+_MODELS.update(_SCIENCE_MODELS)
+
 
 def evaluate(lesson_id, params=None):
     """Validate a bounded lesson configuration and return sampled geometry/data."""
@@ -301,5 +311,6 @@ def evaluate(lesson_id, params=None):
     spec=lesson_spec(lesson_id)
     return {"schema":"mathlab.sample/1","lesson":lesson_id,"title":spec["title"],"params":p,
             "primitives":primitives,"metrics":metrics,"bounds":bounds,"numerics":numerics,
-            "insights":insights,"formula":spec["formula"],
+            "insights":insights,"formula":spec["formula"],"view":spec.get("view", "planar"),
+            "axes":spec.get("axes", ""),
             "scope":"Bounded sampled mathematical model; source equations and diagnostic meanings are declared per lesson. Geometry is not a proof or a complete interactive savegame."}

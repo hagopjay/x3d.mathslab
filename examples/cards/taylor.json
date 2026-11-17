@@ -1,0 +1,10 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "taylor",
+  "params": {
+    "center": 0,
+    "degree": 3,
+    "radius": 2.5,
+    "probe": 0.8
+  }
+}

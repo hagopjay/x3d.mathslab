@@ -1,6 +1,6 @@
 /* Static (GitHub Pages) transport for x3d.mathlab.
  *
- * The lab's six kernels are pure standard-library Python. On a static host there is no
+ * The lab's kernels are pure standard-library Python. On a static host there is no
  * local server, so this adapter loads pinned Pyodide (CPython compiled to WebAssembly) and
  * runs the SAME mathlab/*.py files that the loopback server runs, behind the SAME request
  * gate (decode_request) and the SAME response budget. It evaluates enumerated lessons and
@@ -11,7 +11,7 @@
   const BASE = "https://cdn.jsdelivr.net/pyodide/v" + PYODIDE + "/full/";
   // SHA-384 of pyodide.js@0.27.7 as served by jsDelivr; the browser refuses a changed file.
   const SRI = "sha384-90so5tCKvl0xs9agU29IMKlAVzhfzFX7QO//YxQkRhJG58bBZrFN+2ZTRB026X5X";
-  const MODULES = ["__init__", "schema", "catalog", "kernel", "x3d", "manim_bridge", "cards", "server"];
+  const MODULES = ["__init__", "schema", "catalog", "kernel", "lessons_analysis", "lessons_structures", "lessons_inference", "lessons_science", "x3d", "manim_bridge", "cards", "server"];
   const root = new URL("../", document.baseURI);
   let booting = null;
   const status = (t) => window.dispatchEvent(new CustomEvent("mathlab-static", { detail: t }));
@@ -58,7 +58,7 @@ def run(path, raw):
     status("Loading in-browser Python (Pyodide " + PYODIDE + ", ~10 MB, cached after first visit)");
     await script(BASE + "pyodide.js", SRI);
     const py = await window.loadPyodide({ indexURL: BASE });
-    status("Installing the six mathematical kernels");
+    status("Preparing the mathematical experiments");
     py.FS.mkdirTree("/app/mathlab");
     for (const name of MODULES) {
       const r = await fetch(new URL("mathlab/" + name + ".py", root));

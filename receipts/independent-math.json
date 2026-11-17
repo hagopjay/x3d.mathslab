@@ -1,14 +1,14 @@
 {
   "schema": "mathlab.independent-probes/1",
-  "created_utc": "2026-11-17T05:01:28.891265+00:00",
+  "created_utc": "2026-11-17T19:24:44.102306+00:00",
   "environment": {
     "python": "3.13.18",
     "platform": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39",
     "machine": "x86_64"
   },
   "source_sha256": {
-    "mathlab/kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
-    "mathlab/catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
+    "mathlab/kernel.py": "6734f505fb9e8e2db7f0c68fb09fbf3585e8561c8091a97d168126e2680c97b6",
+    "mathlab/catalog.py": "669442e4652ce772e2c27f6770fb7efcb6c6f8cc273a73f82b0a7bccd7e1a68d",
     "tools/independent_probe.py": "4146e6336d36d8ba8557f72ddbf834bff27b4f07d0557f5bd08106fd632df3cc"
   },
   "checks": [
@@ -23,7 +23,7 @@
         "absolute_development_tolerance": 1e-11,
         "scope": "Residuals of normalized emitted eigenline directions under the displayed matrix; not a theorem prover."
       },
-      "elapsed_seconds": 0.1645170640000515
+      "elapsed_seconds": 0.1932510390000033
     },
     {
       "id": "five_point_derivative",
@@ -64,7 +64,7 @@
         },
         "scope": "Finite-difference corroboration of the authored derivative; finite precision and truncation remain."
       },
-      "elapsed_seconds": 0.0010018529999342718
+      "elapsed_seconds": 0.0012375149999996893
     },
     {
       "id": "independent_quadrature_and_rectangle_area",
@@ -113,7 +113,7 @@
         ],
         "scope": "Independent dense quadrature checks the analytic reference; emitted box area separately checks the visual rectangle-sum contract."
       },
-      "elapsed_seconds": 0.009643329000027734
+      "elapsed_seconds": 0.011123610000005613
     },
     {
       "id": "expanded_hessian_recurrence",
@@ -225,7 +225,7 @@
         ],
         "scope": "A separately expanded Hessian recurrence checks stable, unstable and neutral-boundary cases; not a proof about arbitrary optimization losses."
       },
-      "elapsed_seconds": 0.00893951900002321
+      "elapsed_seconds": 0.009076059999998165
     },
     {
       "id": "dynamics_corners_and_framing",
@@ -401,7 +401,7 @@
         ],
         "scope": "Finite endpoint and framing checks at sixteen declared corners, not exhaustive parameter coverage or proof of chaos."
       },
-      "elapsed_seconds": 0.5585748820000163
+      "elapsed_seconds": 0.5573533399999988
     },
     {
       "id": "optional_scipy_dop853",
@@ -459,7 +459,7 @@
         ],
         "scope": "Independent numerical corroboration at short time; neither solver is an exact solution or rigorous error certificate."
       },
-      "elapsed_seconds": 0.33927112599997145
+      "elapsed_seconds": 3.974587995999997
     }
   ],
   "status": "pass",
@@ -469,5 +469,5 @@
     "Finite sampled comparisons corroborate authored models; they do not prove theorems or generalize to arbitrary functions/ODEs."
   ],
   "source_drift": "none",
-  "report_sha256": "84cc57d712ece0d406ef192c0052cd54c118353f4860a29b466c632bc804c24c"
+  "report_sha256": "a6edbfe519f573784e47e8b611f81e1e7ee2365925f189e577f87b7399b9ca73"
 }

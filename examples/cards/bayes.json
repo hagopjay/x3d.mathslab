@@ -1,0 +1,9 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "bayes",
+  "params": {
+    "prior": 0.01,
+    "sensitivity": 0.99,
+    "false_positive": 0.01
+  }
+}

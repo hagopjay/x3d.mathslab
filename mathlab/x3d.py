@@ -155,6 +155,7 @@ def _validate(sample: Any) -> tuple[list[dict[str, Any]], dict[str, Any], str]:
         normalized.append(row)
     metadata = {"adapter": ADAPTER_VERSION, "sample_schema": sample["schema"], "lesson": lesson,
                 "title": title, "parameters": dict(sample["params"]),
+                "view": sample.get("view", "auto"), "axes": sample.get("axes", ""),
                 "metrics": sample.get("metrics", []), "insights": sample.get("insights", []),
                 "bounds": {"center": center, "size": size},
                 "scope": "Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint."}
@@ -238,7 +239,10 @@ def to_x3d(sample: Mapping[str, Any]) -> str:
     distance = radius / math.sin(0.35) * 1.16
     # Thin integral boxes are an area diagram, not a request for an oblique
     # camera. These authored plane lessons deliberately preserve XY reading.
-    planar = metadata["lesson"] in ("linear", "derivative", "integral", "fourier") or size[2] <= max(size[0], size[1]) * 1e-8
+    view = metadata["view"]
+    planar = view == "planar" or (view != "spatial" and (
+        metadata["lesson"] in ("linear", "derivative", "integral", "fourier")
+        or size[2] <= max(size[0], size[1]) * 1e-8))
     direction = (0.0, 0.0, 1.0) if planar else (0.52, 0.42, 1.0)
     length = math.sqrt(sum(v * v for v in direction))
     unit = tuple(v / length for v in direction)

@@ -24,10 +24,12 @@ class MathMCPTests(unittest.IsolatedAsyncioTestCase):
         from mathlab import mcp_server
         self.server = mcp_server
 
-    async def test_catalog_has_six_lessons_and_three_read_only_tools(self):
+    async def test_catalog_has_eighteen_lessons_and_three_read_only_tools(self):
         result = await self.server.mathlab_list_lessons()
         self.assertEqual({row['id'] for row in result['lessons']},
-                         {'linear', 'derivative', 'integral', 'fourier', 'lorenz', 'gradient'})
+                         {'linear', 'derivative', 'integral', 'fourier', 'lorenz', 'gradient',
+                          'complex', 'taylor', 'waves', 'probability', 'least_squares', 'vector_field',
+                          'svd', 'bayes', 'lagrange', 'aliasing', 'heat', 'refraction'})
         tools = await self.server.mcp.list_tools()
         self.assertEqual({tool.name for tool in tools},
                          {'mathlab_list_lessons', 'mathlab_scene', 'mathlab_manim_source'})

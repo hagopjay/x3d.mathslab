@@ -1,0 +1,10 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "heat",
+  "params": {
+    "mode": 5,
+    "amplitude": 0.4,
+    "diffusivity": 0.25,
+    "time": 0.45
+  }
+}

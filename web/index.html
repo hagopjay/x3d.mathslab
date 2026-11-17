@@ -23,10 +23,10 @@
         ></a
       >
       <div class="top-note">
-        <i></i><span>Six connected ways of seeing.</span>
+        <i></i><span id="collectionNote">Connected ways of seeing.</span>
       </div>
       <div class="top-actions">
-        <button class="quiet" id="guideButton">Field guide ↗</button
+        <button class="quiet" id="guideButton">Insight atlas ↗</button
         ><button class="quiet" id="importButton">Open lesson card</button
         ><input
           id="cardFile"
@@ -40,7 +40,14 @@
     </header>
     <main id="workspace">
       <aside class="atlas" aria-label="Mathematical experiments">
-        <div class="eyebrow">THE COLLECTION <span>01—06</span></div>
+        <div class="eyebrow">THE COLLECTION <span id="collectionCount">…</span></div>
+        <div class="collection-search">
+          <label class="sr-only" for="lessonSearch">Search lessons and mathematical ideas</label>
+          <input id="lessonSearch" type="search" placeholder="Find an idea…" autocomplete="off" />
+          <label class="sr-only" for="levelFilter">Filter lessons by suggested level</label>
+          <select id="levelFilter"><option value="">All suggested levels</option></select>
+          <p id="collectionStatus" role="status" aria-live="polite"></p>
+        </div>
         <nav id="lessonNav" aria-label="Choose an experiment"></nav>
         <div class="atlas-bottom">
           <span class="orbit-glyph" aria-hidden="true">⊕</span>
@@ -56,10 +63,11 @@
         <div class="lesson-heading">
           <div>
             <div class="eyebrow" id="lessonCategory">YOUR NEXT DISCOVERY</div>
-            <h1 id="lessonTitle">
+            <h1 id="lessonTitle" tabindex="-1">
               A small change.<br />A different way to see.
             </h1>
             <p id="lessonTagline">Choose a relationship, then make it move.</p>
+            <div id="learningProfile" class="learning-profile"></div>
           </div>
           <span class="lesson-index" id="lessonIndex" aria-hidden="true"
             >01</span
@@ -130,6 +138,8 @@
             Updating the experiment…
           </div>
         </div>
+        <ul id="sceneLegend" class="scene-legend" aria-label="Scene color key" hidden></ul>
+        <p id="sceneAxes" class="scene-axes" aria-label="Coordinate guide for this experiment" hidden></p>
         <div class="measurements-head">
           <div class="eyebrow">LOOK, THEN MEASURE</div>
           <span id="measurementScope">One model · visible numbers</span>
@@ -189,6 +199,11 @@
               Change one thing. Give yourself a moment to notice.
             </p>
           </div>
+          <section id="presetSection" class="guided-starts" aria-labelledby="presetHeading" hidden>
+            <div class="eyebrow" id="presetHeading">START WITH A SURPRISE</div>
+            <div id="lessonPresets" class="lesson-presets"></div>
+            <p id="presetNote" aria-live="polite">Choose a starting point, predict, then change one control.</p>
+          </section>
           <div id="parameters" class="parameters"></div>
           <div class="control-actions">
             <button id="resetParameters" class="quiet">
@@ -257,6 +272,16 @@
             <div class="eyebrow">NOTICE THIS</div>
             <ul id="insights"></ul>
           </div>
+          <section id="connectionsSection" class="lesson-connections" aria-labelledby="connectionsHeading" hidden>
+            <div class="eyebrow" id="connectionsHeading">CONNECT THIS IDEA</div>
+            <p class="resources-intro">Carry one insight into a different mathematical setting.</p>
+            <ul id="lessonConnections"></ul>
+          </section>
+          <section id="resourcesSection" class="lesson-resources" aria-labelledby="resourcesHeading" hidden>
+            <div class="eyebrow" id="resourcesHeading">CONTINUE THE THOUGHT</div>
+            <p class="resources-intro">Read the derivation, then return and test the idea.</p>
+            <ul id="lessonResources"></ul>
+          </section>
           <button class="wide quiet" id="backToControls">
             Try that idea in the lab ↗
           </button>

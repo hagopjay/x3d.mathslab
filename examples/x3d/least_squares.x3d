@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="4.0">
+  <head>
+    <meta name="title" content="The Closest Reachable Point.x3d" />
+    <meta name="generator" content="mathlab.x3d/1" />
+    <meta name="description" content="Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint." />
+    <meta name="mathlab.lesson" content="least_squares" />
+    <meta name="mathlab.configuration_sha256" content="a17b6c647ea7539e5d5ee069aa7d31fe3466314f56b46d5e03467d9885bf7da2" />
+  </head>
+  <Scene>
+    <WorldInfo title="The Closest Reachable Point" info="&quot;X3D Math Lab • Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint.&quot;">
+      <MetadataString containerField="metadata" name="mathlab.sample" reference="mathlab.x3d/1" value="&quot;{\&quot;adapter\&quot;:\&quot;mathlab.x3d/1\&quot;,\&quot;axes\&quot;:\&quot;Spatial coordinates: mathematical (x,y,z). Orbit to separate the target, plane and perpendicular residual.\&quot;,\&quot;bounds\&quot;:{\&quot;center\&quot;:[0.0,0.0,0.057125542138681595],\&quot;size\&quot;:[8.8,7.50221579412365,4.795748915722637]},\&quot;configuration_sha256\&quot;:\&quot;a17b6c647ea7539e5d5ee069aa7d31fe3466314f56b46d5e03467d9885bf7da2\&quot;,\&quot;insights\&quot;:[\&quot;The world uses mathematical coordinates (x,y,z) without flattening. Orbit the camera to see the target, plane, and perpendicular residual.\&quot;,\&quot;Columns a₁=(1,0,0) and a₂=(1,ε cos θ,ε sin θ) remain independent because ε≥0.05. Their span is fixed as ε changes, so the projection stays fixed while coordinates can grow.\&quot;,\&quot;The mint point uses a stable geometric QR calculation with orthonormal basis q₁=(1,0,0), q₂=(0,cos θ,sin θ). The normal-equation coefficients are retained only as a comparison.\&quot;,\&quot;A large condition number describes worst-case sensitivity; it does not say every target has a large error. Drawing the projection directly avoids huge opposing coefficient vectors obscuring its geometry.\&quot;],\&quot;lesson\&quot;:\&quot;least_squares\&quot;,\&quot;metrics\&quot;:[{\&quot;id\&quot;:\&quot;residual\&quot;,\&quot;label\&quot;:\&quot;Closest distance ||b−p||\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:1.163076821608171},{\&quot;id\&quot;:\&quot;orthogonality\&quot;,\&quot;label\&quot;:\&quot;Max |aⱼ·(b−p)|\&quot;,\&quot;note\&quot;:\&quot;Zero is the analytic optimality condition; this is a floating-point diagnostic.\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:5.551115123125783e-17},{\&quot;id\&quot;:\&quot;coefficient_1\&quot;,\&quot;label\&quot;:\&quot;Coefficient x̂₁\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:-2.4557683767741656},{\&quot;id\&quot;:\&quot;coefficient_2\&quot;,\&quot;label\&quot;:\&quot;Coefficient x̂₂\&quot;,\&quot;note\&quot;:\&quot;\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:3.8557683767741655},{\&quot;id\&quot;:\&quot;condition\&quot;,\&quot;label\&quot;:\&quot;2-norm condition number κ₂(A)\&quot;,\&quot;note\&quot;:\&quot;κ₂(AᵀA)=κ₂(A)². The display solves by the known orthonormal basis rather than forming the normal equations.\&quot;,\&quot;unit\&quot;:\&quot;\&quot;,\&quot;value\&quot;:3.932042912437429}],\&quot;parameters\&quot;:{\&quot;bx\&quot;:1.4,\&quot;by\&quot;:1.2,\&quot;bz\&quot;:2.1,\&quot;epsilon\&quot;:0.55,\&quot;tilt\&quot;:0.55},\&quot;sample_schema\&quot;:\&quot;mathlab.sample/1\&quot;,\&quot;sample_sha256\&quot;:\&quot;ae35593f041018c03e9ee1a5690b3302903e73dd816c469db7eb571cebb7a64c\&quot;,\&quot;scope\&quot;:\&quot;Static sampled geometry and authored lesson parameters; not a proof, live controller, or checkpoint.\&quot;,\&quot;title\&quot;:\&quot;The Closest Reachable Point\&quot;,\&quot;view\&quot;:\&quot;spatial\&quot;}&quot;" />
+    </WorldInfo>
+    <Background skyColor="0.018 0.035 0.075" />
+    <NavigationInfo DEF="MathLabNavigation" type="&quot;EXAMINE&quot; &quot;ANY&quot;" headlight="true" speed="1" />
+    <Viewpoint DEF="MathLabView" description="Math Lab • The Closest Reachable Point" position="9.1543599389508703 7.3939061045372396 17.661663886274969" orientation="-0.62833710708762125 0.77794118020372172 0 0.58922306973334548" centerOfRotation="0 0 0.057125542138681595" fieldOfView="0.70" />
+    <DirectionalLight direction="-0.4 -0.7 -1" color="0.78 0.88 1" intensity="0.8" />
+    <DirectionalLight direction="0.8 0.4 0.6" color="1 0.76 0.49" intensity="0.35" />
+    <Group DEF="MathLabReferenceGrid">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.065000000000000002 0.13 0.20999999999999999" emissiveColor="0.065000000000000002 0.13 0.20999999999999999" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1 2 3 -1 4 5 -1 6 7 -1 8 9 -1 10 11 -1 12 13 -1 14 15 -1 16 17 -1 18 19 -1 20 21 -1 22 23 -1 24 25 -1 26 27 -1 28 29 -1 30 31 -1 32 33 -1 34 35 -1 36 37 -1 38 39 -1 40 41 -1 42 43 -1">
+          <Coordinate point="-4.4000000000000004 -4.2012408447092442 -2.3407489157226369 -4.4000000000000004 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 -2.3407489157226369 4.4000000000000004 -4.2012408447092442 -2.3407489157226369 -3.5200000000000005 -4.2012408447092442 -2.3407489157226369 -3.5200000000000005 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 -1.8611740241503734 4.4000000000000004 -4.2012408447092442 -1.8611740241503734 -2.6400000000000001 -4.2012408447092442 -2.3407489157226369 -2.6400000000000001 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 -1.3815991325781094 4.4000000000000004 -4.2012408447092442 -1.3815991325781094 -1.7600000000000002 -4.2012408447092442 -2.3407489157226369 -1.7600000000000002 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 -0.90202424100584588 4.4000000000000004 -4.2012408447092442 -0.90202424100584588 -0.87999999999999989 -4.2012408447092442 -2.3407489157226369 -0.87999999999999989 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 -0.42244934943358198 4.4000000000000004 -4.2012408447092442 -0.42244934943358198 0 -4.2012408447092442 -2.3407489157226369 0 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 0.057125542138681595 4.4000000000000004 -4.2012408447092442 0.057125542138681595 0.87999999999999989 -4.2012408447092442 -2.3407489157226369 0.87999999999999989 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 0.53670043371094511 4.4000000000000004 -4.2012408447092442 0.53670043371094511 1.7599999999999998 -4.2012408447092442 -2.3407489157226369 1.7599999999999998 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 1.0162753252832086 4.4000000000000004 -4.2012408447092442 1.0162753252832086 2.6400000000000006 -4.2012408447092442 -2.3407489157226369 2.6400000000000006 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 1.4958502168554728 4.4000000000000004 -4.2012408447092442 1.4958502168554728 3.5200000000000005 -4.2012408447092442 -2.3407489157226369 3.5200000000000005 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 1.9754251084277366 4.4000000000000004 -4.2012408447092442 1.9754251084277366 4.4000000000000004 -4.2012408447092442 -2.3407489157226369 4.4000000000000004 -4.2012408447092442 2.4550000000000001 -4.4000000000000004 -4.2012408447092442 2.4550000000000001 4.4000000000000004 -4.2012408447092442 2.4550000000000001" />
+        </IndexedLineSet>
+      </Shape>
+    </Group>
+    <Group DEF="MathLabModel">
+      <Shape DEF="MathLabPrimitive_0000">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;reachable_plane&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.65000000000000002 0.55000000000000004 1" emissiveColor="0.029249999999999998 0.024750000000000001 0.044999999999999998" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0.80000000000000004" />
+        </Appearance>
+        <IndexedFaceSet solid="false" creaseAngle="0.75" coordIndex="0 1 2 3 -1">
+          <Coordinate point="-4 -3.4100980882380227 -2.0907489157226369 4 -3.4100980882380227 -2.0907489157226369 4 3.4100980882380227 2.0907489157226369 -4 3.4100980882380227 2.0907489157226369" />
+        </IndexedFaceSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0001">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_-4&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 -3.4100980882380227 -2.0907489157226369 -4 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0002">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_-4&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 -3.4100980882380227 -2.0907489157226369 4 -3.4100980882380227 -2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0003">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_-3&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-3 -3.4100980882380227 -2.0907489157226369 -3 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0004">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_-3&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 -2.5575735661785171 -1.5680616867919777 4 -2.5575735661785171 -1.5680616867919777" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0005">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-2 -3.4100980882380227 -2.0907489157226369 -2 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0006">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_-2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 -1.7050490441190114 -1.0453744578613184 4 -1.7050490441190114 -1.0453744578613184" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0007">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-1 -3.4100980882380227 -2.0907489157226369 -1 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0008">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_-1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 -0.85252452205950568 -0.52268722893065922 4 -0.85252452205950568 -0.52268722893065922" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0009">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 -3.4100980882380227 -2.0907489157226369 0 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0010">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_0&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 0 0 4 0 0" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0011">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1 -3.4100980882380227 -2.0907489157226369 1 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0012">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 0.85252452205950568 0.52268722893065922 4 0.85252452205950568 0.52268722893065922" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0013">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="2 -3.4100980882380227 -2.0907489157226369 2 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0014">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 1.7050490441190114 1.0453744578613184 4 1.7050490441190114 1.0453744578613184" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0015">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_3&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="3 -3.4100980882380227 -2.0907489157226369 3 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0016">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_3&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 2.5575735661785171 1.5680616867919777 4 2.5575735661785171 1.5680616867919777" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0017">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_u_4&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="4 -3.4100980882380227 -2.0907489157226369 4 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0018">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;plane_v_4&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.12 0.25 0.39000000000000001" emissiveColor="0.12 0.25 0.39000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="-4 3.4100980882380227 2.0907489157226369 4 3.4100980882380227 2.0907489157226369" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0019">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;target_b&quot;" />
+        <Appearance>
+          <Material diffuseColor="1 0.72999999999999998 0.32000000000000001" emissiveColor="1 0.72999999999999998 0.32000000000000001" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 0 0 1.3999999999999999 1.2 2.1000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0020">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;projection_p&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.35999999999999999 1 0.72999999999999998" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 0 0 1.3999999999999999 1.8079254009198535 1.1084484885400052" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0021">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;residual_e&quot;" />
+        <Appearance>
+          <Material diffuseColor="1 0.34999999999999998 0.66000000000000003" emissiveColor="1 0.34999999999999998 0.66000000000000003" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="1.3999999999999999 1.8079254009198535 1.1084484885400052 1.3999999999999999 1.2 2.1000000000000001" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0022">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;column_1&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.28000000000000003 0.83999999999999997 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 0 0 1 0 0" />
+        </IndexedLineSet>
+      </Shape>
+      <Shape DEF="MathLabPrimitive_0023">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;column_2&quot;" />
+        <Appearance>
+          <Material diffuseColor="0.65000000000000002 0.55000000000000004 1" emissiveColor="0.65000000000000002 0.55000000000000004 1" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 -1">
+          <Coordinate point="0 0 0 1 0.46888848713272818 0.28747797591186258" />
+        </IndexedLineSet>
+      </Shape>
+      <Transform translation="1.3999999999999999 1.2 2.1000000000000001">
+        <Shape DEF="MathLabPrimitive_0024">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;target_tip&quot;" />
+          <Appearance>
+            <Material diffuseColor="1 0.72999999999999998 0.32000000000000001" emissiveColor="0.044999999999999998 0.032849999999999997 0.0144" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.105" />
+        </Shape>
+      </Transform>
+      <Transform translation="1.3999999999999999 1.8079254009198535 1.1084484885400052">
+        <Shape DEF="MathLabPrimitive_0025">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;projection_tip&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.35999999999999999 1 0.72999999999999998" emissiveColor="0.016199999999999999 0.044999999999999998 0.032849999999999997" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.089999999999999997" />
+        </Shape>
+      </Transform>
+      <Transform translation="1 0 0">
+        <Shape DEF="MathLabPrimitive_0026">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;column_1_tip&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.28000000000000003 0.83999999999999997 1" emissiveColor="0.0126 0.0378 0.044999999999999998" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Transform translation="1 0.46888848713272818 0.28747797591186258">
+        <Shape DEF="MathLabPrimitive_0027">
+          <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;column_2_tip&quot;" />
+          <Appearance>
+            <Material diffuseColor="0.65000000000000002 0.55000000000000004 1" emissiveColor="0.029249999999999998 0.024750000000000001 0.044999999999999998" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          </Appearance>
+          <Sphere radius="0.065000000000000002" />
+        </Shape>
+      </Transform>
+      <Shape DEF="MathLabPrimitive_0028">
+        <MetadataString containerField="metadata" name="mathlab.primitive" value="&quot;right_angle&quot;" />
+        <Appearance>
+          <Material diffuseColor="1 0.34999999999999998 0.66000000000000003" emissiveColor="1 0.34999999999999998 0.66000000000000003" specularColor="0.22 0.28 0.34" shininess="0.28" transparency="0" />
+          <LineProperties applied="true" linewidthScaleFactor="2" />
+        </Appearance>
+        <IndexedLineSet coordIndex="0 1 2 -1">
+          <Coordinate point="1.3999999999999999 1.6772535936871886 1.3215796190548816 1.6499999999999999 1.6772535936871886 1.3215796190548816 1.6499999999999999 1.8079254009198535 1.1084484885400052" />
+        </IndexedLineSet>
+      </Shape>
+    </Group>
+  </Scene>
+</X3D>

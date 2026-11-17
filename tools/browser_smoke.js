@@ -4,9 +4,16 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 (async () => {
   const [url, out, shots] = [process.argv[2], process.argv[3], process.argv[4]];
-  const browser = await chromium.launch();
+  const report = { url, status: 'not_run', playwright: require('playwright/package.json').version,
+    lessons: [], checks: {}, scope: 'Native browser smoke; no learning-outcome or GPU benchmark claim.' };
+  const save = () => { const text = JSON.stringify(report, null, 2); console.log(text); if (out) fs.writeFileSync(out, text + '\n'); };
+  let browser;
+  try { browser = await chromium.launch({ executablePath: process.env.MATHLAB_CHROMIUM || undefined }); }
+  catch (error) { report.blocker = 'Browser launch failed: ' + error.message.split('\n')[0]; save(); process.exitCode = 2; return; }
+  try {
   const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
-  const errors = [], report = { url, chromium: browser.version(), playwright: require('playwright/package.json').version, lessons: [], checks: {} };
+  report.chromium = browser.version();
+  const errors = [];
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
   page.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
   const t0 = Date.now();
@@ -24,7 +31,7 @@ const fs = require('fs');
     await buttons.nth(i).click();
     await page.waitForTimeout(400);
     await native();
-    await page.waitForFunction(() => !document.querySelector('[aria-busy="true"]') && !document.body.classList.contains('busy'), null, { timeout: 60000 }).catch(() => {});
+    await page.waitForFunction(() => !document.querySelector('[aria-busy="true"]') && !document.body.classList.contains('busy'), null, { timeout: 60000 });
     await page.waitForTimeout(1500);
     const row = await page.evaluate(() => {
       const b = document.getElementById('world')?.browser;
@@ -52,8 +59,11 @@ const fs = require('fs');
   if (await btn.count()) { await btn.click(); const d = await dl; if (d) { const p = await d.path(); const src = fs.readFileSync(p, 'utf8'); report.checks.manim_source = { filename: d.suggestedFilename(), bytes: src.length, has_scene_class: /class \w+\(.*Scene\)/.test(src) }; } else report.checks.manim_source = 'no download'; }
   report.console_errors = errors.slice(0, 10);
   report.elapsed_s = (Date.now() - t0) / 1000;
-  const text = JSON.stringify(report, null, 1);
-  console.log(text);
-  if (out) fs.writeFileSync(out, text);
-  await browser.close();
-})();
+  report.status = n === 18 && report.lessons.every(row => row.nodes > 0 && row.model) &&
+    report.checks.parameter_change_changes_model_id.changed &&
+    report.checks.manim_source?.has_scene_class && errors.length === 0 ? 'pass' : 'fail';
+  } catch (error) { report.status = 'fail'; report.error = error.message.slice(0, 700); }
+  finally { await browser.close(); }
+  save();
+  if (report.status !== 'pass') process.exitCode = 1;
+})().catch(error => { console.error(error.message); process.exitCode = 1; });

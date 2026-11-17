@@ -67,7 +67,10 @@ async def probe() -> dict:
                            all(tool.annotations and ga(tool.annotations, "readOnlyHint")
                                for tool in inventory.tools), 'names': sorted(names)})
             lessons = data(await session.call_tool('mathlab_list_lessons'))
-            checks.append({'id': 'catalog_call', 'pass': len(lessons.get('lessons', [])) == 6,
+            expected_lessons = {'linear', 'derivative', 'integral', 'fourier', 'lorenz', 'gradient',
+                                'complex', 'taylor', 'waves', 'probability', 'least_squares', 'vector_field',
+                                'svd', 'bayes', 'lagrange', 'aliasing', 'heat', 'refraction'}
+            checks.append({'id': 'catalog_call', 'pass': {row['id'] for row in lessons.get('lessons', [])} == expected_lessons,
                            'lessons': [row['id'] for row in lessons['lessons']]})
             scene = data(await session.call_tool('mathlab_scene',
                         {'lesson': 'derivative', 'params': {'x': 1, 'h': .1}}))
@@ -87,6 +90,12 @@ async def probe() -> dict:
                            source['identity']['manim_source_sha256'] == sha(source['source'].encode()),
                            'source_bytes': len(source['source'].encode()),
                            'source_sha256': source['identity']['manim_source_sha256']})
+            for key in sorted(expected_lessons - {'derivative'}):
+                result = data(await session.call_tool('mathlab_scene', {'lesson': key}))
+                checks.append({'id': key + '_scene_call',
+                               'pass': result['sample']['lesson'] == key and
+                               result['identity']['x3d_sha256'] == sha(result['x3d'].encode()),
+                               'x3d_bytes': len(result['x3d'].encode())})
             refused = await session.call_tool('mathlab_scene',
                         {'lesson': 'derivative', 'params': {'x': True}})
             checks.append({'id': 'boolean_parameter_refused', 'pass': bool(ga(refused, "isError"))})

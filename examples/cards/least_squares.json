@@ -1,0 +1,11 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "least_squares",
+  "params": {
+    "bx": 1.4,
+    "by": 1.2,
+    "bz": 2.1,
+    "tilt": 0.55,
+    "epsilon": 0.55
+  }
+}
