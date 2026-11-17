@@ -1,13 +1,13 @@
 {
   "schema": "mathlab.distribution/1",
-  "edition": "0.1.0",
+  "edition": "0.1.1",
   "target": "Curious to advanced",
-  "commit": "a8396b6a8778ad9521c51076d3c046c66027834a",
-  "git_tree": "a9edd496fa4ba248368d0e73fe92851b0e1420c0",
   "source_attachment": "manimV2.zip",
   "source_attachment_sha256": "58df499d06a48605cd497e04ec44ceaa8e30174c43d52e636979167796b21d5e",
   "validation": "receipts/release-checks.json",
   "validation_status": "pass",
-  "python_tests": 89,
-  "scope": "First working six-lesson edition. No actual Manim video or hardware GPU benchmark."
+  "python_tests": 93,
+  "scope": "First working six-lesson edition. No actual Manim video or hardware GPU benchmark. 0.1.1 adds GitHub Pages mode (Pyodide), mcp 2.x compatibility and scene framing; see docs/PAGES.md and receipts/.",
+  "base_commit": "a8396b6a8778ad9521c51076d3c046c66027834a",
+  "base_git_tree": "a9edd496fa4ba248368d0e73fe92851b0e1420c0"
 }
