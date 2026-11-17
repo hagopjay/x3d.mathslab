@@ -1,0 +1,127 @@
+{
+  "schema": "mathlab.release-checks/1",
+  "started_utc": "2026-11-17T05:01:25.719795+00:00",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39"
+  },
+  "source_sha256": {
+    "mathlab/__init__.py": "7ced7664bbd1076034fe2c86e39027a9a794944cc4d82138d6ace895734829e4",
+    "mathlab/cards.py": "c1d3fd9ee31b6332c3c0ba279afd3263acb2c10eb54d8ad6e98332fb695c3a4e",
+    "mathlab/catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
+    "mathlab/kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
+    "mathlab/manim_bridge.py": "27f836c06180ed799b7b0f4c462770cb9d5709e02d2d7f153593d34a4c2946f0",
+    "mathlab/mcp_server.py": "54dda98b3bd29872d6d65fb1f03c61306d3634271aeb53b4f1833f78f535f9e9",
+    "mathlab/schema.py": "f2512f474001845559c69908194865b26cb1f22761b102179810227a4b161886",
+    "mathlab/server.py": "0c47e85e1b40415ab4354af9491e3619e43af9ba232fc8c5c1c6d2a7f17552b3",
+    "mathlab/x3d.py": "39fb7f5cedd965e6dd7163b2df381bee73bf27539804cfc8eec2eb93722d5850",
+    "pyproject.toml": "e538c6b6a894d35626d51895bc750a712fe67b14cc310097e9dbeffd45b0e568",
+    "run.bat": "9662cec9394bf704369b7a1988d5afb07f5f1e664539e15adeb76481def751d8",
+    "run.sh": "8da1b1ce5cd7efe8d4fd6cca2a6492b284a34e5dc2b24a0bb0507da9267d7690",
+    "run_mathlab.py": "3d74e690d18d7d8cdbca9dc4ba67dde83df17e9547387ffb2afee69041be3267",
+    "run_mathlab_mcp.py": "c3c3f6fabc77f0abf11fc687e80a4be80bb01bf15803ff09155bd47c5ac9be50",
+    "schemas/lesson-card.schema.json": "4fd90b74d98efb932c9a10bd902410ffddb18fe682ac296f692ec6ecdbee759e",
+    "src/manim_mcp/__init__.py": "f3fff01374f85abec8c28381ffbe3efc868097e2c9fc3426e526e08ce8639c58",
+    "src/manim_mcp/server.py": "502458dea6249506c500a3680725888f9b0b2cd0aed0538e435ce052450f92ae",
+    "tests/test_bridge.py": "9b32da55eac597ee45faeb8e91e45f7da283b4a0cbfd174660364cbbfcfa180c",
+    "tests/test_card_schema.py": "324f99773131b3a7a2a25f23613e19ee389696ac2530b622b35595bd44ad40e5",
+    "tests/test_cards.py": "09fb6abfb49b16f7295efee2b1c05241b855753420215b71cf7937bf633f211b",
+    "tests/test_kernel.py": "cc4397247238ad0935a8ff2a03b51c7346838a39cba5323fcfe4c080fe4ed639",
+    "tests/test_manim_v2.py": "c7dffde391784770c7ea94f4dabf0ae788391d9c4485d897bfb59b5a623a9ae6",
+    "tests/test_math_mcp.py": "9f2cc88a596b60f073b0937eaf8bd1e369a4d833a2494ff1f61cbe30fb3a933d",
+    "tests/test_pages.py": "732bb2fc7006a2ae93d29976efcca1ce914304d7e5ce1d756f0a0ed9bfd86c92",
+    "tests/test_server.py": "049e7e45e31302203f65229554f6f34c382b43466d78ae03c74ae55ee6f743dc",
+    "tests/test_x3d.py": "09f4d93c5c9ba5e6f9fb554979071aea80786178abaafdff989891a26b1a08ad",
+    "tests/ui_state.test.mjs": "4f11d966b3a25b9e2b6d37497c40fe5ea55988b45aae2746399320cd1fbbac0a",
+    "tools/check_release.py": "c62720ba07afa6085d543d679c9a85f8fbcf74a116e0d0fe4b06e5343987cb0d",
+    "tools/export_examples.py": "462195d349556c1a73e60b4e97ef3e45a64539175527304c94ee80d4344cb5a7",
+    "tools/independent_probe.py": "4146e6336d36d8ba8557f72ddbf834bff27b4f07d0557f5bd08106fd632df3cc",
+    "tools/probe_math_mcp.py": "c4f66388cd2eda69f08cacf352525ac196a419ef109606465350c49fac0b5536",
+    "tools/recover_card.py": "f5238cfc01896d0299f39580840fdacc53395e96968e0746fa0d4c35bce383fb",
+    "tools/requirements-validation.txt": "adebb3e01483a08d1b61ea6a54a2cf545f3f7d4ed7ea62103300a9eddc3726a2",
+    "tools/validate_x3d.py": "8f8fbaf2cd0b7a9cad59ccc17c0f10e47ff31f2deaab7e623d235ead67043f52",
+    "tools/vendor_xite.py": "456bb4485e958410c1b38746d191b2bda73050c66a9e45a1f797a9e6bc83c9ae",
+    "vendor/x3d_mcp/ORIGIN.json": "e7587506b4b4e3455f358451e104ad8d8e31514e6f8e687bdb2b9be5b170c349",
+    "web/app.js": "596fe8b00691d96fc9e94fbdd4c38d10b816f92bb294bde4121f5fbcaeee2e08",
+    "web/index.html": "66b18175917b8afe1910f245a55a08eb6a3852ee08b435e8fa13c87aa7617ed8",
+    "web/static-api.js": "5c75add0963c88bcb5be6f345ac70eb90be9d65ed52e2eabe8b3b5488c0c1e48",
+    "web/style.css": "95caf119fb08f03cb5cac521ba5dc2947c8544bff80be1d3264f2f446874ade2",
+    "web/vendor/x_ite/ORIGIN.json": "9f9770f6a1d00ef3738124167190fc89e55d97920db0b06d05cf83117dda3228"
+  },
+  "tests": [
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.0324,
+      "stdout": "",
+      "stderr": "test_complete_source_compiles_without_importing_manim (test_bridge.BridgeControls.test_complete_source_compiles_without_importing_manim) ... ok\ntest_default_kernel_samples_compile_if_present (test_bridge.BridgeControls.test_default_kernel_samples_compile_if_present) ... ok\ntest_deterministic_output_ignores_dictionary_insertion_order (test_bridge.BridgeControls.test_deterministic_output_ignores_dictionary_insertion_order) ... ok\ntest_exact_data_is_retained_with_digest (test_bridge.BridgeControls.test_exact_data_is_retained_with_digest) ... ok\ntest_export_does_not_mutate_input (test_bridge.BridgeControls.test_export_does_not_mutate_input) ... ok\ntest_fixed_imports_and_no_latex_dependency (test_bridge.BridgeControls.test_fixed_imports_and_no_latex_dependency) ... ok\ntest_limits_are_not_silent_geometry_decimation (test_bridge.BridgeControls.test_limits_are_not_silent_geometry_decimation) ... ok\ntest_mesh_face_budget_has_a_healthy_and_refused_twin (test_bridge.BridgeControls.test_mesh_face_budget_has_a_healthy_and_refused_twin) ... ok\ntest_no_nan_in_geometry (test_bridge.BridgeControls.test_no_nan_in_geometry) ... ok\ntest_non_json_metadata_refuses (test_bridge.BridgeControls.test_non_json_metadata_refuses) ... ok\ntest_shared_default_color_is_supported_without_altering_source_data (test_bridge.BridgeControls.test_shared_default_color_is_supported_without_altering_source_data) ... ok\ntest_text_cannot_add_python_statements_or_rewrite_markers (test_bridge.BridgeControls.test_text_cannot_add_python_statements_or_rewrite_markers) ... ok\ntest_unicode_sample_identity_matches_native_x3d (test_bridge.BridgeControls.test_unicode_sample_identity_matches_native_x3d) ... ok\ntest_all_six_normalized_and_partial_cards_match_shared_domains (test_card_schema.CardSchemaControls.test_all_six_normalized_and_partial_cards_match_shared_domains) ... ok\ntest_domain_errors_and_unknown_fields_are_rejected (test_card_schema.CardSchemaControls.test_domain_errors_and_unknown_fields_are_rejected) ... ok\ntest_changed_parameter_with_stale_identity_refuses (test_cards.CardControls.test_changed_parameter_with_stale_identity_refuses) ... ok\ntest_geometry_edits_do_not_silently_become_model_parameter_edits (test_cards.CardControls.test_geometry_edits_do_not_silently_become_model_parameter_edits) ... ok\ntest_six_exported_worlds_recover_the_same_normalized_parameters (test_cards.CardControls.test_six_exported_worlds_recover_the_same_normalized_parameters) ... ok\ntest_unsupported_and_ambiguous_metadata_refuses (test_cards.CardControls.test_unsupported_and_ambiguous_metadata_refuses) ... ok\ntest_analytic_derivative_and_central_bound (test_kernel.CalculusTests.test_analytic_derivative_and_central_bound) ... ok\ntest_changed_h_refines_slope_but_not_the_reference (test_kernel.CalculusTests.test_changed_h_refines_slope_but_not_the_reference) ... ok\ntest_integral_drawn_rectangle_area_equals_numeric_sum (test_kernel.CalculusTests.test_integral_drawn_rectangle_area_equals_numeric_sum) ... ok\ntest_integral_reference_and_midpoint_bound (test_kernel.CalculusTests.test_integral_reference_and_midpoint_bound) ... ok\ntest_left_mid_right_are_actual_changed_sampling_rules (test_kernel.CalculusTests.test_left_mid_right_are_actual_changed_sampling_rules) ... ok\ntest_catalog_is_independent_and_every_lesson_is_discoverable (test_kernel.CatalogAndBoundaryTests.test_catalog_is_independent_and_every_lesson_is_discoverable) ... ok\ntest_default_and_extreme_geometry_are_finite_and_within_adapter_budgets (test_kernel.CatalogAndBoundaryTests.test_default_and_extreme_geometry_are_finite_and_within_adapter_budgets) ... ok\ntest_every_displayed_primitive_fits_bounds_for_default_and_extreme_parameters (test_kernel.CatalogAndBoundaryTests.test_every_displayed_primitive_fits_bounds_for_default_and_extreme_parameters) ... ok\ntest_unknown_inputs_and_wrong_types_refuse (test_kernel.CatalogAndBoundaryTests.test_unknown_inputs_and_wrong_types_refuse) ... ok\ntest_gradient_origin_stays_minimum_even_when_some_modes_amplify (test_kernel.DynamicsTests.test_gradient_origin_stays_minimum_even_when_some_modes_amplify) ... ok\ntest_gradient_stable_decreases_loss_and_matches_closed_form (test_kernel.DynamicsTests.test_gradient_stable_decreases_loss_and_matches_closed_form) ... ok\ntest_gradient_unstable_twin_is_bounded_visually_and_explicit (test_kernel.DynamicsTests.test_gradient_unstable_twin_is_bounded_visually_and_explicit) ... ok\ntest_lorenz_camera_encloses_actual_extreme_trajectory_and_markers (test_kernel.DynamicsTests.test_lorenz_camera_encloses_actual_extreme_trajectory_and_markers) ... ok\ntest_lorenz_rhs_equilibrium_and_short_time_refinement (test_kernel.DynamicsTests.test_lorenz_rhs_equilibrium_and_short_time_refinement) ... ok\ntest_lorenz_separates_initial_condition_and_method_comparisons (test_kernel.DynamicsTests.test_lorenz_separates_initial_condition_and_method_comparisons) ... ok\ntest_epicycle_endpoint_wave_and_formula_agree (test_kernel.FourierTests.test_epicycle_endpoint_wave_and_formula_agree) ... ok\ntest_more_terms_reduce_average_error_without_removing_ringing (test_kernel.FourierTests.test_more_terms_reduce_average_error_without_removing_ringing) ... ok\ntest_parseval_rms_matches_independent_midpoint_quadrature (test_kernel.FourierTests.test_parseval_rms_matches_independent_midpoint_quadrature) ... ok\ntest_basis_columns_and_oriented_area_agree (test_kernel.LinearTests.test_basis_columns_and_oriented_area_agree) ... ok\ntest_identity_blend_and_singular_map_are_valid (test_kernel.LinearTests.test_identity_blend_and_singular_map_are_valid) ... ok\ntest_rotation_has_no_real_eigenlines_but_shear_has_small_residual (test_kernel.LinearTests.test_rotation_has_no_real_eigenlines_but_shear_has_small_residual) ... ok\ntest_ast_discovery_ignores_comment_and_string_decoys (test_manim_v2.ManimTests.test_ast_discovery_ignores_comment_and_string_decoys) ... ok\ntest_batch_limits_and_quality_estimate_scope (test_manim_v2.ManimTests.test_batch_limits_and_quality_estimate_scope) ... ok\ntest_cache_requires_commit_metadata_and_matching_video_digest (test_manim_v2.ManimTests.test_cache_requires_commit_metadata_and_matching_video_digest) ... ok\ntest_cancellation_also_reaps_child (test_manim_v2.ManimTests.test_cancellation_also_reaps_child) ... [manim-mcp] INFO Rendering trusted local scene Demo at low\nok\ntest_cleanup_negative_and_active_artifacts_are_preserved (test_manim_v2.ManimTests.test_cleanup_negative_and_active_artifacts_are_preserved) ... ok\ntest_final_video_selection_ignores_partial_and_other_scene (test_manim_v2.ManimTests.test_final_video_selection_ignores_partial_and_other_scene) ... ok\ntest_identifiers_and_engine_context_change_identity (test_manim_v2.ManimTests.test_identifiers_and_engine_context_change_identity) ... ok\ntest_input_limits_refuse_before_rendering (test_manim_v2.ManimTests.test_input_limits_refuse_before_rendering) ... ok\ntest_invalid_environment_is_refused (test_manim_v2.ManimTests.test_invalid_environment_is_refused) ... ok\ntest_output_tail_is_bounded_and_small_output_retained (test_manim_v2.ManimTests.test_output_tail_is_bounded_and_small_output_retained) ... ok\ntest_owned_real_python_child_is_reaped (test_manim_v2.ManimTests.test_owned_real_python_child_is_reaped) ... [manim-mcp] INFO execute program '/usr/local/bin/python3': <_UnixSubprocessTransport pid=3470 running>\n[manim-mcp] INFO <_UnixSubprocessTransport pid=3470 running> exited with return code -9\nok\ntest_preview_work_does_not_stall_event_loop (test_manim_v2.ManimTests.test_preview_work_does_not_stall_event_loop) ... ok\ntest_render_id_paths_and_symlinks_are_refused (test_manim_v2.ManimTests.test_render_id_paths_and_symlinks_are_refused) ... ok\ntest_same_id_concurrent_requests_render_once (test_manim_v2.ManimTests.test_same_id_concurrent_requests_render_once) ... ok\ntest_single_and_batch_share_global_render_cap (test_manim_v2.ManimTests.test_single_and_batch_share_global_render_cap) ... ok\ntest_static_validation_is_explicitly_not_isolation (test_manim_v2.ManimTests.test_static_validation_is_explicitly_not_isolation) ... ok\ntest_timeout_kills_and_awaits_child (test_manim_v2.ManimTests.test_timeout_kills_and_awaits_child) ... [manim-mcp] INFO Rendering trusted local scene Demo at low\nok\ntest_untrusted_sidecar_cannot_override_returned_path (test_manim_v2.ManimTests.test_untrusted_sidecar_cannot_override_returned_path) ... ok\ntest_catalog_has_six_lessons_and_three_read_only_tools (test_math_mcp.MathMCPTests.test_catalog_has_six_lessons_and_three_read_only_tools) ... [manim-mcp] WARNING Executing <Task finished name='Task-109' coro=<MathMCPTests.asyncSetUp() done, defined at /tmp/ml/a/X3D-MathLab/tests/test_math_mcp.py:23> result=None created at /usr/local/lib/python3.13/asyncio/runners.py:101> took 0.555 seconds\nok\ntest_invalid_boolean_nonfinite_unknown_and_budget_inputs_refuse (test_math_mcp.MathMCPTests.test_invalid_boolean_nonfinite_unknown_and_budget_inputs_refuse) ... ok\ntest_scene_identity_matches_actual_returned_bytes (test_math_mcp.MathMCPTests.test_scene_identity_matches_actual_returned_bytes) ... ok\ntest_source_uses_same_identity_without_importing_manim (test_math_mcp.MathMCPTests.test_source_uses_same_identity_without_importing_manim) ... ok\ntest_every_installed_module_exists (test_pages.PagesContract.test_every_installed_module_exists) ... ok\ntest_installed_modules_import_only_stdlib_and_each_other (test_pages.PagesContract.test_installed_modules_import_only_stdlib_and_each_other) ... ok\ntest_installed_set_covers_server_dependencies (test_pages.PagesContract.test_installed_set_covers_server_dependencies) ... ok\ntest_manim_is_never_installed_in_the_browser (test_pages.PagesContract.test_manim_is_never_installed_in_the_browser) ... ok\ntest_healthy_numeric_request (test_server.DecodeControls.test_healthy_numeric_request) ... ok\ntest_invalid_changed_requests_have_healthy_twin (test_server.DecodeControls.test_invalid_changed_requests_have_healthy_twin) ... ok\ntest_source_identity_refuses_changed_disk_bytes_for_already_loaded_models (test_server.DecodeControls.test_source_identity_refuses_changed_disk_bytes_for_already_loaded_models) ... ok\ntest_every_default_model_has_matching_export_identity (test_server.HTTPControls.test_every_default_model_has_matching_export_identity) ... ok\ntest_health_and_catalog_are_real (test_server.HTTPControls.test_health_and_catalog_are_real) ... ok\ntest_manim_endpoint_generates_source_without_executing_it (test_server.HTTPControls.test_manim_endpoint_generates_source_without_executing_it) ... ok\ntest_origin_host_size_and_content_type_refusals (test_server.HTTPControls.test_origin_host_size_and_content_type_refusals) ... ok\ntest_refused_models_and_inputs_do_not_replace_a_healthy_result (test_server.HTTPControls.test_refused_models_and_inputs_do_not_replace_a_healthy_result) ... ok\ntest_static_routes_cannot_read_source_outside_their_declared_roots (test_server.HTTPControls.test_static_routes_cannot_read_source_outside_their_declared_roots) ... ok\ntest_aggregate_point_and_primitive_budgets (test_x3d.X3DAdapterTests.test_aggregate_point_and_primitive_budgets) ... ok\ntest_area_box_thickness_does_not_tilt_the_authored_plane_lesson (test_x3d.X3DAdapterTests.test_area_box_thickness_does_not_tilt_the_authored_plane_lesson) ... ok\ntest_bad_bounds_and_schema_are_refused (test_x3d.X3DAdapterTests.test_bad_bounds_and_schema_are_refused) ... ok\ntest_collapsed_matrix_geometry_can_remain_a_valid_sample (test_x3d.X3DAdapterTests.test_collapsed_matrix_geometry_can_remain_a_valid_sample) ... ok\ntest_duplicate_source_id_is_refused_without_mutation (test_x3d.X3DAdapterTests.test_duplicate_source_id_is_refused_without_mutation) ... ok\ntest_four_kinds_generate_native_nodes_and_deterministic_bytes (test_x3d.X3DAdapterTests.test_four_kinds_generate_native_nodes_and_deterministic_bytes) ... ok\ntest_generated_defs_are_valid_unique_and_independent_of_source_id_syntax (test_x3d.X3DAdapterTests.test_generated_defs_are_valid_unique_and_independent_of_source_id_syntax) ... ok\ntest_index_metadata_and_text_budgets (test_x3d.X3DAdapterTests.test_index_metadata_and_text_budgets) ... ok\ntest_invalid_color_and_transparency_are_refused (test_x3d.X3DAdapterTests.test_invalid_color_and_transparency_are_refused) ... ok\ntest_invalid_coordinate_and_healthy_twin (test_x3d.X3DAdapterTests.test_invalid_coordinate_and_healthy_twin) ... ok\ntest_mesh_reference_and_face_controls (test_x3d.X3DAdapterTests.test_mesh_reference_and_face_controls) ... ok\ntest_metadata_precedes_shape_appearance_and_geometry (test_x3d.X3DAdapterTests.test_metadata_precedes_shape_appearance_and_geometry) ... ok\ntest_nonfinite_metadata_is_refused (test_x3d.X3DAdapterTests.test_nonfinite_metadata_is_refused) ... ok\ntest_parameter_metadata_round_trip_and_content_identity (test_x3d.X3DAdapterTests.test_parameter_metadata_round_trip_and_content_identity) ... ok\ntest_planar_camera_and_deep_camera_remain_finite (test_x3d.X3DAdapterTests.test_planar_camera_and_deep_camera_remain_finite) ... ok\ntest_positive_physical_primitive_dimensions_are_required (test_x3d.X3DAdapterTests.test_positive_physical_primitive_dimensions_are_required) ... ok\ntest_unknown_geometry_is_refused_not_silently_dropped (test_x3d.X3DAdapterTests.test_unknown_geometry_is_refused_not_silently_dropped) ... ok\ntest_xml_and_mfstring_escaping_cannot_insert_nodes (test_x3d.X3DAdapterTests.test_xml_and_mfstring_escaping_cannot_insert_nodes) ... ok\n\n----------------------------------------------------------------------\nRan 93 tests in 2.792s\n\nOK\n",
+      "tests_run": 93,
+      "skipped": 0
+    },
+    {
+      "command": [
+        "tests/ui_state.test.mjs"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.0381,
+      "stdout": "PASS slow obsolete parse cannot commit over a newer request\nPASS an already-started obsolete native commit is serialized before the final fresh scene\nPASS failed native consumer displays the same model as an explicitly labeled projection\nPASS pending requests disable exports and stale-scene reentry controls\nPASS a failed queue predecessor cannot strand the next valid model\n5 UI concurrency/state controls pass with explicit DOM and native-browser adapters.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "tools/independent_probe.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 1.1972,
+      "stdout": "PASS drawn_eigenvectors\nPASS five_point_derivative\nPASS independent_quadrature_and_rectangle_area\nPASS expanded_hessian_recurrence\nPASS dynamics_corners_and_framing\nPASS optional_scipy_dop853\n{\"checks\":6,\"output\":\"/tmp/ml/a/X3D-MathLab/receipts/independent-math.json\",\"source_drift\":\"none\",\"status\":\"pass\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "tools/probe_math_mcp.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 1.5942,
+      "stdout": "{\"status\": \"pass\", \"checks\": 6, \"mcp_sdk\": \"2.3.0\", \"output\": \"/tmp/ml/a/X3D-MathLab/receipts/math-mcp.json\"}\n",
+      "stderr": "Tool 'mathlab_scene' raised an unexpected exception\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.13/site-packages/mcp/server/mcpserver/tools/base.py\", line 179, in run\n    result = await self.fn_metadata.call_fn(self.fn, self.is_async, validated, pass_directly)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/mcp/server/mcpserver/utilities/func_metadata.py\", line 163, in call_fn\n    return await fn(**kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ml/a/X3D-MathLab/mathlab/mcp_server.py\", line 82, in mathlab_scene\n    request = _request(lesson, params)\n  File \"/tmp/ml/a/X3D-MathLab/mathlab/mcp_server.py\", line 47, in _request\n    raise ValueError('Parameters require short names and numeric values.')\nValueError: Parameters require short names and numeric values.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.13/site-packages/mcp/server/mcpserver/server.py\", line 442, in _handle_call_tool\n    return await self.call_tool(params.name, params.arguments or {}, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/mcp/server/mcpserver/server.py\", line 548, in call_tool\n    return await self._tool_manager.call_tool(name, arguments, context, convert_result=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/mcp/server/mcpserver/tools/tool_manager.py\", line 87, in call_tool\n    return await tool.run(arguments, context, convert_result=convert_result)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/mcp/server/mcpserver/tools/base.py\", line 213, in run\n    raise UnexpectedToolError(f\"Error executing tool {self.name}\") from exc\nmcp.server.mcpserver.exceptions.UnexpectedToolError: Error executing tool mathlab_scene\n"
+    },
+    {
+      "command": [
+        "tools/validate_x3d.py"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.5,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"files\": 6,\n  \"passed\": 6,\n  \"paired_controls_caught\": 2,\n  \"output\": \"/tmp/ml/a/X3D-MathLab/receipts/x3d-validation.json\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "status": "pass",
+  "scope": "Scoped development evidence, not a formal Loom acceptance or learning-outcome study.",
+  "limitations": [
+    "Manim renderer tests use explicit registration/subprocess adapters and fake media, plus one owned real child reap.",
+    "UI concurrency tests use actual functions with explicit DOM/X_ITE adapters; browser observations are separate.",
+    "No Manim video, hardware-GPU benchmark or cross-host comparison ran in this command."
+  ],
+  "assets": [
+    {
+      "directory": "web/vendor/x_ite",
+      "files": 143,
+      "status": "pass"
+    },
+    {
+      "directory": "vendor/x3d_mcp",
+      "files": 19,
+      "status": "pass"
+    }
+  ],
+  "source_drift": "none",
+  "finished_utc": "2026-11-17T05:01:34.132050+00:00",
+  "report_sha256": "fbff350a969c481fba338e5fd8ef4fa92a7c8acf059a982b61c385364c0cfff4"
+}

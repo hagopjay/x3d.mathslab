@@ -1,0 +1,1606 @@
+{
+  "schema": "mathlab.pinned-x3d-validation/1",
+  "created_utc": "2026-11-17T05:01:34.081888+00:00",
+  "status": "pass",
+  "input_cap_bytes": 2097152,
+  "instrument": {
+    "repository": "https://github.com/hagopjay/x3d_mcp",
+    "commit": "b5c9956917714747fe1d034c729612e99b0f09c9",
+    "origin_sha256": "e7587506b4b4e3455f358451e104ad8d8e31514e6f8e687bdb2b9be5b170c349",
+    "files_sha256": {
+      "LICENSE": "d44b2af6013aee7eed3775190b1d15f9594cd70bafc2ce87e393747222271649",
+      "src/validation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/validation/listvalues.py": "9b5ad661b0f12efedb0cde0c6b7c64cd1ffc5b70a667f7c2b48ebdd02d473cf4",
+      "src/validation/oversize.py": "8e80d694d7f63daf0ccf6fb149c7a71b7857f7642b8a1477eecf9760c946bd23",
+      "src/validation/profile.py": "fc716b832034d728892cabf9960a4de22e9a4d58bde1833af25f0eee71f8f5f6",
+      "src/validation/schemas/X3dUnifiedObjectModel-4.0.xml": "7e426a238656c21a4a444b989276494329da363625c36f0a719b15d89416bee3",
+      "src/validation/schemas/X3dUnifiedObjectModel-4.1.xml": "4fc10e8e15c0d6cf2a916e4f59b815b110104aa7ea734dc6afea9458095c792b",
+      "src/validation/schemas/x3d-4.0-Web3dExtensionsPrivate.xsd": "27657b812199aee0155be97d74cbd78181464f558013c18fb19fa4cf3a5d6b9e",
+      "src/validation/schemas/x3d-4.0-Web3dExtensionsPublic.xsd": "7a61432dcf1fef3bd568e555b9bb1d18c08fadc88ddb9a438bc001a9e048a169",
+      "src/validation/schemas/x3d-4.0.xsd": "0509fa5bd6016a0b9104ced3c91d6585c8073041f79b8c3f9758748d131b5192",
+      "src/validation/schemas/x3d-4.1-Web3dExtensionsPrivate.xsd": "784ee866095751eb9ca559837defdf3c1b9980ce66623aaa7635ced6a0d645d3",
+      "src/validation/schemas/x3d-4.1-Web3dExtensionsPublic.xsd": "8643f06321b8152e481f30c03c1c9f00efd61b6ea3806c5e752289092c3289a2",
+      "src/validation/schemas/x3d-4.1.xsd": "1a7935caa7e6a63de2b275968bdc48da2f34124a43acb7b293674c3d16646a85",
+      "src/validation/schemas/xmldsig-core-schema.xsd": "35cf8197da812c85e40d57891b35c94187569ed474a2dac813ce5090dafcd35c",
+      "src/validation/semantic.py": "8ede23abf7a6dfaf2a35c8ce8975c67f5c4d2ed3b1d715e9d0aaca363fc0d73f",
+      "src/validation/splat_arrays.py": "88692a03a68df7688e49cd73b5c2d4715c252d4fc6a350c9d11200d9c6c44160",
+      "src/validation/validate.py": "bbae82aa7ae930acf1e632bec18b785ab106cdf63757077304b4718377870959",
+      "src/x3d_utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/x3d_utils/x3duom.py": "51489acdbf6a6ee8f9f023aa21f5141d528e7afc235af8e4ab8467f8d3bc228c"
+    },
+    "adapter_sha256": "8f8fbaf2cd0b7a9cad59ccc17c0f10e47ff31f2deaab7e623d235ead67043f52",
+    "invocation": [
+      "validation.validate.validate_xml(version=\"4.0\")",
+      "validation.semantic.semantic_diagnostics"
+    ],
+    "xsd_version": "4.0",
+    "semantic_vocabulary_version": "4.1",
+    "runtime": {
+      "python": "3.13.18",
+      "lxml": "6.1.3.0",
+      "libxml2": "2.14.6",
+      "jsonschema": "4.26.0"
+    },
+    "identity_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+  },
+  "instrument_problem": null,
+  "files": [
+    {
+      "path": "examples/x3d/derivative.x3d",
+      "bytes": 26012,
+      "candidate_sha256": "f934681ca69d8605f5cd510cffe36befacb0f8bfc95825b18866a227580e44bf",
+      "status": "pass",
+      "xsd": {
+        "status": "pass",
+        "schema_version": "4.0",
+        "findings": [],
+        "notes": []
+      },
+      "semantic": {
+        "status": "pass",
+        "findings": [
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabModel' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabModel"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabNavigation' (NavigationInfo) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "NavigationInfo",
+            "def_name": "MathLabNavigation"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0000' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0000"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0001' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0001"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0002' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0002"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0003' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0003"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0004' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0004"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0005' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0005"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0006' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0006"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0007' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0007"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0008' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0008"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabReferenceGrid' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabReferenceGrid"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabView' (Viewpoint) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Viewpoint",
+            "def_name": "MathLabView"
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.sample' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.primitive' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          }
+        ]
+      },
+      "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+    },
+    {
+      "path": "examples/x3d/fourier.x3d",
+      "bytes": 65369,
+      "candidate_sha256": "531dc9bab35f96f56d3859f4ebc98d2f8122107cbaea0cf356c15f6662be25a4",
+      "status": "pass",
+      "xsd": {
+        "status": "pass",
+        "schema_version": "4.0",
+        "findings": [],
+        "notes": []
+      },
+      "semantic": {
+        "status": "pass",
+        "findings": [
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabModel' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabModel"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabNavigation' (NavigationInfo) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "NavigationInfo",
+            "def_name": "MathLabNavigation"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0000' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0000"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0001' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0001"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0002' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0002"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0003' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0003"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0004' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0004"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0005' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0005"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0006' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0006"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0007' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0007"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0008' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0008"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0009' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0009"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0010' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0010"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0011' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0011"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0012' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0012"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0013' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0013"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0014' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0014"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0015' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0015"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0016' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0016"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0017' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0017"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabReferenceGrid' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabReferenceGrid"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabView' (Viewpoint) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Viewpoint",
+            "def_name": "MathLabView"
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.sample' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.primitive' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          }
+        ]
+      },
+      "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+    },
+    {
+      "path": "examples/x3d/gradient.x3d",
+      "bytes": 133560,
+      "candidate_sha256": "640197dd2dca1eaff30acc219d9dbb9b498683af52d97eccac438ad9b5c5b680",
+      "status": "pass",
+      "xsd": {
+        "status": "pass",
+        "schema_version": "4.0",
+        "findings": [],
+        "notes": []
+      },
+      "semantic": {
+        "status": "pass",
+        "findings": [
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabModel' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabModel"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabNavigation' (NavigationInfo) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "NavigationInfo",
+            "def_name": "MathLabNavigation"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0000' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0000"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0001' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0001"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0002' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0002"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0003' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0003"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0004' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0004"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0005' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0005"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0006' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0006"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0007' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0007"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0008' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0008"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0009' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0009"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0010' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0010"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0011' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0011"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0012' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0012"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0013' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0013"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0014' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0014"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0015' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0015"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0016' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0016"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0017' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0017"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0018' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0018"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0019' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0019"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0020' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0020"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0021' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0021"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0022' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0022"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0023' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0023"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0024' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0024"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0025' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0025"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0026' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0026"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0027' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0027"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0028' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0028"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0029' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0029"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0030' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0030"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0031' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0031"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0032' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0032"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0033' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0033"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0034' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0034"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0035' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0035"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0036' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0036"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0037' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0037"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0038' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0038"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0039' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0039"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0040' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0040"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0041' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0041"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0042' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0042"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0043' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0043"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0044' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0044"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0045' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0045"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabReferenceGrid' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabReferenceGrid"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabView' (Viewpoint) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Viewpoint",
+            "def_name": "MathLabView"
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.sample' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.primitive' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          }
+        ]
+      },
+      "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+    },
+    {
+      "path": "examples/x3d/integral.x3d",
+      "bytes": 37352,
+      "candidate_sha256": "a5418a094cdcdf0cc03c79ea62ff39fac3a3f35938b00b6fff6f9104a12095db",
+      "status": "pass",
+      "xsd": {
+        "status": "pass",
+        "schema_version": "4.0",
+        "findings": [],
+        "notes": []
+      },
+      "semantic": {
+        "status": "pass",
+        "findings": [
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabModel' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabModel"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabNavigation' (NavigationInfo) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "NavigationInfo",
+            "def_name": "MathLabNavigation"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0000' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0000"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0001' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0001"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0002' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0002"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0003' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0003"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0004' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0004"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0005' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0005"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0006' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0006"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0007' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0007"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0008' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0008"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0009' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0009"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0010' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0010"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0011' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0011"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0012' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0012"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0013' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0013"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0014' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0014"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0015' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0015"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0016' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0016"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0017' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0017"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0018' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0018"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0019' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0019"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0020' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0020"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0021' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0021"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0022' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0022"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0023' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0023"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0024' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0024"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0025' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0025"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0026' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0026"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabReferenceGrid' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabReferenceGrid"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabView' (Viewpoint) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Viewpoint",
+            "def_name": "MathLabView"
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.sample' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.primitive' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          }
+        ]
+      },
+      "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+    },
+    {
+      "path": "examples/x3d/linear.x3d",
+      "bytes": 50200,
+      "candidate_sha256": "f09aa0b55e69ec38046986052dd226c806df2ba6a55d41ebec6df809dbf5ca68",
+      "status": "pass",
+      "xsd": {
+        "status": "pass",
+        "schema_version": "4.0",
+        "findings": [],
+        "notes": []
+      },
+      "semantic": {
+        "status": "pass",
+        "findings": [
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabModel' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabModel"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabNavigation' (NavigationInfo) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "NavigationInfo",
+            "def_name": "MathLabNavigation"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0000' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0000"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0001' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0001"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0002' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0002"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0003' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0003"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0004' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0004"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0005' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0005"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0006' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0006"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0007' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0007"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0008' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0008"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0009' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0009"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0010' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0010"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0011' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0011"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0012' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0012"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0013' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0013"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0014' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0014"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0015' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0015"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0016' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0016"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0017' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0017"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0018' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0018"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0019' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0019"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0020' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0020"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0021' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0021"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0022' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0022"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0023' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0023"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0024' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0024"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0025' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0025"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0026' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0026"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0027' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0027"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0028' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0028"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0029' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0029"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0030' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0030"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0031' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0031"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0032' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0032"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0033' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0033"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0034' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0034"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0035' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0035"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0036' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0036"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0037' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0037"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0038' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0038"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0039' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0039"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0040' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0040"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0041' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0041"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0042' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0042"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0043' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0043"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0044' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0044"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabReferenceGrid' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabReferenceGrid"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabView' (Viewpoint) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Viewpoint",
+            "def_name": "MathLabView"
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.sample' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.primitive' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          }
+        ]
+      },
+      "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+    },
+    {
+      "path": "examples/x3d/lorenz.x3d",
+      "bytes": 137979,
+      "candidate_sha256": "3c1b7f890a17155ea7d401bf5440a991b9673d774cd0e864e5966d1a068ffe48",
+      "status": "pass",
+      "xsd": {
+        "status": "pass",
+        "schema_version": "4.0",
+        "findings": [],
+        "notes": []
+      },
+      "semantic": {
+        "status": "pass",
+        "findings": [
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabModel' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabModel"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabNavigation' (NavigationInfo) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "NavigationInfo",
+            "def_name": "MathLabNavigation"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0000' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0000"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0001' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0001"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0002' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0002"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0003' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0003"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0004' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0004"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0005' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0005"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabPrimitive_0006' (Shape) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Shape",
+            "def_name": "MathLabPrimitive_0006"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabReferenceGrid' (Group) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Group",
+            "def_name": "MathLabReferenceGrid"
+          },
+          {
+            "level": "info",
+            "check": "unused-def",
+            "message": "DEF='MathLabView' (Viewpoint) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+            "node_tag": "Viewpoint",
+            "def_name": "MathLabView"
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.sample' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          },
+          {
+            "level": "warning",
+            "check": "naming-convention",
+            "message": "name='mathlab.primitive' on MetadataString: '.' interferes with ClassicVRML ROUTE syntax. See https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#NamingConventions",
+            "node_tag": "MetadataString",
+            "def_name": ""
+          }
+        ]
+      },
+      "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+    }
+  ],
+  "controls": [
+    {
+      "id": "numeric_radius",
+      "expected_stage": "xsd",
+      "positive": {
+        "bytes": 421,
+        "candidate_sha256": "2653cff5db5f8dfc35c29b3b14ad48fd427a51b3b2d8d2d05978f07ff8bc959a",
+        "status": "pass",
+        "xsd": {
+          "status": "pass",
+          "schema_version": "4.0",
+          "findings": [],
+          "notes": []
+        },
+        "semantic": {
+          "status": "pass",
+          "findings": [
+            {
+              "level": "info",
+              "check": "shape-no-appearance",
+              "message": "Shape has no Appearance. The shape will render with a default white material.",
+              "node_tag": "Shape",
+              "def_name": ""
+            }
+          ]
+        },
+        "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+      },
+      "negative": {
+        "bytes": 426,
+        "candidate_sha256": "3f2b22c28b4fa8624ebb3c92d4ac0739e1e65ea4facfa8efdae084b524ed6ff2",
+        "status": "fail",
+        "xsd": {
+          "status": "fail",
+          "schema_version": "4.0",
+          "findings": [
+            "Line 1: Element 'Sphere', attribute 'radius': 'broken' is not a valid value of the local atomic type."
+          ],
+          "notes": []
+        },
+        "semantic": {
+          "status": "pass",
+          "findings": [
+            {
+              "level": "info",
+              "check": "shape-no-appearance",
+              "message": "Shape has no Appearance. The shape will render with a default white material.",
+              "node_tag": "Shape",
+              "def_name": ""
+            }
+          ]
+        },
+        "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+      },
+      "caught": true
+    },
+    {
+      "id": "missing_route_source",
+      "expected_stage": "semantic",
+      "positive": {
+        "bytes": 421,
+        "candidate_sha256": "2653cff5db5f8dfc35c29b3b14ad48fd427a51b3b2d8d2d05978f07ff8bc959a",
+        "status": "pass",
+        "xsd": {
+          "status": "pass",
+          "schema_version": "4.0",
+          "findings": [],
+          "notes": []
+        },
+        "semantic": {
+          "status": "pass",
+          "findings": [
+            {
+              "level": "info",
+              "check": "shape-no-appearance",
+              "message": "Shape has no Appearance. The shape will render with a default white material.",
+              "node_tag": "Shape",
+              "def_name": ""
+            }
+          ]
+        },
+        "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+      },
+      "negative": {
+        "bytes": 428,
+        "candidate_sha256": "ed497cbf00e025811c50c8a2ca4b4e5021b21f9b59fb255f262264ae517c70e8",
+        "status": "fail",
+        "xsd": {
+          "status": "pass",
+          "schema_version": "4.0",
+          "findings": [],
+          "notes": []
+        },
+        "semantic": {
+          "status": "fail",
+          "findings": [
+            {
+              "level": "info",
+              "check": "unused-def",
+              "message": "DEF='Clock' (TimeSensor) is defined but never USE'd and no ROUTE, IMPORT or EXPORT names it. This is fine if you reference it externally (Script, SAI).",
+              "node_tag": "TimeSensor",
+              "def_name": "Clock"
+            },
+            {
+              "level": "info",
+              "check": "shape-no-appearance",
+              "message": "Shape has no Appearance. The shape will render with a default white material.",
+              "node_tag": "Shape",
+              "def_name": ""
+            },
+            {
+              "level": "error",
+              "check": "route-missing-from-node",
+              "message": "ROUTE fromNode='MissingClock' not found. Available DEFs: Clock, Slide, Target.",
+              "node_tag": "",
+              "def_name": ""
+            }
+          ]
+        },
+        "instrument_sha256": "faa1dc170307e1e8b7f43b2257371fbfec5b2cc131621f3b729fe56e7b4f651e"
+      },
+      "caught": true
+    }
+  ],
+  "limitations": [
+    "Actual direct calls to pinned x3d_mcp functions; no network MCP transport or model call.",
+    "XSD 4.0 and the upstream default semantic vocabulary 4.1 are deliberately recorded separately.",
+    "The optional fixed X3D DOCTYPE is retained; arbitrary DTD/entity declarations are refused before upstream parsing.",
+    "Per-file XSD/implemented semantic checks do not establish Math Lab mapping fidelity, physical validity, visible rendering or GPU performance.",
+    "Parameterized model fidelity and exported visual semantics require separate application controls.",
+    "This unsigned local report is not a formal Loom acceptance receipt or publisher authentication."
+  ],
+  "report_sha256": "fb2c8c18b180d06eeaca81eb6679c05e9175bddbf74f4d53cd5db2484e6210af"
+}

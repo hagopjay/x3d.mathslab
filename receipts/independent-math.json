@@ -1,0 +1,473 @@
+{
+  "schema": "mathlab.independent-probes/1",
+  "created_utc": "2026-11-17T05:01:28.891265+00:00",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39",
+    "machine": "x86_64"
+  },
+  "source_sha256": {
+    "mathlab/kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
+    "mathlab/catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
+    "tools/independent_probe.py": "4146e6336d36d8ba8557f72ddbf834bff27b4f07d0557f5bd08106fd632df3cc"
+  },
+  "checks": [
+    {
+      "id": "drawn_eigenvectors",
+      "status": "pass",
+      "observation": {
+        "seed": 7821,
+        "matrices": 500,
+        "drawn_real_eigenvectors": 696,
+        "max_recomputed_residual": 9.155133597044475e-16,
+        "absolute_development_tolerance": 1e-11,
+        "scope": "Residuals of normalized emitted eigenline directions under the displayed matrix; not a theorem prover."
+      },
+      "elapsed_seconds": 0.1645170640000515
+    },
+    {
+      "id": "five_point_derivative",
+      "status": "pass",
+      "observation": {
+        "stencil_h": 0.0001,
+        "rows": [
+          {
+            "x": -2.5,
+            "five_point": -1.5511436155515865,
+            "lesson_analytic": -1.5511436155469336,
+            "absolute_difference": 4.652944696204031e-12
+          },
+          {
+            "x": -1.0,
+            "five_point": 0.24030230586844872,
+            "lesson_analytic": 0.24030230586813978,
+            "absolute_difference": 3.0894731217756544e-13
+          },
+          {
+            "x": 0.7,
+            "five_point": 0.9748421872843304,
+            "lesson_analytic": 0.9748421872844885,
+            "absolute_difference": 1.580957587066223e-13
+          },
+          {
+            "x": 2.5,
+            "five_point": -0.05114361554814372,
+            "lesson_analytic": -0.051143615546933696,
+            "absolute_difference": 1.2100251356450542e-12
+          }
+        ],
+        "absolute_development_tolerance": 1e-08,
+        "negative_control": {
+          "description": "Omit the 0.3x derivative contribution",
+          "max_difference": 0.7500000000046528,
+          "caught": true
+        },
+        "scope": "Finite-difference corroboration of the authored derivative; finite precision and truncation remain."
+      },
+      "elapsed_seconds": 0.0010018529999342718
+    },
+    {
+      "id": "independent_quadrature_and_rectangle_area",
+      "status": "pass",
+      "observation": {
+        "rows": [
+          {
+            "a": -3.0,
+            "b": 0.2,
+            "subintervals": 20000,
+            "independent_midpoint_quadrature": 6.109917162761337,
+            "lesson_analytic_integral": 6.109917164385868,
+            "absolute_difference": 1.6245307321582914e-09,
+            "quadrature_error_bound": 6.485333333333335e-09,
+            "rounding_guard": 1e-11,
+            "emitted_rectangle_area": 6.105406484822541,
+            "lesson_rectangle_sum": 6.10540648482254,
+            "emitted_to_numeric_area_ratio": 1.0000000000000002
+          },
+          {
+            "a": -3.0,
+            "b": 3.0,
+            "subintervals": 20000,
+            "independent_midpoint_quadrature": 11.602204562913442,
+            "lesson_analytic_integral": 11.602204575630374,
+            "absolute_difference": 1.2716931507839035e-08,
+            "quadrature_error_bound": 4.2749999999999996e-08,
+            "rounding_guard": 1e-11,
+            "emitted_rectangle_area": 11.56675770245329,
+            "lesson_rectangle_sum": 11.56675770245329,
+            "emitted_to_numeric_area_ratio": 1.0
+          },
+          {
+            "a": -0.25,
+            "b": 2.75,
+            "subintervals": 20000,
+            "independent_midpoint_quadrature": 5.294804910726278,
+            "lesson_analytic_integral": 5.2948049122809175,
+            "absolute_difference": 1.5546399723120885e-09,
+            "quadrature_error_bound": 5.3437499999999995e-09,
+            "rounding_guard": 1e-11,
+            "emitted_rectangle_area": 5.29048344839214,
+            "lesson_rectangle_sum": 5.29048344839214,
+            "emitted_to_numeric_area_ratio": 1.0
+          }
+        ],
+        "scope": "Independent dense quadrature checks the analytic reference; emitted box area separately checks the visual rectangle-sum contract."
+      },
+      "elapsed_seconds": 0.009643329000027734
+    },
+    {
+      "id": "expanded_hessian_recurrence",
+      "status": "pass",
+      "observation": {
+        "rotation_radians": 0.4,
+        "relative_development_tolerance": 1e-11,
+        "rows": [
+          {
+            "rate": 0.15,
+            "condition": 8,
+            "steps": 60,
+            "expanded_hessian": [
+              [
+                2.0615265172849213,
+                -2.51074631814833
+              ],
+              [
+                -2.51074631814833,
+                6.93847348271508
+              ]
+            ],
+            "independent_endpoint": [
+              0.0001420927910608693,
+              6.007586849211404e-05
+            ],
+            "lesson_endpoint": [
+              0.0001420927910608693,
+              6.007586849211404e-05
+            ],
+            "relative_difference": 0.0,
+            "contraction_factor": 0.85
+          },
+          {
+            "rate": 0.05,
+            "condition": 20,
+            "steps": 60,
+            "expanded_hessian": [
+              [
+                3.881286261201929,
+                -6.814882863545467
+              ],
+              [
+                -6.814882863545467,
+                17.11871373879807
+              ]
+            ],
+            "independent_endpoint": [
+              0.1124223914712259,
+              0.047531424748361265
+            ],
+            "lesson_endpoint": [
+              0.11242239147122582,
+              0.04753142474836122
+            ],
+            "relative_difference": 8.29681471047699e-17,
+            "contraction_factor": 0.95
+          },
+          {
+            "rate": 0.28,
+            "condition": 20,
+            "steps": 60,
+            "expanded_hessian": [
+              [
+                3.881286261201929,
+                -6.814882863545467
+              ],
+              [
+                -6.814882863545467,
+                17.11871373879807
+              ]
+            ],
+            "independent_endpoint": [
+              -1.4000883636884814e+39,
+              3.311520387831868e+39
+            ],
+            "lesson_endpoint": [
+              -1.4000883636884878e+39,
+              3.3115203878318827e+39
+            ],
+            "relative_difference": 4.4042482836225045e-15,
+            "contraction_factor": 4.6000000000000005
+          },
+          {
+            "rate": 0.1,
+            "condition": 20,
+            "steps": 60,
+            "expanded_hessian": [
+              [
+                3.881286261201929,
+                -6.814882863545467
+              ],
+              [
+                -6.814882863545467,
+                17.11871373879807
+              ]
+            ],
+            "independent_endpoint": [
+              -0.23587707659836638,
+              0.5701276903344792
+            ],
+            "lesson_endpoint": [
+              -0.23587707659836743,
+              0.5701276903344816
+            ],
+            "relative_difference": 1.6453257393234816e-15,
+            "contraction_factor": 1.0
+          }
+        ],
+        "scope": "A separately expanded Hessian recurrence checks stable, unstable and neutral-boundary cases; not a proof about arbitrary optimization losses."
+      },
+      "elapsed_seconds": 0.00893951900002321
+    },
+    {
+      "id": "dynamics_corners_and_framing",
+      "status": "pass",
+      "observation": {
+        "lorenz_corner_count": 16,
+        "rows": [
+          {
+            "sigma": 5,
+            "rho": 1,
+            "beta": 1,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 7.233635523304801e-13
+          },
+          {
+            "sigma": 5,
+            "rho": 1,
+            "beta": 1,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 9.633782184056832e-10
+          },
+          {
+            "sigma": 5,
+            "rho": 1,
+            "beta": 4,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 2.4592460108605423e-12
+          },
+          {
+            "sigma": 5,
+            "rho": 1,
+            "beta": 4,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 3.739102878111046e-09
+          },
+          {
+            "sigma": 5,
+            "rho": 40,
+            "beta": 1,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 8.769641573765778
+          },
+          {
+            "sigma": 5,
+            "rho": 40,
+            "beta": 1,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 21.66938799771765
+          },
+          {
+            "sigma": 5,
+            "rho": 40,
+            "beta": 4,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 2.013650720304093e-07
+          },
+          {
+            "sigma": 5,
+            "rho": 40,
+            "beta": 4,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 0.0006729189909288354
+          },
+          {
+            "sigma": 16,
+            "rho": 1,
+            "beta": 1,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 5.733239809594035e-13
+          },
+          {
+            "sigma": 16,
+            "rho": 1,
+            "beta": 1,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 7.928393303692776e-10
+          },
+          {
+            "sigma": 16,
+            "rho": 1,
+            "beta": 4,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 2.6562927458988076e-12
+          },
+          {
+            "sigma": 16,
+            "rho": 1,
+            "beta": 4,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 5.238941408867918e-09
+          },
+          {
+            "sigma": 16,
+            "rho": 40,
+            "beta": 1,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 0.15127156445142598
+          },
+          {
+            "sigma": 16,
+            "rho": 40,
+            "beta": 1,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 3.4722954432791817
+          },
+          {
+            "sigma": 16,
+            "rho": 40,
+            "beta": 4,
+            "maximum_step": 0.005,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 35.38476229371827
+          },
+          {
+            "sigma": 16,
+            "rho": 40,
+            "beta": 4,
+            "maximum_step": 0.03,
+            "duration": 20,
+            "initial_separation": 0.1,
+            "points_outside_bounds": 0,
+            "endpoint_halfstep_difference": 5.180111428071744
+          }
+        ],
+        "additional_framing_cases": [
+          "default integral",
+          "12-harmonic Fourier at phase pi",
+          "unstable gradient"
+        ],
+        "scope": "Finite endpoint and framing checks at sixteen declared corners, not exhaustive parameter coverage or proof of chaos."
+      },
+      "elapsed_seconds": 0.5585748820000163
+    },
+    {
+      "id": "optional_scipy_dop853",
+      "status": "pass",
+      "observation": {
+        "dependency": "scipy",
+        "version": "1.18.1",
+        "reference_method": "DOP853",
+        "rtol": 1e-12,
+        "atol": 1e-13,
+        "duration": 2,
+        "initial": [
+          1,
+          1,
+          1
+        ],
+        "parameters": {
+          "sigma": 10,
+          "rho": 28,
+          "beta": 2.6666666666666665
+        },
+        "reference_endpoint": [
+          -8.173499932237998,
+          -9.562023686796717,
+          24.620702049672495
+        ],
+        "rows": [
+          {
+            "rk4_maximum_step": 0.02,
+            "endpoint": [
+              -8.17196802220781,
+              -9.562054344092928,
+              24.616194312857257
+            ],
+            "endpoint_norm_difference": 0.00476102713769387
+          },
+          {
+            "rk4_maximum_step": 0.01,
+            "endpoint": [
+              -8.173442490346243,
+              -9.561995763765355,
+              24.620577816379935
+            ],
+            "endpoint_norm_difference": 0.00013968957580713995
+          },
+          {
+            "rk4_maximum_step": 0.005,
+            "endpoint": [
+              -8.173497619297187,
+              -9.562021024515237,
+              24.62069941540941
+            ],
+            "endpoint_norm_difference": 4.401906392037785e-06
+          }
+        ],
+        "scope": "Independent numerical corroboration at short time; neither solver is an exact solution or rigorous error certificate."
+      },
+      "elapsed_seconds": 0.33927112599997145
+    }
+  ],
+  "status": "pass",
+  "limits_scope": "Authored development tolerances and stated analytic quadrature bound; not a formal precommitted Loom acceptance run.",
+  "limitations": [
+    "One local numerical host; no browser, native X3D render, hardware GPU, MCP transport or human learning measurement.",
+    "Finite sampled comparisons corroborate authored models; they do not prove theorems or generalize to arbitrary functions/ODEs."
+  ],
+  "source_drift": "none",
+  "report_sha256": "84cc57d712ece0d406ef192c0052cd54c118353f4860a29b466c632bc804c24c"
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "mathlab.mcp-stdio-probe/1",
+  "started_utc": "2026-11-17T05:01:30.679964+00:00",
+  "finished_utc": "2026-11-17T05:01:31.518831+00:00",
+  "status": "pass",
+  "python": "3.13.18",
+  "mcp_sdk": "2.3.0",
+  "instrument_sha256": "c4f66388cd2eda69f08cacf352525ac196a419ef109606465350c49fac0b5536",
+  "adapter_sha256": "54dda98b3bd29872d6d65fb1f03c61306d3634271aeb53b4f1833f78f535f9e9",
+  "checks": [
+    {
+      "id": "stdio_initialize",
+      "pass": true,
+      "protocol": "2025-11-25",
+      "server": {
+        "name": "x3d-mathlab",
+        "title": null,
+        "version": "",
+        "description": null,
+        "website_url": null,
+        "icons": null
+      }
+    },
+    {
+      "id": "three_read_only_tools",
+      "pass": true,
+      "names": [
+        "mathlab_list_lessons",
+        "mathlab_manim_source",
+        "mathlab_scene"
+      ]
+    },
+    {
+      "id": "catalog_call",
+      "pass": true,
+      "lessons": [
+        "linear",
+        "derivative",
+        "integral",
+        "fourier",
+        "lorenz",
+        "gradient"
+      ]
+    },
+    {
+      "id": "derivative_scene_call",
+      "pass": true,
+      "x3d_bytes": 25993,
+      "sample_sha256": "a6e0832dd748bf862746dffa5a7041b7ea3907a77a03c3296890f93cc7e2d43d",
+      "x3d_sha256": "2bd4960087c34a05555a9ec0b496f771e4a750fd11b73f2fe7caee96ffdd81d3",
+      "source_sha256": {
+        "catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
+        "kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
+        "x3d.py": "39fb7f5cedd965e6dd7163b2df381bee73bf27539804cfc8eec2eb93722d5850",
+        "manim_bridge.py": "27f836c06180ed799b7b0f4c462770cb9d5709e02d2d7f153593d34a4c2946f0"
+      }
+    },
+    {
+      "id": "baked_source_same_sample",
+      "pass": true,
+      "source_bytes": 18401,
+      "source_sha256": "ffea2b04ec91fe71455e8ff3084c05bf1d1e7c8a687edb39e16917764360c1e5"
+    },
+    {
+      "id": "boolean_parameter_refused",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "One local Python/SDK executor using the actual stdio transport.",
+    "No Manim rendering or generated/user-supplied code execution, network transport, browser or formal acceptance ran."
+  ],
+  "report_sha256": "2fef482063af3dda6fde0180b2634307ddcaf30619b34731e95a5558df42dc31"
+}

@@ -1,0 +1,57 @@
+{
+ "schema": "mathlab.runtime-parity/1",
+ "what": "Default-parameter sample from native CPython vs Pyodide, both running the same mathlab/*.py",
+ "native": "CPython 3.13.18, glibc, Linux x86_64",
+ "wasm": "Pyodide 0.27.7 (CPython 3.12 on WebAssembly) in Chromium via Playwright 1.63.0",
+ "lessons": {
+  "linear": {
+   "floats": 990,
+   "differing_floats": 18,
+   "max_abs_diff": 2.22e-16,
+   "sample_sha256_pyodide": "791c277cd977d1af",
+   "sample_sha256_native": "5f3c54f6ed6cbc56",
+   "bit_identical": false
+  },
+  "derivative": {
+   "floats": 759,
+   "differing_floats": 5,
+   "max_abs_diff": 4.441e-16,
+   "sample_sha256_pyodide": "fab280b645d2bad7",
+   "sample_sha256_native": "a7f6c0a40d637021",
+   "bit_identical": false
+  },
+  "integral": {
+   "floats": 1206,
+   "differing_floats": 0,
+   "max_abs_diff": 0,
+   "sample_sha256_pyodide": "acd95e24be654664",
+   "sample_sha256_native": "acd95e24be654664",
+   "bit_identical": true
+  },
+  "fourier": {
+   "floats": 2314,
+   "differing_floats": 20,
+   "max_abs_diff": 3.331e-16,
+   "sample_sha256_pyodide": "28336651f530902d",
+   "sample_sha256_native": "9e746d9226161fcd",
+   "bit_identical": false
+  },
+  "lorenz": {
+   "floats": 6073,
+   "differing_floats": 0,
+   "max_abs_diff": 0,
+   "sample_sha256_pyodide": "a2ec4e2a968d2b43",
+   "sample_sha256_native": "a2ec4e2a968d2b43",
+   "bit_identical": true
+  },
+  "gradient": {
+   "floats": 5041,
+   "differing_floats": 0,
+   "max_abs_diff": 0,
+   "sample_sha256_pyodide": "cea87d148954e3b9",
+   "sample_sha256_native": "cea87d148954e3b9",
+   "bit_identical": true
+  }
+ },
+ "finding": "3 of 6 lessons are bit-identical; linear, derivative, fourier differ by <= 4.441e-16 absolute (about one ulp) in transcendental calls, so sample_sha256 differs across runtimes while source hashes match. Compare floats with a tolerance across runtimes; use the hash for same-runtime identity only."
+}

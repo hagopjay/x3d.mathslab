@@ -1,0 +1,67 @@
+{
+ "url": "http://127.0.0.1:8850/",
+ "chromium": "153.0.8010.12",
+ "playwright": "1.63.0",
+ "lessons": [
+  {
+   "title": "The Shape of a Matrix",
+   "nodes": 8,
+   "metrics": 16,
+   "model": "MODEL 5f3c54f6ed6cbc56",
+   "ms": 2081
+  },
+  {
+   "title": "A Secant Becomes a Tangent",
+   "nodes": 8,
+   "metrics": 17,
+   "model": "MODEL a7f6c0a40d637021",
+   "ms": 1958
+  },
+  {
+   "title": "Build an Area from Samples",
+   "nodes": 8,
+   "metrics": 17,
+   "model": "MODEL acd95e24be654664",
+   "ms": 1975
+  },
+  {
+   "title": "A Wave Made of Circles",
+   "nodes": 8,
+   "metrics": 15,
+   "model": "MODEL 9e746d9226161fcd",
+   "ms": 1950
+  },
+  {
+   "title": "Two Almost-Identical Beginnings",
+   "nodes": 8,
+   "metrics": 20,
+   "model": "MODEL a2ec4e2a968d2b43",
+   "ms": 1967
+  },
+  {
+   "title": "Find the Floor of a Valley",
+   "nodes": 8,
+   "metrics": 20,
+   "model": "MODEL cea87d148954e3b9",
+   "ms": 2196
+  }
+ ],
+ "checks": {
+  "lessons_in_nav": 6,
+  "parameter_change_changes_model_id": {
+   "before": "MODEL cea87d148954e3b9",
+   "after": "MODEL 5c97982f6507db31",
+   "changed": true
+  },
+  "manim_source": {
+   "filename": "mathlab-gradient.py",
+   "bytes": 104672,
+   "has_scene_class": true
+  }
+ },
+ "first_native_scene_s": 1.833,
+ "python_runtime": null,
+ "transport": "server",
+ "console_errors": [],
+ "elapsed_s": 18.04
+}

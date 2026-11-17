@@ -1,0 +1,8 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "fourier",
+  "params": {
+    "terms": 5,
+    "phase": 0.9
+  }
+}

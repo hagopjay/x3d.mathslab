@@ -1,0 +1,11 @@
+{
+  "schema": "x3d.mathlab.lesson-card/1",
+  "lesson": "gradient",
+  "params": {
+    "rate": 0.15,
+    "condition": 8,
+    "start_x": 2.2,
+    "start_y": 1.6,
+    "steps": 28
+  }
+}

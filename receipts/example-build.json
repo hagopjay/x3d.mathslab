@@ -1,0 +1,328 @@
+{
+  "schema": "mathlab.example-build/1",
+  "python": "3.13.18",
+  "source_sha256": {
+    "__init__.py": "7ced7664bbd1076034fe2c86e39027a9a794944cc4d82138d6ace895734829e4",
+    "cards.py": "c1d3fd9ee31b6332c3c0ba279afd3263acb2c10eb54d8ad6e98332fb695c3a4e",
+    "catalog.py": "ca52e06a06388914e38f43262c1906c5763d897a1de649db2a3c4bf727d2d175",
+    "kernel.py": "c7d9c59f122040472d049a13962b3b4712966e8917806d7f8104faa1854c750f",
+    "manim_bridge.py": "27f836c06180ed799b7b0f4c462770cb9d5709e02d2d7f153593d34a4c2946f0",
+    "mcp_server.py": "54dda98b3bd29872d6d65fb1f03c61306d3634271aeb53b4f1833f78f535f9e9",
+    "schema.py": "f2512f474001845559c69908194865b26cb1f22761b102179810227a4b161886",
+    "server.py": "0c47e85e1b40415ab4354af9491e3619e43af9ba232fc8c5c1c6d2a7f17552b3",
+    "x3d.py": "39fb7f5cedd965e6dd7163b2df381bee73bf27539804cfc8eec2eb93722d5850"
+  },
+  "examples": [
+    {
+      "lesson": "linear",
+      "metrics": [
+        {
+          "id": "determinant",
+          "label": "Signed area factor",
+          "value": 0.9600000000000001,
+          "unit": "×",
+          "note": "Determinant of the displayed B(t), not only the target A."
+        },
+        {
+          "id": "area_scale",
+          "label": "Area magnitude",
+          "value": 0.9600000000000001,
+          "unit": "×",
+          "note": ""
+        },
+        {
+          "id": "eigenvalues",
+          "label": "Real eigenvalues",
+          "value": "1.4275, 0.67251",
+          "unit": "",
+          "note": "No real eigenlines are drawn for a complex pair."
+        },
+        {
+          "id": "eigen_residual",
+          "label": "Eigenvector residual",
+          "value": 1.1102230246251565e-16,
+          "unit": "",
+          "note": "||Bv−λv|| for normalized drawn eigenvectors; floating-point diagnostic."
+        }
+      ],
+      "files": {
+        "examples/cards/linear.json": {
+          "bytes": 156,
+          "sha256": "0e494de833da1653a3899b83b695003f9499555576e1460635bbd468880e083b"
+        },
+        "examples/x3d/linear.x3d": {
+          "bytes": 50200,
+          "sha256": "f09aa0b55e69ec38046986052dd226c806df2ba6a55d41ebec6df809dbf5ca68"
+        },
+        "examples/manim/linear.py": {
+          "bytes": 23854,
+          "sha256": "6b3278059af017c5411eb89b5dbd73264fcfcc5f145afe957304dd94f01b6233"
+        }
+      }
+    },
+    {
+      "lesson": "derivative",
+      "metrics": [
+        {
+          "id": "analytic",
+          "label": "Analytic tangent slope",
+          "value": 0.9748421872844885,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "forward",
+          "label": "Forward secant slope",
+          "value": 0.8322341636325031,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "forward_error",
+          "label": "Forward absolute error",
+          "value": 0.14260802365198533,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "central_error",
+          "label": "Central absolute error",
+          "value": 0.04507154664251767,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "central_bound",
+          "label": "Central error bound",
+          "value": 0.06,
+          "unit": "",
+          "note": "Analytic bound from |f‴|≤1; the quadratic contributes zero central-difference truncation error."
+        }
+      ],
+      "files": {
+        "examples/cards/derivative.json": {
+          "bytes": 116,
+          "sha256": "f3f873c59f0cdca3c3abeb9fed2233f34cfcdcc7dd416a33a4c6841d3a0e834c"
+        },
+        "examples/x3d/derivative.x3d": {
+          "bytes": 26012,
+          "sha256": "f934681ca69d8605f5cd510cffe36befacb0f8bfc95825b18866a227580e44bf"
+        },
+        "examples/manim/derivative.py": {
+          "bytes": 18452,
+          "sha256": "da4913883c067141d1fe931ca53241579ca57d60d789b711e74c7450fc566ac6"
+        }
+      }
+    },
+    {
+      "lesson": "integral",
+      "metrics": [
+        {
+          "id": "approximation",
+          "label": "Rectangle sum",
+          "value": 5.85422365987986,
+          "unit": "area units",
+          "note": ""
+        },
+        {
+          "id": "reference",
+          "label": "Analytic integral",
+          "value": 5.8684524599755585,
+          "unit": "area units",
+          "note": ""
+        },
+        {
+          "id": "signed_error",
+          "label": "Approximation − reference",
+          "value": -0.014228800095698269,
+          "unit": "area units",
+          "note": ""
+        },
+        {
+          "id": "width",
+          "label": "Rectangle width",
+          "value": 0.3333333333333333,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "midpoint_bound",
+          "label": "Midpoint absolute-error bound",
+          "value": 0.03518518518518518,
+          "unit": "",
+          "note": "The midpoint rule only; |f″|≤1.9."
+        }
+      ],
+      "files": {
+        "examples/cards/integral.json": {
+          "bytes": 141,
+          "sha256": "a0050e8410b4025daf63c1fb1e2469bd8a08c11dcbe7a0f2acd6e4971eeff4df"
+        },
+        "examples/x3d/integral.x3d": {
+          "bytes": 37352,
+          "sha256": "a5418a094cdcdf0cc03c79ea62ff39fac3a3f35938b00b6fff6f9104a12095db"
+        },
+        "examples/manim/integral.py": {
+          "bytes": 21912,
+          "sha256": "f99c6a3cd91ceaea443020ce59d585848ea8b0f229c7df8d742f4d98f9b04643"
+        }
+      }
+    },
+    {
+      "lesson": "fourier",
+      "metrics": [
+        {
+          "id": "value",
+          "label": "Current partial sum",
+          "value": 1.070092095528523,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "harmonic",
+          "label": "Highest harmonic",
+          "value": 9,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "rms_error",
+          "label": "Exact whole-period RMS error",
+          "value": 0.200985604459016,
+          "unit": "",
+          "note": "Parseval tail relative to the ±1 square wave; not maximum pointwise error."
+        },
+        {
+          "id": "overshoot",
+          "label": "Sampled excess above +1",
+          "value": 18.232723992405898,
+          "unit": "% of plateau",
+          "note": "Maximum over 2,049 phase samples in [0,π]; not an analytic maximum."
+        }
+      ],
+      "files": {
+        "examples/cards/fourier.json": {
+          "bytes": 119,
+          "sha256": "d9fcedb2d2957abfdf6fc7447cc7521d2a7b9d013885074ddd0d80b9de03621b"
+        },
+        "examples/x3d/fourier.x3d": {
+          "bytes": 65369,
+          "sha256": "531dc9bab35f96f56d3859f4ebc98d2f8122107cbaea0cf356c15f6662be25a4"
+        },
+        "examples/manim/fourier.py": {
+          "bytes": 46242,
+          "sha256": "f86e57dffc13518f765cc7ce6bc50e581886c5318ed883f37b4830825275e32d"
+        }
+      }
+    },
+    {
+      "lesson": "lorenz",
+      "metrics": [
+        {
+          "id": "separation",
+          "label": "Nearby-start endpoint separation",
+          "value": 1.5572665486783244,
+          "unit": "state units",
+          "note": "Same RK4 step; different initial x."
+        },
+        {
+          "id": "refinement",
+          "label": "Same-start endpoint difference h vs h/2",
+          "value": 0.6575866904723333,
+          "unit": "state units",
+          "note": "A refinement diagnostic, not a rigorous global error bound."
+        },
+        {
+          "id": "actual_step",
+          "label": "Actual RK4 step",
+          "value": 0.01,
+          "unit": "s",
+          "note": "Adjusted downward to end at the requested duration exactly."
+        },
+        {
+          "id": "steps",
+          "label": "Base integration steps",
+          "value": 2000,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "divergence",
+          "label": "Analytic flow divergence",
+          "value": -13.666666666666666,
+          "unit": "1/s",
+          "note": "Negative volume divergence alone does not establish chaos."
+        }
+      ],
+      "files": {
+        "examples/cards/lorenz.json": {
+          "bytes": 209,
+          "sha256": "fc46f5171e28516f44bad7eadfb53168f9eebdc49f7157ee102e9a0efcac7ffe"
+        },
+        "examples/x3d/lorenz.x3d": {
+          "bytes": 137979,
+          "sha256": "3c1b7f890a17155ea7d401bf5440a991b9673d774cd0e864e5966d1a068ffe48"
+        },
+        "examples/manim/lorenz.py": {
+          "bytes": 128713,
+          "sha256": "aea8e9c0c238a550fdc08161bbf4e3c1e5f90fe98b59ff2a4f787efcf2bfd8ae"
+        }
+      }
+    },
+    {
+      "lesson": "gradient",
+      "metrics": [
+        {
+          "id": "loss",
+          "label": "Final numeric loss",
+          "value": 0.00039149486229455617,
+          "unit": "",
+          "note": "The complete requested iteration, including values outside the displayed domain."
+        },
+        {
+          "id": "contraction",
+          "label": "Worst-case mode factor",
+          "value": 0.85,
+          "unit": "× per step",
+          "note": "contracts every mode"
+        },
+        {
+          "id": "limit",
+          "label": "Strict stability limit α <",
+          "value": 0.25,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "id": "recurrence_residual",
+          "label": "Relative endpoint/reference difference",
+          "value": 1.8866866295880254e-17,
+          "unit": "",
+          "note": "Independent eigen-coordinate closed form checks the iteration."
+        },
+        {
+          "id": "shown",
+          "label": "Displayed iterates",
+          "value": 29,
+          "unit": "of 29",
+          "note": "The path stops drawing before leaving |x|,|y|≤3.4; numeric data retains every iterate."
+        }
+      ],
+      "files": {
+        "examples/cards/gradient.json": {
+          "bytes": 181,
+          "sha256": "5e02a278d75798dc5f74ee8c86e7f5b5c7be86ff5dbbe190ae87d09594940f51"
+        },
+        "examples/x3d/gradient.x3d": {
+          "bytes": 133560,
+          "sha256": "640197dd2dca1eaff30acc219d9dbb9b498683af52d97eccac438ad9b5c5b680"
+        },
+        "examples/manim/gradient.py": {
+          "bytes": 104709,
+          "sha256": "715d244ac6faef1994eb9f3d0aa99209d32c7ab306057a5b5cbd13727986542e"
+        }
+      }
+    }
+  ],
+  "card_schema_sha256": "4fd90b74d98efb932c9a10bd902410ffddb18fe682ac296f692ec6ecdbee759e"
+}

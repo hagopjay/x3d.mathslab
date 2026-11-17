@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071727" />
+    <title>x3d.mathlab · A place to see an idea</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="vendor/x_ite/dist/x_ite.css" />
+    <script defer src="vendor/x_ite/dist/x_ite.min.js"></script>
+    <script defer src="static-api.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to the experiment</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="X3D Math Lab home"
+        ><span class="brand-mark" aria-hidden="true">∿</span
+        ><span
+          >x3d<span class="brand-dot">.</span><strong>mathlab</strong
+          ><small>A PLACE TO SEE AN IDEA</small></span
+        ></a
+      >
+      <div class="top-note">
+        <i></i><span>Six connected ways of seeing.</span>
+      </div>
+      <div class="top-actions">
+        <button class="quiet" id="guideButton">Field guide ↗</button
+        ><button class="quiet" id="importButton">Open lesson card</button
+        ><input
+          id="cardFile"
+          type="file"
+          accept=".json,application/json"
+          hidden
+        /><button class="light" id="saveCard" disabled>
+          Keep this experiment <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </header>
+    <main id="workspace">
+      <aside class="atlas" aria-label="Mathematical experiments">
+        <div class="eyebrow">THE COLLECTION <span>01—06</span></div>
+        <nav id="lessonNav" aria-label="Choose an experiment"></nav>
+        <div class="atlas-bottom">
+          <span class="orbit-glyph" aria-hidden="true">⊕</span>
+          <p>
+            Move a number.<br />Notice a relationship.<br /><em
+              >Ask a better question.</em
+            >
+          </p>
+          <span class="small-label">A LOCAL, OPEN LABORATORY</span>
+        </div>
+      </aside>
+      <section class="laboratory" aria-label="Interactive mathematical model">
+        <div class="lesson-heading">
+          <div>
+            <div class="eyebrow" id="lessonCategory">YOUR NEXT DISCOVERY</div>
+            <h1 id="lessonTitle">
+              A small change.<br />A different way to see.
+            </h1>
+            <p id="lessonTagline">Choose a relationship, then make it move.</p>
+          </div>
+          <span class="lesson-index" id="lessonIndex" aria-hidden="true"
+            >01</span
+          >
+        </div>
+        <div class="stage" id="stage" aria-busy="true">
+          <x3d-canvas
+            id="world"
+            aria-label="Native X3D mathematical scene"
+            contentScale="1"
+            update="auto"
+            splashScreen="false"
+            notifications="false"
+            contextMenu="false"
+            antialiased="true"
+          ></x3d-canvas>
+          <svg
+            id="projection"
+            viewBox="0 0 1000 700"
+            preserveAspectRatio="xMidYMid meet"
+            role="img"
+            aria-label="Two-dimensional projection of the current mathematical model"
+            hidden
+          >
+            <g id="projectionGeometry"></g>
+          </svg>
+          <div class="stage-top">
+            <span class="renderer-pill" id="rendererLabel"
+              ><i></i>PREPARING YOUR VIEW</span
+            >
+            <div class="stage-tools">
+              <button
+                id="cameraReset"
+                title="Return to the authored camera"
+                aria-label="Reset camera"
+              >
+                ⌖</button
+              ><button
+                id="projectionToggle"
+                title="Switch between native X3D and a 2D projection"
+                aria-label="Switch projection"
+              >
+                2D</button
+              ><button
+                id="fullscreen"
+                title="Expand the experiment"
+                aria-label="Fullscreen experiment"
+              >
+                ⛶
+              </button>
+            </div>
+          </div>
+          <div class="stage-watermark" aria-hidden="true">LOOK CLOSER.</div>
+          <div class="stage-message" id="stageMessage">
+            <div class="loader-orbit" aria-hidden="true"></div>
+            <span>Finding the shape of an idea…</span>
+          </div>
+          <div class="equation-card">
+            <div class="small-label">THE RELATIONSHIP</div>
+            <div id="formula" class="formula">
+              A visual question, waiting for you.
+            </div>
+            <div class="view-hint" id="viewHint">
+              Drag to orbit · scroll to look closer
+            </div>
+          </div>
+          <div class="update-label" id="updateLabel" hidden>
+            Updating the experiment…
+          </div>
+        </div>
+        <div class="measurements-head">
+          <div class="eyebrow">LOOK, THEN MEASURE</div>
+          <span id="measurementScope">One model · visible numbers</span>
+        </div>
+        <div
+          id="metrics"
+          class="metrics"
+          aria-label="Mathematical measurements"
+        ></div>
+        <div class="model-foot">
+          <span id="modelIdentity">Your parameters travel with the model.</span
+          ><button id="downloadX3D" disabled>
+            Export this world <span>.x3d ↓</span>
+          </button>
+        </div>
+      </section>
+      <aside class="bench" aria-label="Experiment controls and explanation">
+        <div class="bench-tabs" role="tablist" aria-label="Learning tools">
+          <button
+            role="tab"
+            id="tab-explore"
+            aria-controls="panel-explore"
+            aria-selected="true"
+            data-panel="explore"
+          >
+            Explore</button
+          ><button
+            role="tab"
+            id="tab-story"
+            aria-controls="panel-story"
+            aria-selected="false"
+            tabindex="-1"
+            data-panel="story"
+          >
+            Understand</button
+          ><button
+            role="tab"
+            id="tab-source"
+            aria-controls="panel-source"
+            aria-selected="false"
+            tabindex="-1"
+            data-panel="source"
+          >
+            Source
+          </button>
+        </div>
+        <section
+          class="bench-panel active"
+          id="panel-explore"
+          role="tabpanel"
+          aria-labelledby="tab-explore"
+        >
+          <div class="bench-intro">
+            <div class="eyebrow">YOUR HAND ON THE IDEA</div>
+            <h2>What happens if…?</h2>
+            <p id="lessonDescription">
+              Change one thing. Give yourself a moment to notice.
+            </p>
+          </div>
+          <div id="parameters" class="parameters"></div>
+          <div class="control-actions">
+            <button id="resetParameters" class="quiet">
+              ↺ Reset the experiment</button
+            ><button id="animateParameter" class="play-button" hidden>
+              ▶ Set it in motion
+            </button>
+          </div>
+          <div id="errorNotice" class="error-notice" role="alert" hidden></div>
+          <section class="prediction">
+            <div class="eyebrow">A QUESTION BEFORE THE ANSWER</div>
+            <h3 id="challengeQuestion">What do you think will change?</h3>
+            <label class="sr-only" for="predictionText">Your prediction</label
+            ><textarea
+              id="predictionText"
+              rows="2"
+              placeholder="I think… (a note just for this experiment)"
+            ></textarea
+            ><button id="revealAnswer">
+              Reveal the reasoning <span aria-hidden="true">↘</span>
+            </button>
+            <p id="challengeAnswer" hidden></p>
+          </section>
+          <details class="comfort">
+            <summary>Presentation preferences</summary>
+            <label
+              ><input type="checkbox" id="reduceMotion" />Reduce motion</label
+            >
+            <p>
+              The system preference is always respected. Parameters and numbers
+              remain available.
+            </p>
+          </details>
+        </section>
+        <section
+          class="bench-panel"
+          id="panel-story"
+          role="tabpanel"
+          aria-labelledby="tab-story"
+          hidden
+        >
+          <div class="bench-intro">
+            <div class="eyebrow">FROM INTUITION TO STRUCTURE</div>
+            <h2>Follow the thought.</h2>
+            <p>
+              A short route into the idea. Return to the controls whenever a
+              question appears.
+            </p>
+          </div>
+          <div
+            class="story-progress"
+            id="storyProgress"
+            aria-hidden="true"
+          ></div>
+          <article class="story-card">
+            <span class="small-label" id="storyStep">01 / 03</span>
+            <h3 id="storyTitle">Start with what you can see.</h3>
+            <p id="storyText"></p>
+          </article>
+          <div class="story-buttons">
+            <button id="storyPrev" aria-label="Previous explanation">←</button
+            ><span id="storyCount"></span
+            ><button id="storyNext" aria-label="Next explanation">→</button>
+          </div>
+          <div class="insights">
+            <div class="eyebrow">NOTICE THIS</div>
+            <ul id="insights"></ul>
+          </div>
+          <button class="wide quiet" id="backToControls">
+            Try that idea in the lab ↗
+          </button>
+        </section>
+        <section
+          class="bench-panel"
+          id="panel-source"
+          role="tabpanel"
+          aria-labelledby="tab-source"
+          hidden
+        >
+          <div class="bench-intro">
+            <div class="eyebrow">AN IDEA YOU CAN TAKE APART</div>
+            <h2>The model is yours.</h2>
+            <p>
+              This X3D document describes the current geometry and retains the
+              lesson parameters. Keep it, inspect it, or open it in another X3D
+              viewer.
+            </p>
+          </div>
+          <div class="source-actions">
+            <button id="copySource">Copy X3D</button
+            ><button id="sourceDownload" disabled>Download .x3d</button
+            ><button id="downloadManim" disabled>Manim .py</button>
+          </div>
+          <label class="sr-only" for="sourceText"
+            >Current exported X3D source</label
+          ><textarea
+            id="sourceText"
+            class="source-text"
+            readonly
+            spellcheck="false"
+            wrap="off"
+          ></textarea>
+          <div class="source-meta" id="sourceMeta">Waiting for a model.</div>
+          <p class="source-note">
+            The exported world is a geometric snapshot. The lesson card keeps
+            the parameters for returning to this interactive experiment.
+          </p>
+        </section>
+      </aside>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
