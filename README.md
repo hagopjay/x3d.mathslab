@@ -7,6 +7,8 @@ grade 10 students through second- and third-year undergraduates.
 
 ## Live (no install)
 
+**Companion piece: [Sri Yantra · Chamber Harp](https://hagopjay.github.io/x3d.mathslab/yantra/)**. It is a measured nine-triangle Sri Yantra in native X3D, where each of its 43 odd-coverage chambers can be struck like a bell. Frozen editions and hashes are in [yantra/README.md](yantra/README.md); the source is in x3d.loom `x3d.mandala/`.
+
 **https://hagopjay.github.io/x3d.mathslab/** is the upstream GitHub Pages site. This patch
 provides eighteen lessons when applied and deployed; the live site is not updated by this delivery. With no server there,
 `web/static-api.js` loads pinned Pyodide 0.27.7 (CPython 3.12.7 on WebAssembly, SRI-checked) and runs the
